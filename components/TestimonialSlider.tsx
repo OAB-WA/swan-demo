@@ -4,6 +4,8 @@ import React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faQuoteLeft, faStar } from '@fortawesome/free-solid-svg-icons'
 
 const testimonials = [
   {
@@ -46,7 +48,7 @@ export default function TestimonialSlider() {
           <div className="embla__slide col-md-6 col-lg-4 px-3" key={testimonial.id}>
             <div className="testimonial-single" style={{ height: '100%' }}>
               <div className="testimonial-quote">
-                <span className="testimonial-quote-icon"><i className="fal fa-quote-left"></i></span>
+                <span className="testimonial-quote-icon"><FontAwesomeIcon icon={faQuoteLeft} /></span>
                 <p>{testimonial.text}</p>
               </div>
               <div className="testimonial-content">
@@ -57,17 +59,18 @@ export default function TestimonialSlider() {
                     width={200}
                     height={200}
                     className="img-fluid"
+                    sizes="100px"
                   />
                 </div>
                 <div className="testimonial-author-info">
                   <h4>{testimonial.name}</h4>
                   <p>{testimonial.location}</p>
                   <div className="testimonial-rate">
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
+                    <FontAwesomeIcon icon={faStar} />
+                    <FontAwesomeIcon icon={faStar} />
+                    <FontAwesomeIcon icon={faStar} />
+                    <FontAwesomeIcon icon={faStar} />
+                    <FontAwesomeIcon icon={faStar} />
                   </div>
                 </div>
               </div>

@@ -7,6 +7,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const projects = [
   { id: 1, title: 'Water Line Repair', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop' },
@@ -42,7 +44,7 @@ export default function CaseSlider() {
                     setIndex(idx)
                     setOpen(true)
                   }}> 
-                    <i className="far fa-plus"></i>
+                    <FontAwesomeIcon icon={faPlus} />
                   </div>
                 </div>
                 <div className="case-content">
@@ -50,7 +52,9 @@ export default function CaseSlider() {
                     <h4><Link href="/projects">{project.title}</Link></h4>
                     <small>{project.category}</small>
                   </div>
-                  <Link href="/projects" className="case-arrow"><i className="far fa-arrow-right"></i></Link>
+                  <Link href="/projects" className="case-arrow">
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </Link>
                 </div>
               </div>
             </div>

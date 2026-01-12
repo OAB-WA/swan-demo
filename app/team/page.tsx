@@ -3,6 +3,14 @@ import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faFacebookF, 
+  faTwitter, 
+  faInstagram, 
+  faLinkedin, 
+  faYoutube 
+} from '@fortawesome/free-brands-svg-icons'
 
 export const metadata = {
   title: 'Our Team - Swan Electric, Plumbing, Heating & Air',
@@ -61,11 +69,11 @@ export default function TeamPage() {
                     />
                     <div className="team-content">
                       <div className="team-social">
-                        <a href="#"><i className="fab fa-facebook-f"></i></a>
-                        <a href="#"><i className="fab fa-twitter"></i></a>
-                        <a href="#"><i className="fab fa-instagram"></i></a>
-                        <a href="#"><i className="fab fa-linkedin"></i></a>
-                        <a href="#"><i className="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+                        <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
+                        <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+                        <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
+                        <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
                       </div>
                       <div className="team-bio">
                         <h5><Link href="/team">{member.name}</Link></h5>

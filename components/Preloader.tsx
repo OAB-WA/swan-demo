@@ -26,7 +26,7 @@ export default function Preloader() {
     // Fallback timeout (in case scripts don't load)
     const timeout = setTimeout(() => {
       hidePreloader()
-    }, 2000)
+    }, 1000)
 
     return () => {
       clearTimeout(timeout)

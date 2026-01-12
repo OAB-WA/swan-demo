@@ -7,6 +7,8 @@ import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
 import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 export default function GalleryPage() {
   const [open, setOpen] = useState(false)
@@ -70,7 +72,7 @@ export default function GalleryPage() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     <div className="gallery-item-content">
-                      <i className="far fa-plus"></i>
+                      <FontAwesomeIcon icon={faPlus} />
                     </div>
                   </div>
                 </div>

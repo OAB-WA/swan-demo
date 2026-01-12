@@ -1,6 +1,21 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Script from 'next/script'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faMapMarkerAlt, 
+  faPhone, 
+  faEnvelope, 
+  faClock, 
+  faPaperPlane, 
+  faLongArrowUp 
+} from '@fortawesome/free-solid-svg-icons'
+import { 
+  faFacebookF, 
+  faInstagram, 
+  faTwitter, 
+  faYoutube 
+} from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
   return (
@@ -26,10 +41,10 @@ export default function Footer() {
                     in Dallas, Texas. We are your trusted partner for all your home service needs.
                   </p>
                   <ul className="footer-social">
-                    <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i className="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i className="fab fa-youtube"></i></a></li>
+                    <li><a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+                    <li><a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                    <li><a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                    <li><a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a></li>
                   </ul>
                 </div>
               </div>
@@ -73,7 +88,7 @@ export default function Footer() {
                       <form action="#">
                         <input type="email" className="form-control" placeholder="Your Email" />
                         <button className="theme-btn" type="submit">
-                          <i className="far fa-paper-plane"></i> Subscribe Now
+                          <FontAwesomeIcon icon={faPaperPlane} className="me-2" /> Subscribe Now
                         </button>
                       </form>
                     </div>
@@ -85,24 +100,10 @@ export default function Footer() {
         </div>
         <div className="footer-contact-info">
           <div className="container">
-            {/* <div className="row mb-4">
-              <div className="col-12">
-                <div className="emergency-service-banner text-center p-4" style={{background: 'linear-gradient(135deg, #0000FF 0%, #0000cc 100%)', borderRadius: '10px', marginBottom: '30px'}}>
-                  <h3 className="text-white mb-2">
-                    <i className="fas fa-exclamation-triangle me-2"></i>
-                    24/7 Emergency Service Available
-                  </h3>
-                  <p className="text-white mb-3">Need immediate assistance? We&apos;re here to help, day or night.</p>
-                  <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{background: '#fff', color: '#0000FF', fontSize: '18px', padding: '12px 30px'}}>
-                    <i className="fas fa-phone me-2"></i>Call Emergency: (214) 555-0123
-                  </a>
-                </div>
-              </div>
-            </div> */}
             <div className="row">
               <div className="col-md-6 col-lg-3">
                 <div className="contact-info-item">
-                  <span className="contact-info-icon"><i className="far fa-map-marker-alt"></i></span>
+                  <span className="contact-info-icon"><FontAwesomeIcon icon={faMapMarkerAlt} /></span>
                   <div>
                     <h5>Address</h5>
                     <p>309 US Highway 80 E, Sunnyvale, TX 75150</p>
@@ -111,7 +112,7 @@ export default function Footer() {
               </div>
               <div className="col-md-6 col-lg-3">
                 <div className="contact-info-item">
-                  <span className="contact-info-icon"><i className="far fa-phone"></i></span>
+                  <span className="contact-info-icon"><FontAwesomeIcon icon={faPhone} /></span>
                   <div>
                     <h5>Call Us</h5>
                     <p style={{fontSize: '18px', fontWeight: '600'}}>
@@ -123,7 +124,7 @@ export default function Footer() {
               </div>
               <div className="col-md-6 col-lg-3">
                 <div className="contact-info-item">
-                  <span className="contact-info-icon"><i className="far fa-envelope"></i></span>
+                  <span className="contact-info-icon"><FontAwesomeIcon icon={faEnvelope} /></span>
                   <div>
                     <h5>Email Us</h5>
                     <p><a href="mailto:info@swanplumbingdemo.com">info@swanplumbingdemo.com</a></p>
@@ -132,7 +133,7 @@ export default function Footer() {
               </div>
               <div className="col-md-6 col-lg-3">
                 <div className="contact-info-item">
-                  <span className="contact-info-icon"><i className="far fa-clock"></i></span>
+                  <span className="contact-info-icon"><FontAwesomeIcon icon={faClock} /></span>
                   <div>
                     <h5>Business Hours</h5>
                     <p>Sun - Fri (08AM - 10PM)</p>
@@ -164,7 +165,7 @@ export default function Footer() {
       {/* footer area end */}
 
       {/* scroll-top */}
-      <a href="#" id="scroll-top"><i className="far fa-long-arrow-up"></i></a>
+      <a href="#" id="scroll-top"><FontAwesomeIcon icon={faLongArrowUp} /></a>
       {/* scroll-top end */}
 
       {/* Date script */}

@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 export default function FloatingCallButton() {
   const [isVisible, setIsVisible] = useState(false)
@@ -51,7 +53,7 @@ export default function FloatingCallButton() {
         e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 255, 0.4)'
       }}
     >
-      <i className="fas fa-phone" style={{fontSize: '20px'}}></i>
+      <FontAwesomeIcon icon={faPhone} style={{fontSize: '20px'}} />
       <span className="d-none d-md-inline">Call (214) 555-0123</span>
       <span className="d-md-none">Call Now</span>
     </a>

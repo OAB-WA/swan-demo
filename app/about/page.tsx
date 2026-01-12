@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/Header'
@@ -5,17 +7,27 @@ import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
 import dynamic from 'next/dynamic'
 import Counter from '@/components/Counter'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faCheckCircle, 
+  faArrowRight 
+} from '@fortawesome/free-solid-svg-icons'
+import { faChartPie } from '@fortawesome/pro-duotone-svg-icons' // We'll use fad if available or solid
+import { 
+  faFacebookF, 
+  faTwitter, 
+  faInstagram, 
+  faLinkedin, 
+  faYoutube 
+} from '@fortawesome/free-brands-svg-icons'
+
+// Fallback for fad icon if not using Pro
+import { faPieChart } from '@fortawesome/free-solid-svg-icons'
 
 // Performance: Dynamic import for client-only components
 const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { ssr: false })
 const TestimonialSlider = dynamic(() => import('@/components/TestimonialSlider'), { ssr: false })
-
 const PartnerSlider = dynamic(() => import('@/components/PartnerSlider'), { ssr: false })
-
-export const metadata = {
-  title: 'About Us - Swan Electric, Plumbing, Heating & Air',
-  description: 'Learn about Swan Electric, Plumbing, Heating & Air - your trusted partner for plumbing, electrical, and HVAC services in Dallas, Texas.',
-}
 
 export default function AboutPage() {
   return (
@@ -49,6 +61,7 @@ export default function AboutPage() {
                       width={800}
                       height={600}
                       loading="lazy"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <Image 
                       className="about-img-2" 
@@ -57,6 +70,7 @@ export default function AboutPage() {
                       width={800}
                       height={600}
                       loading="lazy"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -75,19 +89,19 @@ export default function AboutPage() {
                   <div className="about-list-wrapper">
                     <ul className="about-list list-unstyled">
                       <li>
-                        <div className="icon"><span className="far fa-check-circle"></span></div>
+                        <div className="icon"><FontAwesomeIcon icon={faCheckCircle} /></div>
                         <div className="text">
                           <p>Licensed and insured professionals</p>
                         </div>
                       </li>
                       <li>
-                        <div className="icon"><span className="far fa-check-circle"></span></div>
+                        <div className="icon"><FontAwesomeIcon icon={faCheckCircle} /></div>
                         <div className="text">
                           <p>Years of experience in the industry</p>
                         </div>
                       </li>
                       <li>
-                        <div className="icon"><span className="far fa-check-circle"></span></div>
+                        <div className="icon"><FontAwesomeIcon icon={faCheckCircle} /></div>
                         <div className="text">
                           <p>100% customer satisfaction guarantee</p>
                         </div>
@@ -96,7 +110,7 @@ export default function AboutPage() {
                   </div>
                   <div className="about-solutions">
                     <div className="about-solutions-icon">
-                      <span className="fad fa-chart-pie"></span>
+                      <FontAwesomeIcon icon={faPieChart} />
                     </div>
                     <div className="about-solutions-text-box">
                       <p className="about-solutions-tex">We Provide all Kinds of Plumbing, Electrical & HVAC Services
@@ -104,7 +118,7 @@ export default function AboutPage() {
                       </p>
                     </div>
                   </div>
-                  <Link href="/contact" className="theme-btn">Get In Touch <i className="far fa-arrow-right"></i></Link>
+                  <Link href="/contact" className="theme-btn">Get In Touch <FontAwesomeIcon icon={faArrowRight} className="ms-2" /></Link>
                 </div>
               </div>
             </div>
@@ -171,14 +185,15 @@ export default function AboutPage() {
                     height={400}
                     loading="lazy"
                     className="img-fluid"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="team-content">
                     <div className="team-social">
-                      <a href="#"><i className="fab fa-facebook-f"></i></a>
-                      <a href="#"><i className="fab fa-twitter"></i></a>
-                      <a href="#"><i className="fab fa-instagram"></i></a>
-                      <a href="#"><i className="fab fa-linkedin"></i></a>
-                      <a href="#"><i className="fab fa-youtube"></i></a>
+                      <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+                      <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
+                      <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+                      <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
+                      <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
                     </div>
                     <div className="team-bio">
                       <h5><Link href="/team">George Hooks</Link></h5>
@@ -196,14 +211,15 @@ export default function AboutPage() {
                     height={400}
                     loading="lazy"
                     className="img-fluid"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="team-content">
                     <div className="team-social">
-                      <a href="#"><i className="fab fa-facebook-f"></i></a>
-                      <a href="#"><i className="fab fa-twitter"></i></a>
-                      <a href="#"><i className="fab fa-instagram"></i></a>
-                      <a href="#"><i className="fab fa-linkedin"></i></a>
-                      <a href="#"><i className="fab fa-youtube"></i></a>
+                      <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+                      <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
+                      <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+                      <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
+                      <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
                     </div>
                     <div className="team-bio">
                       <h5><Link href="/team">Veron Reyn</Link></h5>
@@ -221,14 +237,15 @@ export default function AboutPage() {
                     height={400}
                     loading="lazy"
                     className="img-fluid"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="team-content">
                     <div className="team-social">
-                      <a href="#"><i className="fab fa-facebook-f"></i></a>
-                      <a href="#"><i className="fab fa-twitter"></i></a>
-                      <a href="#"><i className="fab fa-instagram"></i></a>
-                      <a href="#"><i className="fab fa-linkedin"></i></a>
-                      <a href="#"><i className="fab fa-youtube"></i></a>
+                      <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+                      <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
+                      <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+                      <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
+                      <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
                     </div>
                     <div className="team-bio">
                       <h5><Link href="/team">Karl Hart</Link></h5>
@@ -246,14 +263,15 @@ export default function AboutPage() {
                     height={400}
                     loading="lazy"
                     className="img-fluid"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="team-content">
                     <div className="team-social">
-                      <a href="#"><i className="fab fa-facebook-f"></i></a>
-                      <a href="#"><i className="fab fa-twitter"></i></a>
-                      <a href="#"><i className="fab fa-instagram"></i></a>
-                      <a href="#"><i className="fab fa-linkedin"></i></a>
-                      <a href="#"><i className="fab fa-youtube"></i></a>
+                      <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+                      <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
+                      <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+                      <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
+                      <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
                     </div>
                     <div className="team-bio">
                       <h5><Link href="/team">Adam Coon</Link></h5>

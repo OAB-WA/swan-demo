@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useCallback } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -69,7 +71,7 @@ export default function ContactForm() {
         )}
         
         <button type="submit" className="theme-btn" disabled={status === 'loading'}>
-          <i className="far fa-paper-plane"></i> {status === 'loading' ? 'Sending...' : 'Send Message'}
+          <FontAwesomeIcon icon={faPaperPlane} className="me-2" /> {status === 'loading' ? 'Sending...' : 'Send Message'}
         </button>
       </form>
     </div>

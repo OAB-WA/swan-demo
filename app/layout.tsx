@@ -4,6 +4,10 @@ import Preloader from '@/components/Preloader'
 import FloatingCallButton from '@/components/FloatingCallButton'
 import ScrollReveal from '@/components/ScrollReveal'
 
+// Performance: FontAwesome tree-shaking setup
+import { config, dom } from '@fortawesome/fontawesome-svg-core'
+config.autoAddCss = false
+
 // Performance: Optimize Google Fonts with next/font
 const rubik = Rubik({
   subsets: ['latin'],
@@ -14,7 +18,7 @@ const rubik = Rubik({
 
 // Import CSS directly for Next.js optimization and bundling
 import '../public/assets/css/bootstrap.min.css'
-import '../public/assets/css/all-fontawesome.min.css'
+// Performance: Removed all-fontawesome.min.css (replaced by tree-shaken SVG icons)
 import '../public/assets/css/animate.min.css'
 import '../public/assets/css/style.css'
 import './globals.css'
@@ -42,12 +46,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={rubik.variable}>
       <head>
+        <style>{dom.css()}</style>
         {/* Performance: Preconnect to external domains */}
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
-        {/* Preload critical font files */}
-        <link rel="preload" href="/assets/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/assets/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        {/* Preload critical font files - removed FA woff2 preloads as we use SVGs now */}
         <link rel="icon" type="image/webp" href="/assets/img/swan logo.webp" />
       </head>
       <body>
@@ -55,13 +58,6 @@ export default function RootLayout({
         <ScrollReveal />
         {children}
         <FloatingCallButton />
-
-        {/* 
-          Performance Optimization: 
-          Removed all legacy jQuery and Bootstrap JS files.
-          The site now runs on 100% React-based components for Sliders, Popups, and Menus.
-          This significantly reduces Total Blocking Time (TBT) and Bundle Size.
-        */}
       </body>
     </html>
   )

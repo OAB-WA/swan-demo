@@ -3,6 +3,22 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faMapMarkerAlt, 
+  faEnvelope, 
+  faClock, 
+  faStream, 
+  faPhone, 
+  faArrowRight 
+} from '@fortawesome/free-solid-svg-icons'
+import { 
+  faFacebookF, 
+  faTwitter, 
+  faInstagram, 
+  faLinkedinIn, 
+  faWhatsapp 
+} from '@fortawesome/free-brands-svg-icons'
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -36,17 +52,17 @@ export default function Header() {
                 <ul>
                   <li>
                     <a href="#">
-                      <i className="far fa-map-marker-alt"></i>309 US Highway 80 E, Sunnyvale, TX 75150
+                      <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />309 US Highway 80 E, Sunnyvale, TX 75150
                     </a>
                   </li>
                   <li>
                     <a href="mailto:info@swanplumbingdemo.com">
-                      <i className="far fa-envelope"></i>info@swanplumbingdemo.com
+                      <FontAwesomeIcon icon={faEnvelope} className="me-2" />info@swanplumbingdemo.com
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i className="far fa-clock"></i> Sun - Fri (08AM - 10PM)
+                      <FontAwesomeIcon icon={faClock} className="me-2" /> Sun - Fri (08AM - 10PM)
                     </a>
                   </li>
                 </ul>
@@ -54,11 +70,11 @@ export default function Header() {
             </div>
             <div className="header-top-right">
               <div className="header-top-social">
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-                <a href="#"><i className="fab fa-instagram"></i></a>
-                <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                <a href="#"><i className="fab fa-whatsapp"></i></a>
+                <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
+                <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
+                <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
+                <a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                <a href="#"><FontAwesomeIcon icon={faWhatsapp} /></a>
               </div>
             </div>
           </div>
@@ -85,7 +101,9 @@ export default function Header() {
               aria-expanded={isMobileMenuOpen} 
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"><i className="far fa-stream"></i></span>
+              <span className="navbar-toggler-icon">
+                <FontAwesomeIcon icon={faStream} />
+              </span>
             </button>
             <div className={`collapse navbar-collapse ${isMobileMenuOpen ? 'show' : ''}`} id="main_nav">
               <ul className="navbar-nav ms-auto">
@@ -105,10 +123,10 @@ export default function Header() {
               <div className="header-nav-right">
                 <div className="header-btn d-flex gap-2">
                   <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{whiteSpace: 'nowrap'}}>
-                    <i className="fas fa-phone me-2"></i>CALL NOW
+                    <FontAwesomeIcon icon={faPhone} className="me-2" />CALL NOW
                   </a>
                   <Link href="/contact" className="theme-btn" onClick={() => setIsMobileMenuOpen(false)}>
-                    GET QUOTE<i className="far fa-arrow-right ms-2"></i>
+                    GET QUOTE<FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                   </Link>
                 </div>
               </div>

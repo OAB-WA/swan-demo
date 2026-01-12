@@ -4,6 +4,28 @@ import dynamic from 'next/dynamic'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faPhone, 
+  faArrowRight, 
+  faStar, 
+  faPlay, 
+  faQuestion, 
+  faMapMarkerAlt,
+  faTools,
+  faGasPump,
+  faDewpoint,
+  faBath,
+  faPaintRoller,
+  faHouseFlood
+} from '@fortawesome/free-solid-svg-icons'
+import { 
+  faFacebookF, 
+  faTwitter, 
+  faInstagram, 
+  faLinkedin, 
+  faYoutube 
+} from '@fortawesome/free-brands-svg-icons'
 
 // Performance: Dynamically import heavy carousel component
 const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { 
@@ -52,10 +74,11 @@ export default function Home() {
                       height={600}
                       loading="lazy"
                       className="img-fluid"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                   <div className="service-icon">
-                    <i className="fad fa-tools"></i>
+                    <FontAwesomeIcon icon={faTools} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
@@ -67,10 +90,10 @@ export default function Home() {
                     </p>
                     <div className="service-arrow d-flex gap-2">
                       <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        <i className="fas fa-phone me-1"></i>Call
+                        <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
                       <Link href="/contact" className="theme-btn" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        Get Quote<i className="far fa-arrow-right ms-1"></i>
+                        Get Quote<FontAwesomeIcon icon={faArrowRight} className="ms-1" />
                       </Link>
                     </div>
                   </div>
@@ -86,10 +109,11 @@ export default function Home() {
                       height={600}
                       loading="lazy"
                       className="img-fluid"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                   <div className="service-icon">
-                    <i className="fad fa-gas-pump"></i>
+                    <FontAwesomeIcon icon={faGasPump} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
@@ -101,10 +125,10 @@ export default function Home() {
                     </p>
                     <div className="service-arrow d-flex gap-2">
                       <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        <i className="fas fa-phone me-1"></i>Call
+                        <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
                       <Link href="/contact" className="theme-btn" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        Get Quote<i className="far fa-arrow-right ms-1"></i>
+                        Get Quote<FontAwesomeIcon icon={faArrowRight} className="ms-1" />
                       </Link>
                     </div>
                   </div>
@@ -120,10 +144,11 @@ export default function Home() {
                       height={600}
                       loading="lazy"
                       className="img-fluid"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                   <div className="service-icon">
-                    <i className="fad fa-dewpoint"></i>
+                    <FontAwesomeIcon icon={faDewpoint} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
@@ -135,10 +160,10 @@ export default function Home() {
                     </p>
                     <div className="service-arrow d-flex gap-2">
                       <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        <i className="fas fa-phone me-1"></i>Call
+                        <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
                       <Link href="/contact" className="theme-btn" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        Get Quote<i className="far fa-arrow-right ms-1"></i>
+                        Get Quote<FontAwesomeIcon icon={faArrowRight} className="ms-1" />
                       </Link>
                     </div>
                   </div>
@@ -154,10 +179,11 @@ export default function Home() {
                       height={600}
                       loading="lazy"
                       className="img-fluid"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                   <div className="service-icon">
-                    <i className="fad fa-bath"></i>
+                    <FontAwesomeIcon icon={faBath} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
@@ -169,10 +195,10 @@ export default function Home() {
                     </p>
                     <div className="service-arrow d-flex gap-2">
                       <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        <i className="fas fa-phone me-1"></i>Call
+                        <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
                       <Link href="/contact" className="theme-btn" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        Get Quote<i className="far fa-arrow-right ms-1"></i>
+                        Get Quote<FontAwesomeIcon icon={faArrowRight} className="ms-1" />
                       </Link>
                     </div>
                   </div>
@@ -188,10 +214,11 @@ export default function Home() {
                       height={600}
                       loading="lazy"
                       className="img-fluid"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                   <div className="service-icon">
-                    <i className="fad fa-paint-roller"></i>
+                    <FontAwesomeIcon icon={faPaintRoller} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
@@ -203,10 +230,10 @@ export default function Home() {
                     </p>
                     <div className="service-arrow d-flex gap-2">
                       <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        <i className="fas fa-phone me-1"></i>Call
+                        <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
                       <Link href="/contact" className="theme-btn" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        Get Quote<i className="far fa-arrow-right ms-1"></i>
+                        Get Quote<FontAwesomeIcon icon={faArrowRight} className="ms-1" />
                       </Link>
                     </div>
                   </div>
@@ -222,10 +249,11 @@ export default function Home() {
                       height={600}
                       loading="lazy"
                       className="img-fluid"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                   <div className="service-icon">
-                    <i className="fad fa-house-flood"></i>
+                    <FontAwesomeIcon icon={faHouseFlood} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
@@ -237,10 +265,10 @@ export default function Home() {
                     </p>
                     <div className="service-arrow d-flex gap-2">
                       <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        <i className="fas fa-phone me-1"></i>Call
+                        <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
                       <Link href="/contact" className="theme-btn" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        Get Quote<i className="far fa-arrow-right ms-1"></i>
+                        Get Quote<FontAwesomeIcon icon={faArrowRight} className="ms-1" />
                       </Link>
                     </div>
                   </div>
@@ -274,7 +302,7 @@ export default function Home() {
                   </p>
                   <div className="review-badge mb-4">
                     <span className="badge" style={{background: 'rgba(255,255,255,0.2)', color: '#fff', padding: '10px 25px', borderRadius: '30px', fontSize: '16px'}}>
-                      <i className="fas fa-star me-2" style={{color: '#FFD700'}}></i>
+                      <FontAwesomeIcon icon={faStar} className="me-2" style={{color: '#FFD700'}} />
                       <strong>4.9/5 Stars</strong> from <strong>250+ Reviews</strong>
                     </span>
                   </div>
@@ -284,9 +312,9 @@ export default function Home() {
             <TestimonialSlider />
             <div className="row mt-4">
               <div className="col-12 text-center">
-                <a href="/contact" className="theme-btn">
-                  Read More Reviews<i className="far fa-arrow-right ms-2"></i>
-                </a>
+                <Link href="/contact" className="theme-btn">
+                  Read More Reviews<FontAwesomeIcon icon={faArrowRight} className="ms-2" />
+                </Link>
               </div>
             </div>
           </div>
@@ -294,13 +322,21 @@ export default function Home() {
         {/* testimonial-area end */}
 
         {/* video area */}
-        <div className="video-area" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop)'}}>
-          <div className="container">
+        <div className="video-area" style={{position: 'relative', overflow: 'hidden'}}>
+          <Image 
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop"
+            alt="Video Background"
+            fill
+            style={{objectFit: 'cover', zIndex: -1}}
+            loading="lazy"
+            sizes="100vw"
+          />
+          <div className="container" style={{position: 'relative', zIndex: 1}}>
             <div className="row align-items-center">
               <div className="col-lg-12">
                 <div className="video-wrapper">
                   <a className="play-btn popup-youtube" href="https://www.youtube.com/watch?v=ckHzmP1evNU">
-                    <i className="fas fa-play"></i>
+                    <FontAwesomeIcon icon={faPlay} />
                   </a>
                 </div>
               </div>
@@ -323,6 +359,7 @@ export default function Home() {
                       height={600}
                       loading="lazy"
                       className="img-fluid"
+                      sizes="(max-width: 991px) 100vw, 40vw"
                     />
                   </div>
                 </div>
@@ -350,9 +387,9 @@ export default function Home() {
                   <p>If you don&apos;t find the answer you&apos;re looking for, feel free to contact us directly.</p>
                   <div className="d-flex gap-3 mt-5">
                     <a href="tel:+12145550123" className="theme-btn theme-btn2">
-                      <i className="fas fa-phone me-2"></i>Call (214) 555-0123
+                      <FontAwesomeIcon icon={faPhone} className="me-2" />Call (214) 555-0123
                     </a>
-                    <Link href="/contact" className="theme-btn">Ask Your Question <i className="far fa-arrow-right ms-2"></i></Link>
+                    <Link href="/contact" className="theme-btn">Ask Your Question <FontAwesomeIcon icon={faArrowRight} className="ms-2" /></Link>
                   </div>    
                 </div>
               </div>
@@ -362,7 +399,7 @@ export default function Home() {
                     <h2 className="accordion-header" id="headingOne">
                       <button className="accordion-button" type="button" data-bs-toggle="collapse"
                           data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          <span><i className="far fa-question"></i></span> What services do you provide?
+                          <span><FontAwesomeIcon icon={faQuestion} /></span> What services do you provide?
                       </button>
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show"
@@ -378,7 +415,7 @@ export default function Home() {
                     <h2 className="accordion-header" id="headingTwo">
                       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                           data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          <span><i className="far fa-question"></i></span> Do you offer emergency services?
+                          <span><FontAwesomeIcon icon={faQuestion} /></span> Do you offer emergency services?
                       </button>
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
@@ -394,7 +431,7 @@ export default function Home() {
                       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                           data-bs-target="#collapseThree" aria-expanded="false"
                           aria-controls="collapseThree">
-                          <span><i className="far fa-question"></i></span> What areas do you serve?
+                          <span><FontAwesomeIcon icon={faQuestion} /></span> What areas do you serve?
                       </button>
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse"
@@ -461,14 +498,15 @@ export default function Home() {
                     height={400}
                     loading="lazy"
                     className="img-fluid"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="team-content">
                     <div className="team-social">
-                      <a href="#"><i className="fab fa-facebook-f"></i></a>
-                      <a href="#"><i className="fab fa-twitter"></i></a>
-                      <a href="#"><i className="fab fa-instagram"></i></a>
-                      <a href="#"><i className="fab fa-linkedin"></i></a>
-                      <a href="#"><i className="fab fa-youtube"></i></a>
+                      <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+                      <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
+                      <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+                      <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
+                      <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
                     </div>
                     <div className="team-bio">
                       <h5><Link href="/team">George Hooks</Link></h5>
@@ -486,14 +524,15 @@ export default function Home() {
                     height={400}
                     loading="lazy"
                     className="img-fluid"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="team-content">
                     <div className="team-social">
-                      <a href="#"><i className="fab fa-facebook-f"></i></a>
-                      <a href="#"><i className="fab fa-twitter"></i></a>
-                      <a href="#"><i className="fab fa-instagram"></i></a>
-                      <a href="#"><i className="fab fa-linkedin"></i></a>
-                      <a href="#"><i className="fab fa-youtube"></i></a>
+                      <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+                      <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
+                      <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+                      <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
+                      <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
                     </div>
                     <div className="team-bio">
                       <h5><Link href="/team">Veron Reyn</Link></h5>
@@ -512,14 +551,15 @@ export default function Home() {
                     height={400}
                     loading="lazy"
                     className="img-fluid"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="team-content">
                     <div className="team-social">
-                      <a href="#"><i className="fab fa-facebook-f"></i></a>
-                      <a href="#"><i className="fab fa-twitter"></i></a>
-                      <a href="#"><i className="fab fa-instagram"></i></a>
-                      <a href="#"><i className="fab fa-linkedin"></i></a>
-                      <a href="#"><i className="fab fa-youtube"></i></a>
+                      <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+                      <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
+                      <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+                      <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
+                      <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
                     </div>
                     <div className="team-bio">
                       <h5><Link href="/team">Karl Hart</Link></h5>
@@ -538,14 +578,15 @@ export default function Home() {
                     height={400}
                     loading="lazy"
                     className="img-fluid"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="team-content">
                     <div className="team-social">
-                      <a href="#"><i className="fab fa-facebook-f"></i></a>
-                      <a href="#"><i className="fab fa-twitter"></i></a>
-                      <a href="#"><i className="fab fa-instagram"></i></a>
-                      <a href="#"><i className="fab fa-linkedin"></i></a>
-                      <a href="#"><i className="fab fa-youtube"></i></a>
+                      <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+                      <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
+                      <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+                      <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
+                      <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
                     </div>
                     <div className="team-bio">
                       <h5><Link href="/team">Adam Coon</Link></h5>
@@ -578,28 +619,28 @@ export default function Home() {
             <div className="row">
               <div className="col-md-6 col-lg-3 mb-4">
                 <div className="service-area-item text-center p-4" style={{background: '#fff', borderRadius: '10px', boxShadow: '0 3px 15px rgba(0,0,0,0.1)'}}>
-                  <i className="fas fa-map-marker-alt mb-3" style={{fontSize: '30px', color: '#0000FF'}}></i>
+                  <FontAwesomeIcon icon={faMapMarkerAlt} className="mb-3" style={{fontSize: '30px', color: '#0000FF'}} />
                   <h5>Dallas</h5>
                   <p className="mb-0">Downtown & Surrounding</p>
                 </div>
               </div>
               <div className="col-md-6 col-lg-3 mb-4">
                 <div className="service-area-item text-center p-4" style={{background: '#fff', borderRadius: '10px', boxShadow: '0 3px 15px rgba(0,0,0,0.1)'}}>
-                  <i className="fas fa-map-marker-alt mb-3" style={{fontSize: '30px', color: '#0000FF'}}></i>
+                  <FontAwesomeIcon icon={faMapMarkerAlt} className="mb-3" style={{fontSize: '30px', color: '#0000FF'}} />
                   <h5>Sunnyvale</h5>
                   <p className="mb-0">Full Service Area</p>
                 </div>
               </div>
               <div className="col-md-6 col-lg-3 mb-4">
                 <div className="service-area-item text-center p-4" style={{background: '#fff', borderRadius: '10px', boxShadow: '0 3px 15px rgba(0,0,0,0.1)'}}>
-                  <i className="fas fa-map-marker-alt mb-3" style={{fontSize: '30px', color: '#0000FF'}}></i>
+                  <FontAwesomeIcon icon={faMapMarkerAlt} className="mb-3" style={{fontSize: '30px', color: '#0000FF'}} />
                   <h5>Mesquite</h5>
                   <p className="mb-0">Complete Coverage</p>
                 </div>
               </div>
               <div className="col-md-6 col-lg-3 mb-4">
                 <div className="service-area-item text-center p-4" style={{background: '#fff', borderRadius: '10px', boxShadow: '0 3px 15px rgba(0,0,0,0.1)'}}>
-                  <i className="fas fa-map-marker-alt mb-3" style={{fontSize: '30px', color: '#0000FF'}}></i>
+                  <FontAwesomeIcon icon={faMapMarkerAlt} className="mb-3" style={{fontSize: '30px', color: '#0000FF'}} />
                   <h5>Garland</h5>
                   <p className="mb-0">24/7 Available</p>
                 </div>
@@ -611,7 +652,7 @@ export default function Home() {
                   <strong>Not sure if we service your area?</strong>
                 </p>
                 <a href="tel:+12145550123" className="theme-btn">
-                  <i className="fas fa-phone me-2"></i>Call (214) 555-0123 to Confirm
+                  <FontAwesomeIcon icon={faPhone} className="me-2" />Call (214) 555-0123 to Confirm
                 </a>
               </div>
             </div>

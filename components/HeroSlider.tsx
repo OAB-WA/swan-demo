@@ -2,8 +2,12 @@
 
 import { useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faLongArrowLeft, faLongArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function HeroSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })])
@@ -30,11 +34,18 @@ export default function HeroSlider() {
   return (
     <div className="hero-section hero-slider-wrapper embla" ref={emblaRef}>
       <div className="hero-slider embla__container d-flex">
-        <div 
-          className="hero-single embla__slide w-100 flex-shrink-0" 
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop)', minWidth: '100%' }}
-        >
-          <div className="container">
+        {/* Slide 1 */}
+        <div className="hero-single embla__slide w-100 flex-shrink-0" style={{ position: 'relative', minHeight: '600px', minWidth: '100%' }}>
+          {/* Performance: Use next/image with priority and sizes for mobile LCP optimization */}
+          <Image
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=70"
+            alt="Professional Plumbing Services"
+            fill
+            priority
+            style={{ objectFit: 'cover', zIndex: -1 }}
+            sizes="100vw"
+          />
+          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div className="row align-items-center">
               <div className="col-md-7 col-lg-7">
                 <div className="hero-content">
@@ -66,10 +77,10 @@ export default function HeroSlider() {
                     data-wow-delay="1s"
                   >
                     <a href="tel:+12145550123" className="theme-btn" style={{marginRight: '15px'}}>
-                      <i className="fas fa-phone me-2"></i>Call (214) 555-0123
+                      <FontAwesomeIcon icon={faPhone} className="me-2" />Call (214) 555-0123
                     </a>
                     <Link href="/contact" className="theme-btn theme-btn2">
-                      Get Free Quote<i className="far fa-arrow-right ms-2"></i>
+                      Get Free Quote<FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                     </Link>
                   </div>
                 </div>
@@ -77,11 +88,17 @@ export default function HeroSlider() {
             </div>
           </div>
         </div>
-        <div 
-          className="hero-single embla__slide w-100 flex-shrink-0" 
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1920&h=1080&fit=crop)', minWidth: '100%' }}
-        >
-          <div className="container">
+
+        {/* Slide 2 */}
+        <div className="hero-single embla__slide w-100 flex-shrink-0" style={{ position: 'relative', minHeight: '600px', minWidth: '100%' }}>
+          <Image
+            src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&q=70"
+            alt="Trusted Service Provider"
+            fill
+            style={{ objectFit: 'cover', zIndex: -1 }}
+            sizes="100vw"
+          />
+          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div className="row align-items-center">
               <div className="col-md-7 col-lg-7">
                 <div className="hero-content">
@@ -113,10 +130,10 @@ export default function HeroSlider() {
                     data-wow-delay="1s"
                   >
                     <a href="tel:+12145550123" className="theme-btn" style={{marginRight: '15px'}}>
-                      <i className="fas fa-phone me-2"></i>Call (214) 555-0123
+                      <FontAwesomeIcon icon={faPhone} className="me-2" />Call (214) 555-0123
                     </a>
                     <Link href="/contact" className="theme-btn theme-btn2">
-                      Get Free Quote<i className="far fa-arrow-right ms-2"></i>
+                      Get Free Quote<FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                     </Link>
                   </div>
                 </div>
@@ -127,17 +144,17 @@ export default function HeroSlider() {
       </div>
       
       {/* Performance: Custom simple arrows to avoid jQuery Owl dependencies */}
-      <button className="embla__prev" onClick={() => emblaApi?.scrollPrev()} style={{
+      <button className="embla__prev" onClick={() => emblaApi?.scrollPrev()} aria-label="Previous Slide" style={{
         position: 'absolute', top: '50%', left: '20px', transform: 'translateY(-50%)',
         background: 'rgba(255,255,255,0.2)', border: 'none', color: '#fff', padding: '10px 15px', borderRadius: '50%', zIndex: 10
       }}>
-        <i className="far fa-long-arrow-left"></i>
+        <FontAwesomeIcon icon={faLongArrowLeft} />
       </button>
-      <button className="embla__next" onClick={() => emblaApi?.scrollNext()} style={{
+      <button className="embla__next" onClick={() => emblaApi?.scrollNext()} aria-label="Next Slide" style={{
         position: 'absolute', top: '50%', right: '20px', transform: 'translateY(-50%)',
         background: 'rgba(255,255,255,0.2)', border: 'none', color: '#fff', padding: '10px 15px', borderRadius: '50%', zIndex: 10
       }}>
-        <i className="far fa-long-arrow-right"></i>
+        <FontAwesomeIcon icon={faLongArrowRight} />
       </button>
     </div>
   )

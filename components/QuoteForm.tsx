@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useCallback } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 export default function QuoteForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -42,11 +44,11 @@ export default function QuoteForm() {
         <h6>Get Your Free Quote Today</h6>
         <h2>Request A Quote</h2>
         <p className="mb-3" style={{fontSize: '14px', color: '#666'}}>
-          <i className="fas fa-check-circle me-2" style={{color: '#0000FF'}}></i>No Obligation
+          <FontAwesomeIcon icon={faCheckCircle} className="me-2" style={{color: '#0000FF'}} />No Obligation
           <span className="mx-2">|</span>
-          <i className="fas fa-check-circle me-2" style={{color: '#0000FF'}}></i>Free Estimates
+          <FontAwesomeIcon icon={faCheckCircle} className="me-2" style={{color: '#0000FF'}} />Free Estimates
           <span className="mx-2">|</span>
-          <i className="fas fa-check-circle me-2" style={{color: '#0000FF'}}></i>Same-Day Response
+          <FontAwesomeIcon icon={faCheckCircle} className="me-2" style={{color: '#0000FF'}} />Same-Day Response
         </p>
       </div>
       <form onSubmit={handleSubmit}>
@@ -120,7 +122,7 @@ export default function QuoteForm() {
         )}
         
         <button type="submit" className="theme-btn w-100" disabled={status === 'loading'}>
-          <i className="far fa-paper-plane me-2"></i> 
+          <FontAwesomeIcon icon={faPaperPlane} className="me-2" /> 
           {status === 'loading' ? 'Sending...' : 'Get My Free Quote'}
         </button>
         

@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
   title: 'Projects - Swan Electric, Plumbing, Heating & Air',
@@ -62,9 +64,9 @@ export default function ProjectsPage() {
                         loading="lazy"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
-                      <a className="popup-img case-link" href={project.image}>
-                        <i className="far fa-plus"></i>
-                      </a>
+                      <div className="popup-img case-link">
+                        <FontAwesomeIcon icon={faPlus} />
+                      </div>
                     </div>
                     <div className="case-content">
                       <div className="case-content-info">
@@ -74,7 +76,7 @@ export default function ProjectsPage() {
                         <small>{project.category}</small>
                       </div>
                       <Link href={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`} className="case-arrow">
-                        <i className="far fa-arrow-right"></i>
+                        <FontAwesomeIcon icon={faArrowRight} />
                       </Link>
                     </div>
                   </div>

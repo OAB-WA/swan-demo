@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faQuoteLeft, faStar } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
   title: 'Testimonials - Swan Electric, Plumbing, Heating & Air',
@@ -85,10 +87,10 @@ export default function TestimonialsPage() {
             </div>
             <div className="row">
               {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="col-md-6 col-lg-4">
+                <div key={testimonial.id} className="col-md-6 col-lg-4 mb-4">
                   <div className="testimonial-single">
                     <div className="testimonial-quote">
-                      <span className="testimonial-quote-icon"><i className="fal fa-quote-left"></i></span>
+                      <span className="testimonial-quote-icon"><FontAwesomeIcon icon={faQuoteLeft} /></span>
                       <p>{testimonial.text}</p>
                     </div>
                     <div className="testimonial-content">
@@ -107,11 +109,11 @@ export default function TestimonialsPage() {
                         <h4>{testimonial.name}</h4>
                         <p>{testimonial.location}</p>
                         <div className="testimonial-rate">
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
+                          <FontAwesomeIcon icon={faStar} />
+                          <FontAwesomeIcon icon={faStar} />
+                          <FontAwesomeIcon icon={faStar} />
+                          <FontAwesomeIcon icon={faStar} />
+                          <FontAwesomeIcon icon={faStar} />
                         </div>
                       </div>
                     </div>

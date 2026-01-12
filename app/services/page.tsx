@@ -3,6 +3,16 @@ import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faTools, 
+  faGasPump, 
+  faDewpoint, 
+  faBath, 
+  faPaintRoller, 
+  faHouseFlood, 
+  faArrowRight 
+} from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
   title: 'Services - Swan Electric, Plumbing, Heating & Air',
@@ -16,42 +26,42 @@ export default function ServicesPage() {
       title: 'Kitchen Plumbing',
       description: 'Professional kitchen plumbing services including sink installation, garbage disposal, and faucet repair.',
       image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop',
-      icon: 'fad fa-tools'
+      icon: faTools
     },
     {
       id: 2,
       title: 'Gas Line Services',
       description: 'Safe and reliable gas line installation, repair, and maintenance for your home or business.',
       image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop',
-      icon: 'fad fa-gas-pump'
+      icon: faGasPump
     },
     {
       id: 3,
       title: 'Water Line Services',
       description: 'Complete water line installation, repair, and replacement services to keep your water flowing.',
       image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop',
-      icon: 'fad fa-dewpoint'
+      icon: faDewpoint
     },
     {
       id: 4,
       title: 'Bathroom Plumbing',
       description: 'Expert bathroom plumbing services including toilet repair, shower installation, and drain cleaning.',
       image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop',
-      icon: 'fad fa-bath'
+      icon: faBath
     },
     {
       id: 5,
       title: 'Pipe Line Install',
       description: 'Professional pipe installation and replacement services using quality materials and expert craftsmanship.',
       image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop',
-      icon: 'fad fa-paint-roller'
+      icon: faPaintRoller
     },
     {
       id: 6,
       title: 'Basement Plumbing',
       description: 'Comprehensive basement plumbing solutions including sump pump installation and water damage prevention.',
       image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop',
-      icon: 'fad fa-house-flood'
+      icon: faHouseFlood
     }
   ]
 
@@ -100,7 +110,7 @@ export default function ServicesPage() {
                       />
                     </div>
                     <div className="service-icon">
-                      <i className={service.icon}></i>
+                      <FontAwesomeIcon icon={service.icon} />
                     </div>
                     <div className="service-content">
                       <h3 className="service-title">
@@ -111,7 +121,7 @@ export default function ServicesPage() {
                       <p className="service-text">{service.description}</p>
                       <div className="service-arrow">
                         <Link href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="theme-btn">
-                          Read More<i className="far fa-arrow-right"></i>
+                          Read More<FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                         </Link>
                       </div>
                     </div>
