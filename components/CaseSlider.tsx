@@ -1,10 +1,12 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
 import Link from 'next/link'
+import Lightbox from 'yet-another-react-lightbox'
+import 'yet-another-react-lightbox/styles.css'
 
 const projects = [
   { id: 1, title: 'Water Line Repair', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop' },
@@ -15,36 +17,53 @@ const projects = [
 
 export default function CaseSlider() {
   const [emblaRef] = useEmblaCarousel({ loop: true, align: 'start' }, [Autoplay({ delay: 4500 })])
+  const [open, setOpen] = useState(false)
+  const [index, setIndex] = useState(0)
+
+  const slides = projects.map((p) => ({ src: p.image }))
 
   return (
-    <div className="embla" ref={emblaRef} style={{ overflow: 'hidden' }}>
-      <div className="embla__container d-flex">
-        {projects.map((project) => (
-          <div className="embla__slide col-md-6 col-lg-4 px-3" key={project.id}>
-            <div className="case-item">
-              <div className="case-img">
-                <Image 
-                  src={project.image} 
-                  alt={project.title}
-                  width={800}
-                  height={600}
-                  className="img-fluid"
-                />
-                <a className="popup-img case-link" href={project.image}> 
-                  <i className="far fa-plus"></i>
-                </a>
-              </div>
-              <div className="case-content">
-                <div className="case-content-info">
-                  <h4><Link href="/projects">{project.title}</Link></h4>
-                  <small>{project.category}</small>
+    <>
+      <div className="embla" ref={emblaRef} style={{ overflow: 'hidden' }}>
+        <div className="embla__container d-flex">
+          {projects.map((project, idx) => (
+            <div className="embla__slide col-md-6 col-lg-4 px-3" key={project.id}>
+              <div className="case-item">
+                <div className="case-img">
+                  <Image 
+                    src={project.image} 
+                    alt={project.title}
+                    width={800}
+                    height={600}
+                    className="img-fluid"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  <div className="popup-img case-link" style={{ cursor: 'pointer' }} onClick={() => {
+                    setIndex(idx)
+                    setOpen(true)
+                  }}> 
+                    <i className="far fa-plus"></i>
+                  </div>
                 </div>
-                <Link href="/projects" className="case-arrow"><i className="far fa-arrow-right"></i></Link>
+                <div className="case-content">
+                  <div className="case-content-info">
+                    <h4><Link href="/projects">{project.title}</Link></h4>
+                    <small>{project.category}</small>
+                  </div>
+                  <Link href="/projects" className="case-arrow"><i className="far fa-arrow-right"></i></Link>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={index}
+        slides={slides}
+      />
+    </>
   )
 }

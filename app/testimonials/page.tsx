@@ -100,6 +100,7 @@ export default function TestimonialsPage() {
                           height={200}
                           loading="lazy"
                           className="img-fluid"
+                          sizes="100px"
                         />
                       </div>
                       <div className="testimonial-author-info">

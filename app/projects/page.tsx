@@ -60,6 +60,7 @@ export default function ProjectsPage() {
                         width={800}
                         height={600}
                         loading="lazy"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                       <a className="popup-img case-link" href={project.image}>
                         <i className="far fa-plus"></i>

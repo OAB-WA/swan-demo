@@ -57,6 +57,7 @@ export default function TeamPage() {
                       height={400}
                       loading="lazy"
                       className="img-fluid"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     />
                     <div className="team-content">
                       <div className="team-social">

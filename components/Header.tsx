@@ -1,7 +1,30 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isSticky, setIsSticky] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsSticky(true)
+      } else {
+        setIsSticky(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
   return (
     <header className="header">
       {/* header top */}
@@ -21,11 +44,6 @@ export default function Header() {
                       <i className="far fa-envelope"></i>info@swanplumbingdemo.com
                     </a>
                   </li>
-                  {/* <li>
-                    <a href="tel:+12145550123">
-                      <i className="far fa-phone"></i>(214) 555-0123
-                    </a>
-                  </li> */}
                   <li>
                     <a href="#">
                       <i className="far fa-clock"></i> Sun - Fri (08AM - 10PM)
@@ -47,7 +65,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="main-navigation">
+      <div className={`main-navigation ${isSticky ? 'fixed-top' : ''}`}>
         <nav className="navbar navbar-expand-lg">
           <div className="container">
             <Link className="navbar-brand" href="/">
@@ -60,23 +78,28 @@ export default function Header() {
                 style={{maxWidth: '120px', height: 'auto'}}
               />
             </Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"><i className="far fa-stream"></i></span>
+            <button 
+              className="navbar-toggler" 
+              type="button" 
+              onClick={toggleMobileMenu}
+              aria-expanded={isMobileMenuOpen} 
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"><i className="far fa-stream"></i></span>
             </button>
-            <div className="collapse navbar-collapse" id="main_nav">
+            <div className={`collapse navbar-collapse ${isMobileMenuOpen ? 'show' : ''}`} id="main_nav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <Link className="nav-link active" href="/">Home</Link>
+                  <Link className="nav-link" href="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" href="/about">About</Link>
+                  <Link className="nav-link" href="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" href="/services">Services</Link>
+                  <Link className="nav-link" href="/services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" href="/contact">Contact</Link>
+                  <Link className="nav-link" href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
                 </li>
               </ul>
               <div className="header-nav-right">
@@ -84,7 +107,9 @@ export default function Header() {
                   <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{whiteSpace: 'nowrap'}}>
                     <i className="fas fa-phone me-2"></i>CALL NOW
                   </a>
-                  <Link href="/contact" className="theme-btn">GET QUOTE<i className="far fa-arrow-right ms-2"></i></Link>
+                  <Link href="/contact" className="theme-btn" onClick={() => setIsMobileMenuOpen(false)}>
+                    GET QUOTE<i className="far fa-arrow-right ms-2"></i>
+                  </Link>
                 </div>
               </div>
             </div>

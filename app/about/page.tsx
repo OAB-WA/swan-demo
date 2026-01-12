@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
 import dynamic from 'next/dynamic'
+import Counter from '@/components/Counter'
 
 // Performance: Dynamic import for client-only components
 const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { ssr: false })
@@ -115,34 +116,30 @@ export default function AboutPage() {
         <div className="counter-area pt-20 pb-20">
           <div className="container">
             <div className="row">
-              <div className="col-lg-3 col-sm-6">
-                <div className="counter-box">
-                  <div className="icon"><i className="fad fa-layer-group"></i></div>
-                  <span className="counter" data-count="+" data-to="500" data-speed="3000">500</span>
-                  <h6 className="title">+ Project Done</h6>
-                </div>
-              </div>
-              <div className="col-lg-3 col-sm-6">
-                <div className="counter-box">
-                  <div className="icon"><i className="fad fa-mug-hot"></i></div>
-                  <span className="counter" data-count="+" data-to="250" data-speed="3000">250</span>
-                  <h6 className="title">+ Happy Clients</h6>
-                </div>
-              </div>
-              <div className="col-lg-3 col-sm-6">
-                <div className="counter-box">
-                  <div className="icon"><i className="fad fa-user-friends"></i></div>
-                  <span className="counter" data-count="+" data-to="120" data-speed="3000">120</span>
-                  <h6 className="title">+ Total Employee</h6>
-                </div>
-              </div>
-              <div className="col-lg-3 col-sm-6">
-                <div className="counter-box">
-                  <div className="icon"><i className="fad fa-award"></i></div>
-                  <span className="counter" data-count="+" data-to="50" data-speed="3000">50</span>
-                  <h6 className="title">+ Win Awards</h6>
-                </div>
-              </div>
+              <Counter 
+                end={500} 
+                title="+ Project Done" 
+                icon="fad fa-layer-group" 
+                suffix="+"
+              />
+              <Counter 
+                end={250} 
+                title="+ Happy Clients" 
+                icon="fad fa-mug-hot" 
+                suffix="+"
+              />
+              <Counter 
+                end={120} 
+                title="+ Total Employee" 
+                icon="fad fa-user-friends" 
+                suffix="+"
+              />
+              <Counter 
+                end={50} 
+                title="+ Win Awards" 
+                icon="fad fa-award" 
+                suffix="+"
+              />
             </div>
           </div>
         </div>

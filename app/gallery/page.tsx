@@ -1,14 +1,17 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
-
-export const metadata = {
-  title: 'Gallery - Swan Electric, Plumbing, Heating & Air',
-  description: 'View our gallery of completed projects showcasing our plumbing, electrical, and HVAC work in Dallas, Texas.',
-}
+import Lightbox from 'yet-another-react-lightbox'
+import 'yet-another-react-lightbox/styles.css'
 
 export default function GalleryPage() {
+  const [open, setOpen] = useState(false)
+  const [index, setOpenIndex] = useState(0)
+
   const galleryImages = [
     'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop',
     'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop',
@@ -17,6 +20,8 @@ export default function GalleryPage() {
     'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop',
     'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
   ]
+
+  const slides = galleryImages.map((src) => ({ src }))
 
   return (
     <>
@@ -47,21 +52,26 @@ export default function GalleryPage() {
                 </div>
               </div>
             </div>
-            <div className="row popup-gallery" data-masonry='{"percentPosition": true }'>
-              {galleryImages.map((image, index) => (
-                <div key={index} className="col-md-4">
-                  <div className="gallery-item">
+            {/* Performance: Using standard Bootstrap grid instead of heavy Isotope library */}
+            <div className="row">
+              {galleryImages.map((image, idx) => (
+                <div key={idx} className="col-md-6 col-lg-4 mb-4">
+                  <div className="gallery-item" style={{ cursor: 'pointer' }} onClick={() => {
+                    setOpenIndex(idx)
+                    setOpen(true)
+                  }}>
                     <Image 
                       src={image} 
-                      alt={`Gallery Image ${index + 1}`}
+                      alt={`Gallery Image ${idx + 1}`}
                       width={800}
                       height={600}
                       loading="lazy"
                       className="img-fluid"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                    <a className="popup-img" href={image}>
+                    <div className="gallery-item-content">
                       <i className="far fa-plus"></i>
-                    </a>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -70,6 +80,13 @@ export default function GalleryPage() {
         </div>
         {/* gallery area end */}
       </main>
+
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={index}
+        slides={slides}
+      />
 
       <Footer />
     </>
