@@ -1,7 +1,16 @@
 import type { Metadata } from 'next'
+import { Rubik } from 'next/font/google'
 import Script from 'next/script'
 import Preloader from '@/components/Preloader'
 import FloatingCallButton from '@/components/FloatingCallButton'
+
+// Performance: Optimize Google Fonts with next/font
+const rubik = Rubik({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-rubik',
+})
 
 // Import CSS directly for Next.js optimization and bundling
 import '../public/assets/css/bootstrap.min.css'
@@ -31,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={rubik.variable}>
       <head>
         {/* Performance: Preconnect to external domains for faster resource loading */}
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
