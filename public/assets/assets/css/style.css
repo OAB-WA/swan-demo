@@ -56,7 +56,7 @@ a, a:active, a:focus, a:hover {
 }
 
 a:hover {
-  color: #0000FF;
+  color: #0049D0;
 }
 
 ul {
@@ -162,12 +162,6 @@ preloader
   left: 0;
   top: 0;
   z-index: 9999;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.preloader-deactivate {
-  opacity: 0;
-  visibility: hidden;
 }
 
 .loader {
@@ -182,7 +176,7 @@ preloader
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #0000cc;
+  background-color: #1E60AA;
   opacity: 0.6;
   position: absolute;
   top: 0;
@@ -258,7 +252,7 @@ site title css
   text-transform: uppercase;
   font-weight: 600;
   font-size: 18px;
-  color: #3333FF;
+  color: #4BA1ED;
   padding-left: 60px;
   position: relative;
 }
@@ -270,14 +264,14 @@ site title css
   height: 2px;
   bottom: 5px;
   left: 0;
-  background: #3333FF;
+  background: #4BA1ED;
 }
 
 .site-title {
   font-weight: 700;
   text-transform: capitalize;
   font-size: 40px;
-  color: #0000cc;
+  color: #0C4C93;
   margin-top: 5px;
   margin-bottom: 0;
 }
@@ -293,7 +287,7 @@ site title css
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
-  background-color: #3333FF;
+  background-color: #4BA1ED;
   width: 90px;
   overflow: hidden;
 }
@@ -569,7 +563,7 @@ theme button
   overflow: hidden;
   z-index: 1;
   border: none;
-  background: #3333FF;
+  background: #51acfb;
   box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
 }
 
@@ -580,7 +574,7 @@ theme button
   bottom: -1px;
   width: 20px;
   height: 20px;
-  background: #0000cc;
+  background: #1E60AA;
   border-radius: 50px;
   z-index: -1;
   transition: all 0.4s ease-in-out;
@@ -597,11 +591,11 @@ theme button
 }
 
 .theme-btn2 {
-  background: #0000cc;
+  background: #1E60AA;
 }
 
 .theme-btn2::before {
-  background: #3333FF;
+  background: #51acfb;
 }
 
 .theme-btn i {
@@ -701,7 +695,7 @@ header top css
 
 .header-top {
   padding: 10px 0;
-  background: #0000cc;
+  background: #1E60AA;
 }
 
 .header-top-wrapper {
@@ -785,7 +779,7 @@ nav menu css
     padding: 33px 10px 33px 0;
     font-size: 16px;
     font-weight: 600;
-    color: #0000cc;
+    color: #0C4C93;
     text-transform: uppercase;
   }
 
@@ -860,7 +854,7 @@ nav menu css
     width: 0px;
     height: 3px;
     left: 0px;
-    background: #0000cc;
+    background: #0C4C93;
     border-radius: 5px;
     bottom: 18px;
     opacity: 0;
@@ -958,7 +952,7 @@ nav menu css
 }
 
 .navbar.fixed-top .nav-item .nav-link::before {
-  color: #000099;
+  color: #00235A;
 }
 
 .navbar .navbar-brand .logo-display {
@@ -1059,13 +1053,13 @@ button.navbar-toggler:focus {
   }
 
   .navbar .nav-item .nav-link {
-    color: #000099;
+    color: #00235A;
     font-weight: 700;
     transition: all .5s ease-in-out;
   }
 
   .navbar .nav-item .nav-link:hover {
-    color: #0000FF !important;
+    color: #1d42d9 !important;
   }
 
   .navbar-toggler{
@@ -1074,7 +1068,7 @@ button.navbar-toggler:focus {
 
   .navbar-toggler-icon {
     font-size: 32px;
-    color: #000099;
+    color: #00235A;
     font-weight: 500;
     padding-right: 10px;
     margin-bottom: 10px;
@@ -1086,7 +1080,7 @@ button.navbar-toggler:focus {
   }
 
   .navbar.fixed-top .navbar-toggler-icon {
-    color: #000099;
+    color: #00235A;
   }
 
   .header-nav-right {
@@ -1181,7 +1175,7 @@ hero css
 }
 
 .hero-img-2 {
-  border: 8px solid #0000FF;
+  border: 8px solid #0795FE;
   border-radius: 50%;
   padding: 10px;
   border-left-style: dashed;
@@ -1201,7 +1195,7 @@ hero css
 }
 
 .hero-slider.owl-theme .owl-nav [class*=owl-] {
-  color: #0000FF;
+  color: #0795FE;
   font-size: 25px;
   margin: 0;
   padding: 0;
@@ -1217,7 +1211,7 @@ hero css
 
 .hero-slider.owl-theme .owl-nav [class*=owl-]:hover {
   background: #fff;
-  color: #0000FF;
+  color: #0795FE;
 }
 
 .hero-slider.owl-theme .owl-nav .owl-prev {
@@ -1288,7 +1282,7 @@ play btn
   font-size: 20px;
   text-align: center;
   background: #fff;
-  color: #0000cc !important;
+  color: #1E60AA !important;
   position: absolute;
   border-radius: 50%;
 }
@@ -1382,7 +1376,7 @@ about css
 
 .about-list li .icon span {
   font-size: 20px;
-  color: #3333FF;
+  color: #4BA1ED;
   ;
 }
 
@@ -1413,7 +1407,7 @@ about css
 
 .about-solutions-icon span {
   font-size: 50px;
-  color: #0000cc;
+  color: #1E60AA;
   position: relative;
   display: inline-block;
   transition: all 500ms linear;
@@ -1430,13 +1424,13 @@ about css
 
 .about-solutions-tex {
   font-weight: 600;
-  color: #0000cc;
+  color: #1E60AA;
   margin: 0;
   line-height: 30px;
 }
 
 .about-sticker {
-  background: #0000cc;
+  background: #1E60AA;
   position: absolute;
   right: 5px;
   top: 40px;
@@ -1686,7 +1680,7 @@ service css
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #0000cc;
+  background-color: #1E60AA;
   z-index: -1;
 }
 
@@ -1699,12 +1693,12 @@ service css
 }
 
 .service-title a {
-  color: #0000cc;
+  color: #1E60AA;
   font-size: 25px;
 }
 
 .service-title a:hover {
-  color: #3333FF;
+  color: #4BA1ED;
 }
 
 .service-content .theme-btn {
@@ -1726,18 +1720,18 @@ service single
 }
 
 .service-single-list i {
-  color: #0000cc;
+  color: #0C4C93;
   margin-right: 10px;
 }
 
 .service-details h3{
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .service-download a {
-  border: 2px solid #0000cc;
+  border: 2px solid #0C4C93;
   padding: 10px 20px;
-  color: #0000cc;
+  color: #0C4C93;
   display: block;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -1749,7 +1743,7 @@ service single
 }
 
 .service-download a:hover {
-  background-color: #0000cc;
+  background-color: #0C4C93;
   color: #fff;
 }
 
@@ -1857,7 +1851,7 @@ choose css
 .choose-icon i {
   font-size: 44px;
   line-height: 10px;
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .choose-details {
@@ -1876,7 +1870,7 @@ choose css
 
 .choose-area .choose-details .choose-item h5 {
   margin-bottom: 0;
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .choose-area {
@@ -1898,7 +1892,7 @@ choose css
   width: 82%;
   top: 50%;
   right: 72px;
-  background: #0000cc;
+  background: #0C4C93;
   z-index: -1;
   text-align: center;
   padding: 20px;
@@ -1943,7 +1937,7 @@ skill css
 
 .skill-right .site-sub-heading {
   margin-bottom: 20px;
-  color: #0000FF;
+  color: #1d42d9;
 }
 
 .skill-right .site-heading {
@@ -2000,7 +1994,7 @@ testimonial css
 ====================== */
 
 .testimonial-area {
-  background: #0000cc;
+  background: #1E60AA;
   position: relative;
   z-index: 1;
 }
@@ -2008,7 +2002,7 @@ testimonial css
 .testimonial-area::before {
   content: "";
   position: absolute;
-  background-image: url(/assets/img/testimonial/map.png);
+  background-image: url(../img/testimonial/map.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2074,7 +2068,7 @@ testimonial css
 
 .testimonial-quote-icon i {
   font-size: 50px;
-  color: #0000cc;
+  color: #1E60AA;
 }
 
 .testimonial-area .owl-dots {
@@ -2113,11 +2107,11 @@ testimonial css
 }
 
 .testimonial-area2 .testimonial-author-info h4 {
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .testimonial-area2 .testimonial-author-info p {
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 
@@ -2128,7 +2122,7 @@ counter css
 ====================== */
 
 .counter-area {
-  background: #0000cc;
+  background: #1E60AA;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -2171,7 +2165,7 @@ counter css
   height: 100px;
   width: 100px;
   font-size: 40px;
-  color: #0000cc;
+  color: #1E60AA;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2265,7 +2259,7 @@ Case studies css
   width: 50px;
   height: 50px;
   line-height: 50px;
-  color: #0000cc !important;
+  color: #1E60AA !important;
   background: #fff;
   text-align: center;
   border-radius: 50px;
@@ -2305,7 +2299,7 @@ Case studies css
 .case-content::before {
   content: "";
   position: absolute;
-  background: #0000cc;
+  background: #1E60AA;
   height: 101%;
   width: 90px;
   right: -1px;
@@ -2318,7 +2312,7 @@ Case studies css
 .case-content::after {
   content: "";
   position: absolute;
-  background: #3333FF;
+  background: #51acfb;
   height: 101%;
   width: 80px;
   right: -1px;
@@ -2330,17 +2324,17 @@ Case studies css
 
 
 .case-content-info small {
-  color: #3333FF;
+  color: #51acfb;
   font-size: 16px;
 }
 
 .case-content-info a {
   font-size: 22px;
-  color: #0000cc;
+  color: #1E60AA;
 }
 
 .case-content-info a:hover {
-  color: #3333FF;
+  color: #51acfb;
 }
 
 .case-arrow {
@@ -2362,7 +2356,7 @@ Case studies css
   font-size: 25px;
   margin: 0;
   padding: 0;
-  background: #0000cc;
+  background: #1E60AA;
   display: inline-block;
   cursor: pointer;
   height: 50px;
@@ -2427,7 +2421,7 @@ case single
 .case-sidebar-title {
   text-transform: uppercase;
   margin-bottom: 30px;
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .case-sidebar .case-sidebar-content ul li span {
@@ -2442,7 +2436,7 @@ case single
 }
 
 .case-new-project {
-  background: #0000cc !important;
+  background: #1E60AA !important;
 }
 
 .case-new-project h4 {
@@ -2452,7 +2446,7 @@ case single
 
 .new-project-btn {
   background: #fff;
-  color: #0000cc;
+  color: #0C4C93;
   border: none;
   border-radius: 50px;
   padding: 10px 25px;
@@ -2460,7 +2454,7 @@ case single
 }
 
 .new-project-btn:hover {
-  background: #3333FF;
+  background: #51acfb;
   color: #fff;
 }
 
@@ -2473,11 +2467,11 @@ case single
 }
  
 .case-details h3{
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .case-single-list i {
-  color: #0000cc;
+  color: #1E60AA;
   margin-right: 10px;
 }
 
@@ -2522,7 +2516,7 @@ blog css
 
 .blog-item-meta ul li i {
   margin-right: 5px;
-  color: #0000cc;
+  color: #1E60AA;
 }
 
 .blog-title {
@@ -2532,11 +2526,11 @@ blog css
 }
 
 .blog-title a {
-  color: #0000cc;
+  color: #1E60AA;
 }
 
 .blog-title a:hover {
-  color: #3333FF !important;
+  color: #51acfb !important;
 }
 
 
@@ -2546,14 +2540,14 @@ blog css
 
 .blog-btn {
   padding: 6px 25px;
-  border: 2px solid #0000cc;
-  color: #0000cc;
+  border: 2px solid #1E60AA;
+  color: #1E60AA;
   border-radius: 50px;
 }
 
 .blog-item-info a:hover {
-  border-color: #3333FF;
-  color: #3333FF;
+  border-color: #51acfb;
+  color: #51acfb;
 }
 
 /* ===========================
@@ -2583,7 +2577,7 @@ blog single css
 
 .blog-meta i {
   margin-right: 5px;
-  color: #0000cc;
+  color: #1E60AA;
 }
 
 .blog-meta a {
@@ -2591,17 +2585,17 @@ blog single css
 }
 
 .blog-meta a:hover {
-  color: #0000cc;
+  color: #1E60AA;
 }
 
 .blog-details-title {
   font-size: 34px;
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .blockqoute {
   background: #EEF3F7;
-  border-left: 5px solid #0000cc;
+  border-left: 5px solid #1E60AA;
   padding: 30px;
   font-size: 17px;
   font-style: italic;
@@ -2612,7 +2606,7 @@ blog single css
   margin-top: 20px;
   padding-left: 60px;
   position: relative;
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .blockqoute-author::before {
@@ -2620,7 +2614,7 @@ blog single css
   position: absolute;
   height: 2px;
   width: 40px;
-  background: #0000cc;
+  background: #0C4C93;
   left: 0;
   top: 10px;
 }
@@ -2632,7 +2626,7 @@ blog single css
 }
 
 .blog-details-tags h5{
-  color:#0000cc;
+  color:#0C4C93;
 }
 
 .blog-details-tags ul {
@@ -2642,15 +2636,15 @@ blog single css
 }
 
 .blog-details-tags ul a {
-  border: 1px solid #0000cc;
-  color: #0000cc;
+  border: 1px solid #0C4C93;
+  color: #0C4C93;
   padding: 2px 15px;
   border-radius: 50px;
   transition: all .5s ease-in-out;
 }
 
 .blog-details-tags ul a:hover {
-  background: #0000cc;
+  background: #0C4C93;
   color: #fff;
 }
 
@@ -2666,7 +2660,7 @@ blog single css
 }
 
 .blog-author-img {
-  border: 2px dashed #0000cc;
+  border: 2px dashed #1E60AA;
   padding: 5px;
   border-radius: 50%;
   width: 250px;
@@ -2678,7 +2672,7 @@ blog single css
 
 .author-name {
   font-size: 25px;
-  color: #0000cc;
+  color: #0C4C93;
   margin: 8px 0;
 }
 
@@ -2687,7 +2681,7 @@ blog single css
 }
 
 .author-info h6{
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .author-social {
@@ -2696,12 +2690,12 @@ blog single css
 
 .author-social a {
   margin-right: 10px;
-  color: #0000cc;
+  color: #0C4C93;
   transition: all .5s ease-in-out;
 }
 
 .author-social a:hover {
-  color: #3333FF;
+  color: #51acfb;
 }
 
 .blog-comments {
@@ -2709,7 +2703,7 @@ blog single css
 }
 
 .blog-comments h4{
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .blog-comments-wrapper {
@@ -2731,7 +2725,7 @@ blog single css
 }
 
 .blog-comments-content h5{
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .blog-comments-content span {
@@ -2741,11 +2735,11 @@ blog single css
 .blog-comments-content a {
   font-weight: 600;
   margin-top: 5px;
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .blog-comments-content a:hover {
-  color: #3333FF;
+  color: #51acfb;
 }
 
 .blog-comments-reply {
@@ -2768,7 +2762,7 @@ blog single css
 }
 
 .blog-comments-form .form-control:focus {
-  border-color: #0000cc;
+  border-color: #1E60AA;
 }
 
 .blog-comments-form .theme-btn i {
@@ -2823,7 +2817,7 @@ sidebar css
 }
 
 .widget .widget-title {
-  color: #0000cc;
+  color: #0C4C93;
   padding-bottom: 10px;
   margin-bottom: 30px;
   position: relative;
@@ -2833,7 +2827,7 @@ sidebar css
   position: absolute;
   content: '';
   width: 30px;
-  border-bottom: 3px solid #0000cc;
+  border-bottom: 3px solid #0C4C93;
   bottom: 0;
   left: 0;
 }
@@ -2842,7 +2836,7 @@ sidebar css
   position: absolute;
   content: '';
   width: 5px;
-  border-bottom: 3px solid #0000cc;
+  border-bottom: 3px solid #0C4C93;
   bottom: 0;
   left: 35px;
 }
@@ -2858,7 +2852,7 @@ sidebar css
 }
 
 .widget .search-form .form-control:focus {
-  border-color: #0000cc;
+  border-color: #0C4C93;
 }
 
 .widget .search-form button {
@@ -2874,7 +2868,7 @@ sidebar css
 .widget .category-list a {
   display: block;
   padding: 10px 0;
-  color: #0000cc;
+  color: #0C4C93;
   border-bottom: 1px solid #ced4da;
   transition: all .5s ease-in-out;
 }
@@ -2886,7 +2880,7 @@ sidebar css
 
 .widget .category-list a:hover {
   padding-left: 10px;
-  color: #3333FF;
+  color: #51acfb;
 }
 
 .widget .category-list a i {
@@ -2926,19 +2920,19 @@ sidebar css
 }
 
 .widget .recent-post-bio h6 a{
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .widget .recent-post-bio h6 a:hover {
-  color: #3333FF;
+  color: #51acfb;
 }
 
 .widget .social-share-link a {
   width: 35px;
   height: 35px;
   line-height: 32px;
-  border: 2px solid #0000cc;
-  color: #0000cc;
+  border: 2px solid #1E60AA;
+  color: #1E60AA;
   text-align: center;
   border-radius: 50px;
   margin-right: 5px;
@@ -2946,13 +2940,13 @@ sidebar css
 }
 
 .widget .social-share-link a:hover {
-  background: #0000cc;
+  background: #1E60AA;
   color: #fff;
 }
 
 .widget .tag-list a {
-  border: 1px solid #0000cc;
-  color: #0000cc;
+  border: 1px solid #1E60AA;
+  color: #1E60AA;
   padding: 3px 16px;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -2962,7 +2956,7 @@ sidebar css
 }
 
 .widget .tag-list a:hover {
-  background-color: #0000cc;
+  background-color: #1E60AA;
   color: #fff;
 }
 
@@ -2983,11 +2977,11 @@ contact us css
 
 .contact-form-header {
   margin-bottom: 30px;
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .contact-form-header h2 {
-  color: #0000cc;
+  color: #0C4C93;
   font-size: 30px;
   margin-bottom: 10px;
 }
@@ -3004,7 +2998,7 @@ contact us css
 }
 
 .contact-form .form-group .form-control:focus {
-  border-color: #0000cc;
+  border-color: #1E60AA;
 }
 
 .contact-map iframe {
@@ -3038,7 +3032,7 @@ contact us css
   position: absolute;
   width: 80px;
   height: 80px;
-  border: 12px solid #0000cc;
+  border: 12px solid #1E60AA;
   left: -20px;
   top: -20px;
   opacity: .1;
@@ -3049,16 +3043,16 @@ contact us css
   text-align: center;
   border-radius: 50px;
   margin-bottom: 20px;
-  color: #0000cc;
+  color: #1E60AA;
 }
 
 .contact-info h5 {
-  color: #0000cc;
+  color: #0C4C93;
   margin-bottom: 5px;
 }
 
 .contact-info p {
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 @media all and (max-width: 991px) {
@@ -3083,31 +3077,16 @@ quote css
   box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
 }
 
-.quote-thum-sticky {
-  position: sticky;
-  top: 100px;
-  bottom: 0;
-  align-self: flex-start;
-  transition: top 0.3s ease;
-}
-
-.quote-thum-sticky img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
 .quote-content .quote-header h6 {
   display: inline-block;
   font-weight: 600;
   text-transform: uppercase;
-  color: #0000cc;
+  color: #0C4C93;
   font-size: 18px;
 }
 
 .quote-content .quote-header h2 {
-  color: #0000cc;
+  color: #0C4C93;
   font-size: 35px;
   margin-bottom: 30px;
   margin-top: 10px;
@@ -3125,12 +3104,12 @@ quote css
   background-color: #F8F8FA;
   border: none;
   border-radius: 8px;
-  color: #0000cc;
+  color: #0C4C93;
   box-shadow: none;
 }
 
 .quote-content .form-control::placeholder {
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .quote-content .theme-btn i {
@@ -3195,19 +3174,19 @@ team css
 }
 
 .team-bio h5 a {
-  color: #0000cc;
+  color: #1E60AA;
 }
 
 .team-bio h5 a:hover {
-  color: #3333FF;
+  color: #51acfb;
 }
 
 .team-bio span {
-  color: #0000cc;
+  color: #1E60AA;
 }
 
 .team-social {
-  background: #0000cc;
+  background: #1E60AA;
   -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
   clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
 }
@@ -3258,7 +3237,7 @@ team single css
 .team-details-social a {
   margin-right: 15px;
   font-size: 20px;
-  color: #000099;
+  color: #00235A;
   display: inline-block;
   transition: all .5s ease-in-out;
 }
@@ -3334,7 +3313,7 @@ step/process css
   position: relative;
   border-radius: 50%;
   font-size: 40px;
-  border: 2px dashed #0000cc;
+  border: 2px dashed #1E60AA;
   padding: 5px;
   margin-bottom: 30px;
   box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
@@ -3349,7 +3328,7 @@ step/process css
   height: 35px;
   width: 35px;
   font-size: 14px;
-  background: #0000cc;
+  background: #1E60AA;
   line-height: 35px;
   border-radius: 50%;
   color: #ffffff;
@@ -3363,7 +3342,7 @@ step/process css
 }
 
 .process-single::before {
-  content: url(/assets/img/process/4.png);
+  content: url(../img/process/4.png);
   position: absolute;
   right: -65px;
   top: 34px;
@@ -3398,7 +3377,7 @@ pricing css
 .pricing-icon i {
   font-size: 60px;
   padding: 30px 30px 0px 40px;
-  color: #3333FF;
+  color: #51acfb;
 }
 
 .pricing-header {
@@ -3407,11 +3386,11 @@ pricing css
 
 .pricing-header h5 {
   font-size: 22px;
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .pricing-amount {
-  background: #0000cc;
+  background: #1E60AA;
   padding: 0 40px;
   width: 90%;
   clip-path: polygon(0% 0%, 85% 0, 100% 50%, 85% 100%, 0% 100%);
@@ -3436,7 +3415,7 @@ pricing css
 }
 
 .pricing-feature li i {
-  color: #3333FF;
+  color: #51acfb;
   margin-right: 5px;
 }
 
@@ -3472,13 +3451,13 @@ faq css
   height: 45px;
   line-height: 45px;
   border-radius: 50px;
-  background: #0000cc;
+  background: #1E60AA;
   text-align: center;
   color: #fff;
 }
 
 .faq-area .accordion-button:not(.collapsed) {
-  color: #0000cc;
+  color: #1E60AA;
   background-color: #fff;
   box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
 }
@@ -3487,12 +3466,12 @@ faq css
   border-radius: 10px !important;
   font-weight: 700;
   font-size: 18px;
-  color: #0000cc;
+  color: #1E60AA;
   box-shadow: none !important;
 }
 
 .accordion-button:not(.collapsed) {
-  border-bottom: 2px solid #0000cc;
+  border-bottom: 2px solid #1E60AA;
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -3629,7 +3608,7 @@ pagination css
 
 .pagination .page-link {
   border: none;
-  background: #0000cc;
+  background: #1E60AA;
   color: #fff;
   margin: 0 10px;
   border-radius: 50px !important;
@@ -3641,7 +3620,7 @@ pagination css
 }
 
 .pagination .page-link:hover, .pagination .page-item.active .page-link {
-  background: #3333FF;
+  background: #51acfb;
 }
 
 /* ===================
@@ -3692,7 +3671,7 @@ auth css
 }
 
 .login-form .login-header h3 {
-  color: #0000cc;
+  color: #0C4C93;
   margin-bottom: 5px;
   font-weight: 800;
 }
@@ -3710,12 +3689,12 @@ auth css
 }
 
 .login-form .login-footer a {
-  color: #3333FF;
+  color: #51acfb;
   transition: .5s;
 }
 
 .login-form .login-footer a:hover {
-  color: #000099
+  color: #00235A
 }
 
 .login-form .form-group {
@@ -3723,13 +3702,13 @@ auth css
 }
 
 .login-form label {
-  color: #0000cc;
+  color: #0C4C93;
   margin-bottom: 5px;
 }
 
 .login-form .form-group .form-control {
   border: 1px solid #e8e8e8;
-  color: #0000cc;
+  color: #0C4C93;
   border-radius: 8px;
   padding: 12px 18px;
   box-shadow: none;
@@ -3737,7 +3716,7 @@ auth css
 }
 
 .login-form .form-group .form-control:focus {
-  border-color: #0000cc;
+  border-color: #0C4C93;
 }
 
 .login-form .form-check-input {
@@ -3745,12 +3724,12 @@ auth css
 }
 
 .login-form .forgot-pass {
-  color: #3333FF;
+  color: #51acfb;
   transition: .5s;
 }
 
 .login-form .forgot-pass:hover {
-  color: #000099;
+  color: #00235A;
 }
 
 .login-form .theme-btn {
@@ -3766,7 +3745,7 @@ auth css
 }
 
 .login-form .form-check-label a {
-  color: #3333FF;
+  color: #51acfb;
   transition: .5s;
 }
 
@@ -3775,8 +3754,8 @@ auth css
 }
 
 .form-check-input:checked {
-  background-color: #3333FF;
-  border-color: #3333FF;
+  background-color: #51acfb;
+  border-color: #51acfb;
 }
 
 .other-login-signup {
@@ -3911,7 +3890,7 @@ gallery css
   border-radius: 50px;
   font-size: 20px;
   background: #fff;
-  color: #0000cc;
+  color: #1E60AA;
   text-align: center;
   left: 50%;
   top: 50%;
@@ -3948,7 +3927,7 @@ coming soon css
 .coming-soon:before {
   position: absolute;
   content: '';
-  background: #0000cc;
+  background: #1E60AA;
   width: 100%;
   height: 100%;
   top: 0;
@@ -3982,7 +3961,7 @@ coming soon css
   height: auto;
   border: none;
   border-radius: 30px;
-  background: #0000cc;
+  background: #1E60AA;
   display: inline-block;
   color: #fff;
   padding-left: 30px;
@@ -3991,7 +3970,7 @@ coming soon css
 }
 
 .coming-soon .newsletter-form button:hover {
-  background-color: #3333FF;
+  background-color: #51acfb;
   color: #fff;
 }
 
@@ -4014,8 +3993,8 @@ coming soon css
 }
 
 .coming-social a:hover {
-  background: #3333FF;
-  border-color: #3333FF;
+  background: #51acfb;
+  border-color: #51acfb;
 }
 
 .countdown-wrap {
@@ -4031,11 +4010,11 @@ coming soon css
 }
 
 .countdown-single h2 {
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .countdown-single h5 {
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 /* ===================
@@ -4049,17 +4028,17 @@ error css
 .error-wrapper h1 {
   font-size: 200px;
   font-weight: bold;
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .error-wrapper h1 span {
-  color: #3333FF;
+  color: #51acfb;
 }
 
 .error-wrapper h2 {
   margin-top: 30px;
   margin-bottom: 10px;
-  color: #0000cc;
+  color: #0C4C93;
 }
 
 .error-wrapper img {
@@ -4166,7 +4145,7 @@ footer css
 }
 
 .copyright .footer-menu li a:hover {
-  color: #3333FF;
+  color: #51acfb;
 }
 
 .copyright .copyright-text {
@@ -4176,7 +4155,7 @@ footer css
 }
 
 .copyright .copyright-text a {
-  color: #3333FF;
+  color: #51acfb;
   font-weight: 500;
 }
 
@@ -4223,7 +4202,7 @@ footer css
 
 .footer-list li a:hover {
   padding-left: 10px;
-  color: #3333FF;
+  color: #51acfb;
 }
 
 .footer-widget-box p {
@@ -4243,7 +4222,7 @@ footer css
   width: 40px;
   line-height: 36px;
   text-align: center;
-  background: #3333FF;
+  background: #51acfb;
   border: 2px solid transparent;
   color: #fff;
   border-radius: 50%;
@@ -4251,7 +4230,7 @@ footer css
 }
 
 .footer-social li a i:hover {
-  border-color: #3333FF;
+  border-color: #51acfb;
   color: #fff;
   background: transparent;
 }
@@ -4285,7 +4264,7 @@ footer css
 }
 
 .footer-newsletter .subscribe-form .theme-btn:hover {
-  color: #0000FF;
+  color: #0795FE;
 }
 
 .footer-newsletter .subscribe-form .theme-btn::before {
@@ -4322,7 +4301,7 @@ footer css
   text-align: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  color: #0000FF;
+  color: #0795FE;
 }
 
 .footer-contact-info {
@@ -4338,23 +4317,15 @@ footer css
 
 .footer-contact-info .contact-info-icon i {
   font-size: 25px;
-  color: #3333FF;
+  color: #51acfb;
 }
 
 .contact-info-item h5 {
-  color: #3333FF;
+  color: #51acfb;
 }
 
 .contact-info-item p {
   color: #fff
-}
-
-.footer-contact-info .contact-info-item p a {
-  color: #fff !important;
-}
-
-.footer-contact-info .contact-info-item p a:hover {
-  color: #0000FF !important;
 }
 
 @media all and (max-width: 1199px) {

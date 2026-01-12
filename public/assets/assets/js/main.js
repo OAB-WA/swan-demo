@@ -21,28 +21,25 @@ Version         : 1.3
     new WOW().init();
 
 
-    // hero slider - skip if already initialized by React component
-    var $heroSlider = $('.hero-slider');
-    if ($heroSlider.length && !$heroSlider.data('owl.carousel')) {
-        $heroSlider.owlCarousel({
-            loop: true,
-            nav: true,
-            dots: false,
-            margin: -1,
-            autoplay: true,
-            autoplayHoverPause: true,
-            autoplayTimeout: 5000,
-            items: 1,
-            navText: [
-                "<i class='far fa-long-arrow-left'></i>",
-                "<i class='far fa-long-arrow-right'></i>"
-            ],
-        });
+    // hero slider
+    $('.hero-slider').owlCarousel({
+        loop: true,
+        nav: true,
+        dots: false,
+        margin: -1,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplayTimeout: 5000,
+        items: 1,
+        navText: [
+            "<i class='far fa-long-arrow-left'></i>",
+            "<i class='far fa-long-arrow-right'></i>"
+        ],
+    });
 
-        $heroSlider.on('change.owl.carousel', function (event) {
-            new WOW().init();
-        });
-    }
+    $('.hero-slider').on('change.owl.carousel', function (event) {
+        new WOW().init();
+    });
 
 
     // partner-slider
