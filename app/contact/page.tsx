@@ -2,6 +2,13 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
 import ContactForm from '@/components/ContactForm'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faMapMarkerAlt, 
+  faPhone, 
+  faEnvelope, 
+  faClock 
+} from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
   title: 'Contact Us - Swan Electric, Plumbing, Heating & Air',
@@ -29,28 +36,28 @@ export default function ContactPage() {
               <div className="row">
                 <div className="col-md-6 col-lg-3">
                   <div className="contact-info">
-                    <i className="fad fa-map-marker-alt"></i>
+                    <FontAwesomeIcon icon={faMapMarkerAlt} />
                     <h5>Office Address</h5>
                     <p>309 US Highway 80 E<br />Sunnyvale, TX 75150</p>
                   </div>
                 </div>
                 <div className="col-md-6 col-lg-3">
                   <div className="contact-info">
-                    <i className="fad fa-phone"></i>
+                    <FontAwesomeIcon icon={faPhone} />
                     <h5>Call Us</h5>
                     <p><a href="tel:+12145550123">(214) 555-0123</a></p>
                   </div>
                 </div>
                 <div className="col-md-6 col-lg-3">
                   <div className="contact-info">
-                    <i className="fad fa-envelope"></i>
+                    <FontAwesomeIcon icon={faEnvelope} />
                     <h5>Email Us</h5>
                     <p><a href="mailto:info@swanplumbingdemo.com">info@swanplumbingdemo.com</a></p>
                   </div>
                 </div>
                 <div className="col-md-6 col-lg-3">
                   <div className="contact-info">
-                    <i className="fad fa-clock"></i>
+                    <FontAwesomeIcon icon={faClock} />
                     <h5>Office Open</h5>
                     <p>Sun - Fri (08AM - 10PM)</p>
                   </div>

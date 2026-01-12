@@ -2,6 +2,11 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faQuestion, 
+  faArrowRight 
+} from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
   title: 'FAQ - Swan Electric, Plumbing, Heating & Air',
@@ -40,7 +45,7 @@ export default function FAQPage() {
                     If you don&apos;t find the answer you&apos;re looking for, feel free to contact us directly.
                   </p>
                   <Link href="/contact" className="theme-btn mt-5">
-                    Ask Your Question <i className="far fa-arrow-right"></i>
+                    Ask Your Question <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                   </Link>    
                 </div>
               </div>
@@ -50,7 +55,7 @@ export default function FAQPage() {
                     <h2 className="accordion-header" id="headingOne">
                       <button className="accordion-button" type="button" data-bs-toggle="collapse"
                           data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          <span><i className="far fa-question"></i></span> What services do you provide?
+                          <span><FontAwesomeIcon icon={faQuestion} /></span> What services do you provide?
                       </button>
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show"
@@ -66,7 +71,7 @@ export default function FAQPage() {
                     <h2 className="accordion-header" id="headingTwo">
                       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                           data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          <span><i className="far fa-question"></i></span> Do you offer emergency services?
+                          <span><FontAwesomeIcon icon={faQuestion} /></span> Do you offer emergency services?
                       </button>
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
@@ -82,7 +87,7 @@ export default function FAQPage() {
                       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                           data-bs-target="#collapseThree" aria-expanded="false"
                           aria-controls="collapseThree">
-                          <span><i className="far fa-question"></i></span> What areas do you serve?
+                          <span><FontAwesomeIcon icon={faQuestion} /></span> What areas do you serve?
                       </button>
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse"
@@ -98,7 +103,7 @@ export default function FAQPage() {
                       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                           data-bs-target="#collapseFour" aria-expanded="false"
                           aria-controls="collapseFour">
-                          <span><i className="far fa-question"></i></span> Are your technicians licensed and insured?
+                          <span><FontAwesomeIcon icon={faQuestion} /></span> Are your technicians licensed and insured?
                       </button>
                     </h2>
                     <div id="collapseFour" className="accordion-collapse collapse"
@@ -114,7 +119,7 @@ export default function FAQPage() {
                       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                           data-bs-target="#collapseFive" aria-expanded="false"
                           aria-controls="collapseFive">
-                          <span><i className="far fa-question"></i></span> Do you provide free estimates?
+                          <span><FontAwesomeIcon icon={faQuestion} /></span> Do you provide free estimates?
                       </button>
                     </h2>
                     <div id="collapseFive" className="accordion-collapse collapse"

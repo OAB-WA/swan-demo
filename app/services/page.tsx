@@ -7,10 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faTools, 
   faGasPump, 
-  faDewpoint, 
+  faDroplet, 
   faBath, 
   faPaintRoller, 
-  faHouseFlood, 
+  faHouseFloodWater, 
   faArrowRight 
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -40,7 +40,7 @@ export default function ServicesPage() {
       title: 'Water Line Services',
       description: 'Complete water line installation, repair, and replacement services to keep your water flowing.',
       image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop',
-      icon: faDewpoint
+      icon: faDroplet
     },
     {
       id: 4,
@@ -61,7 +61,7 @@ export default function ServicesPage() {
       title: 'Basement Plumbing',
       description: 'Comprehensive basement plumbing solutions including sump pump installation and water damage prevention.',
       image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop',
-      icon: faHouseFlood
+      icon: faHouseFloodWater
     }
   ]
 

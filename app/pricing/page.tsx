@@ -2,6 +2,12 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faRocket, 
+  faCheck, 
+  faArrowRight 
+} from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
   title: 'Pricing - Swan Electric, Plumbing, Heating & Air',
@@ -89,7 +95,7 @@ export default function PricingPage() {
                 <div key={plan.id} className="col-md-6 col-lg-4">
                   <div className="pricing-item">
                     <div className="pricing-icon">
-                      <i className="fad fa-rocket-launch"></i>
+                      <FontAwesomeIcon icon={faRocket} />
                     </div>
                     <div className="pricing-header">
                       <h5>{plan.name}</h5>
@@ -102,14 +108,14 @@ export default function PricingPage() {
                       <ul>
                         {plan.features.map((feature, index) => (
                           <li key={index}>
-                            <i className="far fa-check"></i> {feature}
+                            <FontAwesomeIcon icon={faCheck} className="me-2" /> {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div className="pricing-footer">
                       <Link href="/contact" className="theme-btn">
-                        Get Started <i className="far fa-arrow-right"></i>
+                        Get Started <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                       </Link>
                     </div>
                   </div>

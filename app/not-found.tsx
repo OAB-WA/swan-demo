@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
   title: '404 Error - Swan Electric, Plumbing, Heating & Air',
@@ -31,7 +33,7 @@ export default function NotFound() {
                 <h2>Oops... Page Not Found!</h2>
                 <p>The page you looking for not found may be it not exist or removed.</p>
                 <Link href="/" className="theme-btn">
-                  <i className="far fa-home"></i> Go Back Home
+                  <FontAwesomeIcon icon={faHome} className="me-2" /> Go Back Home
                 </Link>
               </div>
             </div>

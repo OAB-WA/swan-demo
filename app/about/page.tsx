@@ -10,9 +10,13 @@ import Counter from '@/components/Counter'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faCheckCircle, 
-  faArrowRight 
+  faArrowRight,
+  faChartPie,
+  faLayerGroup,
+  faMugHot,
+  faUserFriends,
+  faAward
 } from '@fortawesome/free-solid-svg-icons'
-import { faChartPie } from '@fortawesome/pro-duotone-svg-icons' // We'll use fad if available or solid
 import { 
   faFacebookF, 
   faTwitter, 
@@ -20,9 +24,6 @@ import {
   faLinkedin, 
   faYoutube 
 } from '@fortawesome/free-brands-svg-icons'
-
-// Fallback for fad icon if not using Pro
-import { faPieChart } from '@fortawesome/free-solid-svg-icons'
 
 // Performance: Dynamic import for client-only components
 const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { ssr: false })
@@ -110,7 +111,7 @@ export default function AboutPage() {
                   </div>
                   <div className="about-solutions">
                     <div className="about-solutions-icon">
-                      <FontAwesomeIcon icon={faPieChart} />
+                      <FontAwesomeIcon icon={faChartPie} />
                     </div>
                     <div className="about-solutions-text-box">
                       <p className="about-solutions-tex">We Provide all Kinds of Plumbing, Electrical & HVAC Services
@@ -133,25 +134,25 @@ export default function AboutPage() {
               <Counter 
                 end={500} 
                 title="+ Project Done" 
-                icon="fad fa-layer-group" 
+                icon={faLayerGroup} 
                 suffix="+"
               />
               <Counter 
                 end={250} 
                 title="+ Happy Clients" 
-                icon="fad fa-mug-hot" 
+                icon={faMugHot} 
                 suffix="+"
               />
               <Counter 
                 end={120} 
                 title="+ Total Employee" 
-                icon="fad fa-user-friends" 
+                icon={faUserFriends} 
                 suffix="+"
               />
               <Counter 
                 end={50} 
                 title="+ Win Awards" 
-                icon="fad fa-award" 
+                icon={faAward} 
                 suffix="+"
               />
             </div>

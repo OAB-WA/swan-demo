@@ -1720,6 +1720,8 @@ service css
 
 
 /* ====================
+   Footer styles
+   ==================== */
 .footer-list li a:hover {
   padding-left: 10px;
   color: #3333FF;

@@ -14,10 +14,10 @@ import {
   faMapMarkerAlt,
   faTools,
   faGasPump,
-  faDewpoint,
+  faDroplet,
   faBath,
   faPaintRoller,
-  faHouseFlood
+  faHouseFloodWater
 } from '@fortawesome/free-solid-svg-icons'
 import { 
   faFacebookF, 
@@ -148,7 +148,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="service-icon">
-                    <FontAwesomeIcon icon={faDewpoint} />
+                    <FontAwesomeIcon icon={faDroplet} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
@@ -253,7 +253,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="service-icon">
-                    <FontAwesomeIcon icon={faHouseFlood} />
+                    <FontAwesomeIcon icon={faHouseFloodWater} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
