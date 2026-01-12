@@ -3,7 +3,6 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import HeroSlider from '@/components/HeroSlider'
-import OptimizedImage from '@/components/OptimizedImage'
 
 export default function Home() {
   return (
@@ -35,13 +34,7 @@ export default function Home() {
               <div className="col-md-6 col-lg-4">
                 <div className="service-item">
                   <div className="service-img">
-                    <OptimizedImage 
-                      src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop" 
-                      alt="Kitchen Plumbing"
-                      width={800}
-                      height={600}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
+                    <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop" alt="Kitchen Plumbing" />
                   </div>
                   <div className="service-icon">
                     <i className="fad fa-tools"></i>
@@ -68,13 +61,7 @@ export default function Home() {
               <div className="col-md-6 col-lg-4">
                 <div className="service-item">
                   <div className="service-img">
-                    <OptimizedImage 
-                      src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" 
-                      alt="Gas Line Services"
-                      width={800}
-                      height={600}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
+                    <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" alt="Gas Line Services" />
                   </div>
                   <div className="service-icon">
                     <i className="fad fa-gas-pump"></i>
@@ -101,13 +88,7 @@ export default function Home() {
               <div className="col-md-6 col-lg-4">
                 <div className="service-item">
                   <div className="service-img">
-                    <OptimizedImage 
-                      src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" 
-                      alt="Water Line Services"
-                      width={800}
-                      height={600}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
+                    <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" alt="Water Line Services" />
                   </div>
                   <div className="service-icon">
                     <i className="fad fa-dewpoint"></i>
@@ -134,13 +115,7 @@ export default function Home() {
               <div className="col-md-6 col-lg-4">
                 <div className="service-item">
                   <div className="service-img">
-                    <OptimizedImage 
-                      src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop" 
-                      alt="Bathroom Plumbing"
-                      width={800}
-                      height={600}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
+                    <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop" alt="Bathroom Plumbing" />
                   </div>
                   <div className="service-icon">
                     <i className="fad fa-bath"></i>
@@ -167,13 +142,7 @@ export default function Home() {
               <div className="col-md-6 col-lg-4">
                 <div className="service-item">
                   <div className="service-img">
-                    <OptimizedImage 
-                      src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" 
-                      alt="Pipe Line Install"
-                      width={800}
-                      height={600}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
+                    <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" alt="Pipe Line Install" />
                   </div>
                   <div className="service-icon">
                     <i className="fad fa-paint-roller"></i>
@@ -200,13 +169,7 @@ export default function Home() {
               <div className="col-md-6 col-lg-4">
                 <div className="service-item">
                   <div className="service-img">
-                    <OptimizedImage 
-                      src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" 
-                      alt="Basement Plumbing"
-                      width={800}
-                      height={600}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
+                    <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" alt="Basement Plumbing" />
                   </div>
                   <div className="service-icon">
                     <i className="fad fa-house-flood"></i>
@@ -276,13 +239,7 @@ export default function Home() {
                 </div>
                 <div className="testimonial-content">
                   <div className="testimonial-author-img">
-                    <OptimizedImage 
-                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" 
-                      alt="Customer"
-                      width={200}
-                      height={200}
-                      sizes="100px"
-                    />
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" alt="Customer" />
                   </div>
                   <div className="testimonial-author-info">
                     <h4>Sylvia H Green</h4>
@@ -307,13 +264,7 @@ export default function Home() {
                 </div>
                 <div className="testimonial-content">
                   <div className="testimonial-author-img">
-                    <OptimizedImage 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" 
-                      alt="Customer"
-                      width={200}
-                      height={200}
-                      sizes="100px"
-                    />
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Customer" />
                   </div>
                   <div className="testimonial-author-info">
                     <h4>Gordon D Novak</h4>
@@ -338,13 +289,7 @@ export default function Home() {
                 </div>
                 <div className="testimonial-content">
                   <div className="testimonial-author-img">
-                    <OptimizedImage 
-                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face" 
-                      alt="Customer"
-                      width={200}
-                      height={200}
-                      sizes="100px"
-                    />
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face" alt="Customer" />
                   </div>
                   <div className="testimonial-author-info">
                     <h4>Reid E Butt</h4>
@@ -369,13 +314,7 @@ export default function Home() {
                 </div>
                 <div className="testimonial-content">
                   <div className="testimonial-author-img">
-                    <OptimizedImage 
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" 
-                      alt="Customer"
-                      width={200}
-                      height={200}
-                      sizes="100px"
-                    />
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" alt="Customer" />
                   </div>
                   <div className="testimonial-author-info">
                     <h4>Parker Jimenez</h4>
@@ -425,13 +364,7 @@ export default function Home() {
               <div className="row align-items-start">
                 <div className="col-lg-5 col-12">
                   <div className="quote-thum quote-thum-sticky">
-                    <OptimizedImage 
-                      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop" 
-                      alt="Request A Quote"
-                      width={800}
-                      height={600}
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop" alt="Request A Quote" />
                   </div>
                 </div>
                 <div className="col-lg-7 col-12">
@@ -619,13 +552,7 @@ export default function Home() {
             <div className="row">
               <div className="col-md-6 col-lg-3">
                 <div className="team-item">
-                  <OptimizedImage 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
-                    alt="Team Member"
-                    width={400}
-                    height={400}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Team Member" />
                   <div className="team-content">
                     <div className="team-social">
                       <a href="#"><i className="fab fa-facebook-f"></i></a>
@@ -643,13 +570,7 @@ export default function Home() {
               </div>
               <div className="col-md-6 col-lg-3">
                 <div className="team-item">
-                  <OptimizedImage 
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face" 
-                    alt="Team Member"
-                    width={400}
-                    height={400}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face" alt="Team Member" />
                   <div className="team-content">
                     <div className="team-social">
                       <a href="#"><i className="fab fa-facebook-f"></i></a>
@@ -668,13 +589,7 @@ export default function Home() {
 
               <div className="col-md-6 col-lg-3">
                 <div className="team-item active">
-                  <OptimizedImage 
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" 
-                    alt="Team Member"
-                    width={400}
-                    height={400}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" alt="Team Member" />
                   <div className="team-content">
                     <div className="team-social">
                       <a href="#"><i className="fab fa-facebook-f"></i></a>
@@ -693,13 +608,7 @@ export default function Home() {
 
               <div className="col-md-6 col-lg-3">
                 <div className="team-item">
-                  <OptimizedImage 
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" 
-                    alt="Team Member"
-                    width={400}
-                    height={400}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" alt="Team Member" />
                   <div className="team-content">
                     <div className="team-social">
                       <a href="#"><i className="fab fa-facebook-f"></i></a>
@@ -784,13 +693,13 @@ export default function Home() {
         <div className="partner-area pt-70 pb-70">
           <div className="container">
             <div className="partner-wrapper partner-slider owl-carousel owl-theme">
-              <OptimizedImage src="/assets/img/partner/1.png" alt="Partner" width={150} height={80} sizes="150px" />
-              <OptimizedImage src="/assets/img/partner/2.png" alt="Partner" width={150} height={80} sizes="150px" />
-              <OptimizedImage src="/assets/img/partner/3.png" alt="Partner" width={150} height={80} sizes="150px" />
-              <OptimizedImage src="/assets/img/partner/4.png" alt="Partner" width={150} height={80} sizes="150px" />
-              <OptimizedImage src="/assets/img/partner/5.png" alt="Partner" width={150} height={80} sizes="150px" />
-              <OptimizedImage src="/assets/img/partner/6.png" alt="Partner" width={150} height={80} sizes="150px" />
-              <OptimizedImage src="/assets/img/partner/4.png" alt="Partner" width={150} height={80} sizes="150px" />
+              <img src="/assets/img/partner/1.png" alt="Partner" />
+              <img src="/assets/img/partner/2.png" alt="Partner" />
+              <img src="/assets/img/partner/3.png" alt="Partner" />
+              <img src="/assets/img/partner/4.png" alt="Partner" />
+              <img src="/assets/img/partner/5.png" alt="Partner" />
+              <img src="/assets/img/partner/6.png" alt="Partner" />
+              <img src="/assets/img/partner/4.png" alt="Partner" />
             </div>
           </div>
         </div>
