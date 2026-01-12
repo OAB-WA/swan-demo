@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/Header'
@@ -29,6 +27,11 @@ import {
 const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { ssr: false })
 const TestimonialSlider = dynamic(() => import('@/components/TestimonialSlider'), { ssr: false })
 const PartnerSlider = dynamic(() => import('@/components/PartnerSlider'), { ssr: false })
+
+export const metadata = {
+  title: 'About Us - Swan Electric, Plumbing, Heating & Air',
+  description: 'Learn about Swan Electric, Plumbing, Heating & Air - your trusted partner for plumbing, electrical, and HVAC services in Dallas, Texas.',
+}
 
 export default function AboutPage() {
   return (

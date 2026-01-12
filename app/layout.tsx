@@ -5,7 +5,8 @@ import FloatingCallButton from '@/components/FloatingCallButton'
 import ScrollReveal from '@/components/ScrollReveal'
 
 // Performance: FontAwesome tree-shaking setup
-import { config, dom } from '@fortawesome/fontawesome-svg-core'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 // Performance: Optimize Google Fonts with next/font
@@ -46,7 +47,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={rubik.variable}>
       <head>
-        <style>{dom.css()}</style>
         {/* Performance: Preconnect to external domains */}
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />

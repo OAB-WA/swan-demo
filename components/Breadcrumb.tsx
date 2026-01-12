@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface BreadcrumbProps {
   title: string
@@ -7,7 +8,15 @@ interface BreadcrumbProps {
 
 export default function Breadcrumb({ title, items }: BreadcrumbProps) {
   return (
-    <div className="site-breadcrumb" style={{background: 'url(https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=400&fit=crop)'}}>
+    <div className="site-breadcrumb" style={{ position: 'relative' }}>
+      <Image
+        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=400&fit=crop"
+        alt="Breadcrumb Background"
+        fill
+        priority
+        style={{ objectFit: 'cover', zIndex: -1 }}
+        sizes="100vw"
+      />
       <div className="container">
         <h2 className="breadcrumb-title">{title}</h2>
         <ul className="breadcrumb-menu">

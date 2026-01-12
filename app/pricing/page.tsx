@@ -3,11 +3,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-  faRocket, 
-  faCheck, 
-  faArrowRight 
-} from '@fortawesome/free-solid-svg-icons'
+import { faRocket, faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
   title: 'Pricing - Swan Electric, Plumbing, Heating & Air',

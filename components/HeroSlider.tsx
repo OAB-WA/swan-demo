@@ -38,12 +38,13 @@ export default function HeroSlider() {
         <div className="hero-single embla__slide w-100 flex-shrink-0" style={{ position: 'relative', minHeight: '600px', minWidth: '100%' }}>
           {/* Performance: Use next/image with priority and sizes for mobile LCP optimization */}
           <Image
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=70"
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop"
             alt="Professional Plumbing Services"
             fill
             priority
             style={{ objectFit: 'cover', zIndex: -1 }}
             sizes="100vw"
+            quality={85}
           />
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div className="row align-items-center">
@@ -92,11 +93,12 @@ export default function HeroSlider() {
         {/* Slide 2 */}
         <div className="hero-single embla__slide w-100 flex-shrink-0" style={{ position: 'relative', minHeight: '600px', minWidth: '100%' }}>
           <Image
-            src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&q=70"
+            src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1920&h=1080&fit=crop"
             alt="Trusted Service Provider"
             fill
             style={{ objectFit: 'cover', zIndex: -1 }}
             sizes="100vw"
+            quality={85}
           />
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div className="row align-items-center">

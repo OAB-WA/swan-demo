@@ -322,16 +322,15 @@ export default function Home() {
         {/* testimonial-area end */}
 
         {/* video area */}
-        <div className="video-area" style={{position: 'relative', overflow: 'hidden'}}>
-          <Image 
+        <div className="video-area" style={{ position: 'relative' }}>
+          <Image
             src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop"
             alt="Video Background"
             fill
-            style={{objectFit: 'cover', zIndex: -1}}
-            loading="lazy"
+            style={{ objectFit: 'cover', zIndex: -1 }}
             sizes="100vw"
           />
-          <div className="container" style={{position: 'relative', zIndex: 1}}>
+          <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-12">
                 <div className="video-wrapper">

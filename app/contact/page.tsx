@@ -3,12 +3,7 @@ import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
 import ContactForm from '@/components/ContactForm'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-  faMapMarkerAlt, 
-  faPhone, 
-  faEnvelope, 
-  faClock 
-} from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt, faPhone, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
   title: 'Contact Us - Swan Electric, Plumbing, Heating & Air',
