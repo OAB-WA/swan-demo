@@ -3,6 +3,7 @@ import { Rubik } from 'next/font/google'
 import Script from 'next/script'
 import Preloader from '@/components/Preloader'
 import FloatingCallButton from '@/components/FloatingCallButton'
+import ScrollReveal from '@/components/ScrollReveal'
 
 // Performance: Optimize Google Fonts with next/font
 const rubik = Rubik({
@@ -25,13 +26,16 @@ export const metadata: Metadata = {
   title: 'Swan Electric, Plumbing, Heating & Air - Dallas, TX',
   description: 'Professional plumbing, electrical, and HVAC services in Dallas, Texas. Trusted experts for all your home service needs.',
   keywords: 'plumbing, electrical, HVAC, Dallas, Texas, Sunnyvale, home services',
-  // Performance: Add viewport for mobile optimization
-  viewport: 'width=device-width, initial-scale=1',
   // Performance: Optimize metadata for better SEO and performance
   openGraph: {
     type: 'website',
     locale: 'en_US',
   },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -53,29 +57,25 @@ export default function RootLayout({
       </head>
       <body>
         <Preloader />
+        <ScrollReveal />
         {children}
         <FloatingCallButton />
 
         {/* Performance Optimization: Load critical scripts first, defer non-critical ones */}
-        {/* jQuery must load before interactive for carousel functionality */}
-        <Script src="/assets/js/jquery-3.6.0.min.js" strategy="beforeInteractive" />
         {/* Modernizr for feature detection - needed early */}
         <Script src="/assets/js/modernizr.min.js" strategy="beforeInteractive" />
         
-        {/* Bootstrap and jQuery plugins - load after page is interactive */}
+        {/* jQuery and core plugins - load after interactive since Slider is now React-based */}
+        <Script src="/assets/js/jquery-3.6.0.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
-        <Script src="/assets/js/imagesloaded.pkgd.min.js" strategy="afterInteractive" />
-        <Script src="/assets/js/jquery.magnific-popup.min.js" strategy="afterInteractive" />
-        <Script src="/assets/js/isotope.pkgd.min.js" strategy="afterInteractive" />
-        <Script src="/assets/js/jquery.appear.min.js" strategy="afterInteractive" />
-        <Script src="/assets/js/jquery.easing.min.js" strategy="afterInteractive" />
         
-        {/* Carousel - critical for hero slider, load after interactive */}
-        <Script src="/assets/js/owl.carousel.min.js" strategy="afterInteractive" />
-        
-        {/* Non-critical scripts - lazy load to improve initial page load */}
+        {/* Non-critical jQuery plugins - lazy load */}
+        <Script src="/assets/js/imagesloaded.pkgd.min.js" strategy="lazyOnload" />
+        <Script src="/assets/js/jquery.magnific-popup.min.js" strategy="lazyOnload" />
+        <Script src="/assets/js/isotope.pkgd.min.js" strategy="lazyOnload" />
+        <Script src="/assets/js/jquery.appear.min.js" strategy="lazyOnload" />
+        <Script src="/assets/js/jquery.easing.min.js" strategy="lazyOnload" />
         <Script src="/assets/js/counter-up.js" strategy="lazyOnload" />
-        <Script src="/assets/js/wow.min.js" strategy="lazyOnload" />
         <Script src="/assets/js/main.js" strategy="lazyOnload" />
       </body>
     </html>

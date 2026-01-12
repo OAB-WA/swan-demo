@@ -1,12 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import dynamic from 'next/dynamic'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
+import dynamic from 'next/dynamic'
 
 // Performance: Dynamic import for client-only components
 const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { ssr: false })
+const TestimonialSlider = dynamic(() => import('@/components/TestimonialSlider'), { ssr: false })
+
+const PartnerSlider = dynamic(() => import('@/components/PartnerSlider'), { ssr: false })
 
 export const metadata = {
   title: 'About Us - Swan Electric, Plumbing, Heating & Air',
@@ -283,136 +286,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-            <div className="testimonial-slider owl-carousel owl-theme">
-              <div className="testimonial-single">
-                <div className="testimonial-quote">
-                  <span className="testimonial-quote-icon"><i className="fal fa-quote-left"></i></span>
-                  <p>
-                    Excellent service! The team was professional, punctual, and completed 
-                    the work quickly. Highly recommend for all plumbing needs.
-                  </p>
-                </div>
-                <div className="testimonial-content">
-                  <div className="testimonial-author-img">
-                    <Image 
-                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" 
-                      alt="Customer"
-                      width={200}
-                      height={200}
-                      loading="lazy"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="testimonial-author-info">
-                    <h4>Sylvia H Green</h4>
-                    <p>Dallas, TX</p>
-                    <div className="testimonial-rate">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="testimonial-single">
-                <div className="testimonial-quote">
-                  <span className="testimonial-quote-icon"><i className="fal fa-quote-left"></i></span>
-                  <p>
-                    Great experience from start to finish. The technicians were knowledgeable 
-                    and explained everything clearly. Will definitely use again!
-                  </p>
-                </div>
-                <div className="testimonial-content">
-                  <div className="testimonial-author-img">
-                    <Image 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" 
-                      alt="Customer"
-                      width={200}
-                      height={200}
-                      loading="lazy"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="testimonial-author-info">
-                    <h4>Gordon D Novak</h4>
-                    <p>Sunnyvale, TX</p>
-                    <div className="testimonial-rate">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="testimonial-single">
-                <div className="testimonial-quote">
-                  <span className="testimonial-quote-icon"><i className="fal fa-quote-left"></i></span>
-                  <p>
-                    Professional service at a fair price. They arrived on time and 
-                    completed the job efficiently. Very satisfied with the results.
-                  </p>
-                </div>
-                <div className="testimonial-content">
-                  <div className="testimonial-author-img">
-                    <Image 
-                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face" 
-                      alt="Customer"
-                      width={200}
-                      height={200}
-                      loading="lazy"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="testimonial-author-info">
-                    <h4>Reid E Butt</h4>
-                    <p>Dallas, TX</p>
-                    <div className="testimonial-rate">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="testimonial-single">
-                <div className="testimonial-quote">
-                  <span className="testimonial-quote-icon"><i className="fal fa-quote-left"></i></span>
-                  <p>
-                    Outstanding workmanship and customer service. The team went above 
-                    and beyond to ensure everything was done correctly. Highly recommended!
-                  </p>
-                </div>
-                <div className="testimonial-content">
-                  <div className="testimonial-author-img">
-                    <Image 
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" 
-                      alt="Customer"
-                      width={200}
-                      height={200}
-                      loading="lazy"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="testimonial-author-info">
-                    <h4>Parker Jimenez</h4>
-                    <p>Dallas, TX</p>
-                    <div className="testimonial-rate">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <TestimonialSlider />
           </div>
         </div>
         {/* testimonial-area end */}
@@ -433,55 +307,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-            <div className="partner-wrapper">
-              <div className="row justify-content-center align-items-center">
-                <div className="col-md-2">
-                  <div className="partner-item">
-                    <Image src="/assets/img/partner/1.png" alt="Partner" width={150} height={80} loading="lazy" />
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="partner-item">
-                    <Image src="/assets/img/partner/2.png" alt="Partner" width={150} height={80} loading="lazy" />
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="partner-item">
-                    <Image src="/assets/img/partner/3.png" alt="Partner" width={150} height={80} loading="lazy" />
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="partner-item">
-                    <Image src="/assets/img/partner/4.png" alt="Partner" width={150} height={80} loading="lazy" />
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="partner-item">
-                    <Image src="/assets/img/partner/5.png" alt="Partner" width={150} height={80} loading="lazy" />
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="partner-item">
-                    <Image src="/assets/img/partner/6.png" alt="Partner" width={150} height={80} loading="lazy" />
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="partner-item">
-                    <Image src="/assets/img/partner/2.png" alt="Partner" width={150} height={80} loading="lazy" />
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="partner-item">
-                    <Image src="/assets/img/partner/4.png" alt="Partner" width={150} height={80} loading="lazy" />
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="partner-item">
-                    <Image src="/assets/img/partner/5.png" alt="Partner" width={150} height={80} loading="lazy" />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <PartnerSlider />
           </div>
         </div>
         {/* partner area end */}

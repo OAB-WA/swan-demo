@@ -5,12 +5,15 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 
-// Performance: Dynamically import heavy carousel component to reduce initial TBT
-// Load only on client side since it depends on jQuery
+// Performance: Dynamically import heavy carousel component
 const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { 
   ssr: false,
   loading: () => <div className="hero-slider-placeholder" style={{ minHeight: '600px', background: '#f0f0f0' }}></div>
 })
+
+const CaseSlider = dynamic(() => import('@/components/CaseSlider'), { ssr: false })
+const TestimonialSlider = dynamic(() => import('@/components/TestimonialSlider'), { ssr: false })
+const PartnerSlider = dynamic(() => import('@/components/PartnerSlider'), { ssr: false })
 
 export default function Home() {
   return (
@@ -49,7 +52,6 @@ export default function Home() {
                       height={600}
                       loading="lazy"
                       className="img-fluid"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                   <div className="service-icon">
@@ -279,136 +281,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="testimonial-slider owl-carousel owl-theme">
-              <div className="testimonial-single">
-                <div className="testimonial-quote">
-                  <span className="testimonial-quote-icon"><i className="fal fa-quote-left"></i></span>
-                  <p>
-                    Excellent service! The team was professional, punctual, and completed 
-                    the work quickly. Highly recommend for all plumbing needs.
-                  </p>
-                </div>
-                <div className="testimonial-content">
-                  <div className="testimonial-author-img">
-                    <Image 
-                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" 
-                      alt="Customer"
-                      width={200}
-                      height={200}
-                      loading="lazy"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="testimonial-author-info">
-                    <h4>Sylvia H Green</h4>
-                    <p>Dallas, TX</p>
-                    <div className="testimonial-rate">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="testimonial-single">
-                <div className="testimonial-quote">
-                  <span className="testimonial-quote-icon"><i className="fal fa-quote-left"></i></span>
-                  <p>
-                    Great experience from start to finish. The technicians were knowledgeable 
-                    and explained everything clearly. Will definitely use again!
-                  </p>
-                </div>
-                <div className="testimonial-content">
-                  <div className="testimonial-author-img">
-                    <Image 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" 
-                      alt="Customer"
-                      width={200}
-                      height={200}
-                      loading="lazy"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="testimonial-author-info">
-                    <h4>Gordon D Novak</h4>
-                    <p>Sunnyvale, TX</p>
-                    <div className="testimonial-rate">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="testimonial-single">
-                <div className="testimonial-quote">
-                  <span className="testimonial-quote-icon"><i className="fal fa-quote-left"></i></span>
-                  <p>
-                    Professional service at a fair price. They arrived on time and 
-                    completed the job efficiently. Very satisfied with the results.
-                  </p>
-                </div>
-                <div className="testimonial-content">
-                  <div className="testimonial-author-img">
-                    <Image 
-                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face" 
-                      alt="Customer"
-                      width={200}
-                      height={200}
-                      loading="lazy"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="testimonial-author-info">
-                    <h4>Reid E Butt</h4>
-                    <p>Dallas, TX</p>
-                    <div className="testimonial-rate">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="testimonial-single">
-                <div className="testimonial-quote">
-                  <span className="testimonial-quote-icon"><i className="fal fa-quote-left"></i></span>
-                  <p>
-                    Outstanding workmanship and customer service. The team went above 
-                    and beyond to ensure everything was done correctly. Highly recommended!
-                  </p>
-                </div>
-                <div className="testimonial-content">
-                  <div className="testimonial-author-img">
-                    <Image 
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" 
-                      alt="Customer"
-                      width={200}
-                      height={200}
-                      loading="lazy"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="testimonial-author-info">
-                    <h4>Parker Jimenez</h4>
-                    <p>Dallas, TX</p>
-                    <div className="testimonial-rate">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <TestimonialSlider />
             <div className="row mt-4">
               <div className="col-12 text-center">
                 <a href="/contact" className="theme-btn">
@@ -556,92 +429,7 @@ export default function Home() {
               </div>
             </div>
             <div className="row popup-gallery">
-              <div className="case-slider owl-carousel owl-theme">
-                <div className="case-item">
-                  <div className="case-img">
-                    <Image 
-                      className="img-fluid" 
-                      src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" 
-                      alt="Water Line Repair"
-                      width={800}
-                      height={600}
-                      loading="lazy"
-                    />
-                    <a className="popup-img case-link" href="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop"> <i
-                            className="far fa-plus"></i></a>
-                  </div>
-                  <div className="case-content">
-                    <div className="case-content-info">
-                      <h4><Link href="/projects">Water Line Repair</Link></h4>
-                      <small>Plumbing</small>
-                    </div>
-                    <Link href="/projects" className="case-arrow"><i className="far fa-arrow-right"></i></Link>
-                  </div>
-                </div>
-                <div className="case-item">
-                  <div className="case-img">
-                    <Image 
-                      className="img-fluid" 
-                      src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop" 
-                      alt="Kitchen Plumbing"
-                      width={800}
-                      height={600}
-                      loading="lazy"
-                    />
-                    <a className="popup-img case-link" href="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop"> <i
-                            className="far fa-plus"></i></a>
-                  </div>
-                  <div className="case-content">
-                    <div className="case-content-info">
-                      <h4><Link href="/projects">Kitchen Plumbing</Link></h4>
-                      <small>Plumbing</small>
-                    </div>
-                    <Link href="/projects" className="case-arrow"><i className="far fa-arrow-right"></i></Link>
-                  </div>
-                </div>
-                <div className="case-item">
-                  <div className="case-img">
-                    <Image 
-                      className="img-fluid" 
-                      src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" 
-                      alt="Basement Plumbing"
-                      width={800}
-                      height={600}
-                      loading="lazy"
-                    />
-                    <a className="popup-img case-link" href="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop"> <i
-                            className="far fa-plus"></i></a>
-                  </div>
-                  <div className="case-content">
-                    <div className="case-content-info">
-                      <h4><Link href="/projects">Basement Plumbing</Link></h4>
-                      <small>Plumbing</small>
-                    </div>
-                    <Link href="/projects" className="case-arrow"><i className="far fa-arrow-right"></i></Link>
-                  </div>
-                </div>
-                <div className="case-item">
-                  <div className="case-img">
-                    <Image 
-                      className="img-fluid" 
-                      src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" 
-                      alt="Pipe Line Repair"
-                      width={800}
-                      height={600}
-                      loading="lazy"
-                    />
-                    <a className="popup-img case-link" href="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop"> <i
-                            className="far fa-plus"></i></a>
-                  </div>
-                  <div className="case-content">
-                    <div className="case-content-info">
-                      <h4><Link href="/projects">Pipe Line Repair</Link></h4>
-                      <small>Plumbing</small>
-                    </div>
-                    <Link href="/projects" className="case-arrow"><i className="far fa-arrow-right"></i></Link>
-                  </div>
-                </div>
-              </div>
+              <CaseSlider />
             </div>
           </div>
         </div>
@@ -673,7 +461,6 @@ export default function Home() {
                     height={400}
                     loading="lazy"
                     className="img-fluid"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="team-content">
                     <div className="team-social">
@@ -835,15 +622,7 @@ export default function Home() {
         {/* partner area */}
         <div className="partner-area pt-70 pb-70">
           <div className="container">
-            <div className="partner-wrapper partner-slider owl-carousel owl-theme">
-              <Image src="/assets/img/partner/1.png" alt="Partner" width={150} height={80} loading="lazy" />
-              <Image src="/assets/img/partner/2.png" alt="Partner" width={150} height={80} loading="lazy" />
-              <Image src="/assets/img/partner/3.png" alt="Partner" width={150} height={80} loading="lazy" />
-              <Image src="/assets/img/partner/4.png" alt="Partner" width={150} height={80} loading="lazy" />
-              <Image src="/assets/img/partner/5.png" alt="Partner" width={150} height={80} loading="lazy" />
-              <Image src="/assets/img/partner/6.png" alt="Partner" width={150} height={80} loading="lazy" />
-              <Image src="/assets/img/partner/4.png" alt="Partner" width={150} height={80} loading="lazy" />
-            </div>
+            <PartnerSlider />
           </div>
         </div>
         {/* partner area end */}
