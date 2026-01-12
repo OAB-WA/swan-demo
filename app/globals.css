@@ -38,6 +38,13 @@
   color: #0000FF !important;
 }
 
+/* Breadcrumb text color and transition */
+.site-breadcrumb .breadcrumb-title,
+.site-breadcrumb .breadcrumb-menu li,
+.site-breadcrumb .breadcrumb-menu li a {
+  color: #ffffff !important;
+}
+
 /* Responsive adjustments for header buttons */
 @media (max-width: 768px) {
   .header-nav-right .header-btn {
