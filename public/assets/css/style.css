@@ -2493,6 +2493,7 @@ contact us css
   box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
   border-radius: 10px;
   position: relative;
+  padding: 1.5rem;
 }
 
 .contact-form {

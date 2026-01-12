@@ -18,7 +18,12 @@ const projects = [
 ]
 
 export default function CaseSlider() {
-  const [emblaRef] = useEmblaCarousel({ loop: true, align: 'start' }, [Autoplay({ delay: 4500 })])
+  const [emblaRef] = useEmblaCarousel({ 
+    loop: true, 
+    align: 'start',
+    slidesToScroll: 1,
+  }, [Autoplay({ delay: 4500 })])
+  
   const [open, setOpen] = useState(false)
   const [index, setIndex] = useState(0)
 
@@ -29,7 +34,14 @@ export default function CaseSlider() {
       <div className="embla" ref={emblaRef} style={{ overflow: 'hidden' }}>
         <div className="embla__container d-flex">
           {projects.map((project, idx) => (
-            <div className="embla__slide col-md-6 col-lg-4 px-3" key={project.id}>
+            <div 
+              className="embla__slide px-3" 
+              key={project.id} 
+              style={{ 
+                flex: '0 0 100%', 
+                minWidth: 0,
+              }}
+            >
               <div className="case-item">
                 <div className="case-img">
                   <Image 
@@ -52,15 +64,26 @@ export default function CaseSlider() {
                     <h4><Link href="/projects">{project.title}</Link></h4>
                     <small>{project.category}</small>
                   </div>
-                  <Link href="/projects" className="case-arrow">
-                    <FontAwesomeIcon icon={faArrowRight} />
-                  </Link>
+                  <Link href="/projects" className="case-arrow"><FontAwesomeIcon icon={faArrowRight} /></Link>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        @media (min-width: 768px) {
+          .embla__slide {
+            flex: 0 0 50% !important;
+          }
+        }
+        @media (min-width: 1200px) {
+          .embla__slide {
+            flex: 0 0 33.333% !important;
+          }
+        }
+      `}} />
 
       <Lightbox
         open={open}

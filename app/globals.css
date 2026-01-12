@@ -27,6 +27,17 @@
   }
 }
 
+/* Sticky navbar background */
+.sticky-nav {
+  background-color: #ffffff !important;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ensure active link visibility */
+.nav-link.active {
+  color: #0000FF !important;
+}
+
 /* Responsive adjustments for header buttons */
 @media (max-width: 768px) {
   .header-nav-right .header-btn {

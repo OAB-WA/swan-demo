@@ -46,6 +46,15 @@ export default function HeroSlider() {
             sizes="100vw"
             quality={85}
           />
+          <div className="hero-overlay" style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust opacity as needed
+            zIndex: 0
+          }} />
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div className="row align-items-center">
               <div className="col-md-7 col-lg-7">
@@ -100,6 +109,15 @@ export default function HeroSlider() {
             sizes="100vw"
             quality={85}
           />
+          <div className="hero-overlay" style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust opacity as needed
+            zIndex: 0
+          }} />
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div className="row align-items-center">
               <div className="col-md-7 col-lg-7">

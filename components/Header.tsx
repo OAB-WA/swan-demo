@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faMapMarkerAlt, 
@@ -23,6 +24,7 @@ import {
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isSticky, setIsSticky] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,6 +42,13 @@ export default function Header() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
+
+  const navLinks = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'Contact', href: '/contact' },
+  ]
 
   return (
     <header className="header">
@@ -70,18 +79,18 @@ export default function Header() {
             </div>
             <div className="header-top-right">
               <div className="header-top-social">
-                <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
-                <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
-                <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
-                <a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a>
-                <a href="#"><FontAwesomeIcon icon={faWhatsapp} /></a>
+                <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+                <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
+                <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+                <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                <a href="#" aria-label="Whatsapp"><FontAwesomeIcon icon={faWhatsapp} /></a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className={`main-navigation ${isSticky ? 'fixed-top' : ''}`}>
+      <div className={`main-navigation ${isSticky ? 'fixed-top shadow-sm sticky-nav' : ''}`}>
         <nav className="navbar navbar-expand-lg">
           <div className="container">
             <Link className="navbar-brand" href="/">
@@ -107,18 +116,17 @@ export default function Header() {
             </button>
             <div className={`collapse navbar-collapse ${isMobileMenuOpen ? 'show' : ''}`} id="main_nav">
               <ul className="navbar-nav ms-auto">
-                <li className="nav-item">
-                  <Link className="nav-link" href="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" href="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" href="/services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-                </li>
+                {navLinks.map((link) => (
+                  <li className="nav-item" key={link.href}>
+                    <Link 
+                      className={`nav-link ${pathname === link.href ? 'active' : ''}`} 
+                      href={link.href} 
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
               <div className="header-nav-right">
                 <div className="header-btn d-flex gap-2">

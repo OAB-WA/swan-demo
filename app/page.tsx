@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
+import FAQAccordion from '@/components/FAQAccordion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faPhone, 
@@ -393,55 +394,23 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-lg-6">
-                <div className="accordion" id="accordionExample">
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                      <button className="accordion-button" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          <span><FontAwesomeIcon icon={faQuestion} /></span> What services do you provide?
-                      </button>
-                    </h2>
-                    <div id="collapseOne" className="accordion-collapse collapse show"
-                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                      <div className="accordion-body">
-                        We provide comprehensive plumbing services including kitchen and bathroom plumbing, 
-                        gas and water line services, pipe installation, and basement plumbing. We also offer 
-                        electrical and HVAC services for your complete home service needs.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          <span><FontAwesomeIcon icon={faQuestion} /></span> Do you offer emergency services?
-                      </button>
-                    </h2>
-                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample">
-                      <div className="accordion-body">
-                        Yes, we offer 24/7 emergency services for plumbing, electrical, and HVAC emergencies. 
-                        Contact us anytime for urgent repairs and we&apos;ll dispatch a technician to your location.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#collapseThree" aria-expanded="false"
-                          aria-controls="collapseThree">
-                          <span><FontAwesomeIcon icon={faQuestion} /></span> What areas do you serve?
-                      </button>
-                    </h2>
-                    <div id="collapseThree" className="accordion-collapse collapse"
-                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                      <div className="accordion-body">
-                        We serve the greater Dallas, Texas area including Sunnyvale and surrounding communities. 
-                        Contact us to confirm if we service your specific location.
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <FAQAccordion items={[
+                  {
+                    id: 'One',
+                    question: 'What services do you provide?',
+                    answer: 'We provide comprehensive plumbing services including kitchen and bathroom plumbing, gas and water line services, pipe installation, and basement plumbing. We also offer electrical and HVAC services for your complete home service needs.'
+                  },
+                  {
+                    id: 'Two',
+                    question: 'Do you offer emergency services?',
+                    answer: 'Yes, we offer 24/7 emergency services for plumbing, electrical, and HVAC emergencies. Contact us anytime for urgent repairs and we\'ll dispatch a technician to your location.'
+                  },
+                  {
+                    id: 'Three',
+                    question: 'What areas do you serve?',
+                    answer: 'We serve the greater Dallas, Texas area including Sunnyvale and surrounding communities. Contact us to confirm if we service your specific location.'
+                  }
+                ]} />
               </div>
             </div>
           </div>

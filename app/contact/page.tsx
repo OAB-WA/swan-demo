@@ -60,7 +60,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="contact-wrapper p-1.5 md:p-5">
+            <div className="contact-wrapper">
               <div className="row">
                 <div className="col-md-6">
                   <div className="contact-map">
