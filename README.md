@@ -9,7 +9,7 @@ This is a Next.js conversion of the Plumbox HTML template, customized for Swan E
 - ✅ jQuery plugins maintained for exact behavior
 - ✅ Next.js 14 with App Router
 - ✅ TypeScript support
-- ✅ Contact form with Resend API integration
+- ✅ Contact form API endpoint
 - ✅ Optimized for Vercel deployment
 
 ## Getting Started
@@ -25,18 +25,6 @@ This is a Next.js conversion of the Plumbox HTML template, customized for Swan E
 ```bash
 npm install
 ```
-
-2. Set up environment variables:
-Create a `.env.local` file in the root directory:
-```
-RESEND_API_KEY=your_resend_api_key_here
-```
-
-To get a Resend API key:
-1. Sign up at https://resend.com
-2. Go to API Keys section
-3. Create a new API key
-4. Add it to your `.env.local` file
 
 ### Development
 
@@ -103,8 +91,8 @@ Update company details in:
 
 ### Contact Form
 
-The contact form uses Resend API. Update the recipient email in:
-- `app/api/contact/route.ts` - Change `to` email address
+The contact form API endpoint is located at:
+- `app/api/contact/route.ts` - Currently logs form submissions to console (can be extended with your preferred email/storage solution)
 
 ## Deployment
 
@@ -112,8 +100,7 @@ The contact form uses Resend API. Update the recipient email in:
 
 1. Push your code to GitHub
 2. Import project in Vercel
-3. Add environment variable `RESEND_API_KEY`
-4. Deploy!
+3. Deploy!
 
 The site will be automatically deployed on every push to main branch.
 
