@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   title: 'Swan Electric, Plumbing, Heating & Air - Dallas, TX',
   description: 'Professional plumbing, electrical, and HVAC services in Dallas, Texas. Trusted experts for all your home service needs.',
   keywords: 'plumbing, electrical, HVAC, Dallas, Texas, Sunnyvale, home services',
+  // Performance: Add viewport for mobile optimization
+  viewport: 'width=device-width, initial-scale=1',
+  // Performance: Optimize metadata for better SEO and performance
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+  },
 }
 
 export default function RootLayout({
@@ -18,6 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Performance: Preconnect to external domains for faster resource loading */}
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        {/* Favicon */}
         <link rel="icon" type="image/webp" href="/assets/img/swan logo.webp" />
       </head>
       <body>
@@ -25,19 +36,27 @@ export default function RootLayout({
         {children}
         <FloatingCallButton />
 
-        {/* jQuery and plugins - keeping for 100% visual match */}
+        {/* Performance Optimization: Load critical scripts first, defer non-critical ones */}
+        {/* jQuery must load before interactive for carousel functionality */}
         <Script src="/assets/js/jquery-3.6.0.min.js" strategy="beforeInteractive" />
+        {/* Modernizr for feature detection - needed early */}
         <Script src="/assets/js/modernizr.min.js" strategy="beforeInteractive" />
+        
+        {/* Bootstrap and jQuery plugins - load after page is interactive */}
         <Script src="/assets/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/imagesloaded.pkgd.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/jquery.magnific-popup.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/isotope.pkgd.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/jquery.appear.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/jquery.easing.min.js" strategy="afterInteractive" />
+        
+        {/* Carousel - critical for hero slider, load after interactive */}
         <Script src="/assets/js/owl.carousel.min.js" strategy="afterInteractive" />
-        <Script src="/assets/js/counter-up.js" strategy="afterInteractive" />
-        <Script src="/assets/js/wow.min.js" strategy="afterInteractive" />
-        <Script src="/assets/js/main.js" strategy="afterInteractive" />
+        
+        {/* Non-critical scripts - lazy load to improve initial page load */}
+        <Script src="/assets/js/counter-up.js" strategy="lazyOnload" />
+        <Script src="/assets/js/wow.min.js" strategy="lazyOnload" />
+        <Script src="/assets/js/main.js" strategy="lazyOnload" />
       </body>
     </html>
   )

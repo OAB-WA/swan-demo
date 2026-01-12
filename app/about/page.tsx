@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
@@ -33,8 +34,22 @@ export default function AboutPage() {
                     <p>Satisfaction</p>
                   </div>
                   <div className="about-img">
-                    <img className="about-img-1" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop" alt="About Us" />
-                    <img className="about-img-2" src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" alt="About Us" />
+                    <Image 
+                      className="about-img-1" 
+                      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop" 
+                      alt="About Us"
+                      width={800}
+                      height={600}
+                      loading="lazy"
+                    />
+                    <Image 
+                      className="about-img-2" 
+                      src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" 
+                      alt="About Us"
+                      width={800}
+                      height={600}
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>
@@ -145,7 +160,14 @@ export default function AboutPage() {
             <div className="row">
               <div className="col-md-6 col-lg-3">
                 <div className="team-item">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Team Member" />
+                  <Image 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
+                    alt="Team Member"
+                    width={400}
+                    height={400}
+                    loading="lazy"
+                    className="img-fluid"
+                  />
                   <div className="team-content">
                     <div className="team-social">
                       <a href="#"><i className="fab fa-facebook-f"></i></a>
@@ -163,7 +185,14 @@ export default function AboutPage() {
               </div>
               <div className="col-md-6 col-lg-3">
                 <div className="team-item">
-                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face" alt="Team Member" />
+                  <Image 
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face" 
+                    alt="Team Member"
+                    width={400}
+                    height={400}
+                    loading="lazy"
+                    className="img-fluid"
+                  />
                   <div className="team-content">
                     <div className="team-social">
                       <a href="#"><i className="fab fa-facebook-f"></i></a>
@@ -181,7 +210,14 @@ export default function AboutPage() {
               </div>
               <div className="col-md-6 col-lg-3">
                 <div className="team-item active">
-                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" alt="Team Member" />
+                  <Image 
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" 
+                    alt="Team Member"
+                    width={400}
+                    height={400}
+                    loading="lazy"
+                    className="img-fluid"
+                  />
                   <div className="team-content">
                     <div className="team-social">
                       <a href="#"><i className="fab fa-facebook-f"></i></a>
@@ -199,7 +235,14 @@ export default function AboutPage() {
               </div>
               <div className="col-md-6 col-lg-3">
                 <div className="team-item">
-                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" alt="Team Member" />
+                  <Image 
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" 
+                    alt="Team Member"
+                    width={400}
+                    height={400}
+                    loading="lazy"
+                    className="img-fluid"
+                  />
                   <div className="team-content">
                     <div className="team-social">
                       <a href="#"><i className="fab fa-facebook-f"></i></a>
@@ -247,7 +290,14 @@ export default function AboutPage() {
                 </div>
                 <div className="testimonial-content">
                   <div className="testimonial-author-img">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" alt="Customer" />
+                    <Image 
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" 
+                      alt="Customer"
+                      width={200}
+                      height={200}
+                      loading="lazy"
+                      className="img-fluid"
+                    />
                   </div>
                   <div className="testimonial-author-info">
                     <h4>Sylvia H Green</h4>
@@ -272,7 +322,14 @@ export default function AboutPage() {
                 </div>
                 <div className="testimonial-content">
                   <div className="testimonial-author-img">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Customer" />
+                    <Image 
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" 
+                      alt="Customer"
+                      width={200}
+                      height={200}
+                      loading="lazy"
+                      className="img-fluid"
+                    />
                   </div>
                   <div className="testimonial-author-info">
                     <h4>Gordon D Novak</h4>
@@ -297,7 +354,14 @@ export default function AboutPage() {
                 </div>
                 <div className="testimonial-content">
                   <div className="testimonial-author-img">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face" alt="Customer" />
+                    <Image 
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face" 
+                      alt="Customer"
+                      width={200}
+                      height={200}
+                      loading="lazy"
+                      className="img-fluid"
+                    />
                   </div>
                   <div className="testimonial-author-info">
                     <h4>Reid E Butt</h4>
@@ -322,7 +386,14 @@ export default function AboutPage() {
                 </div>
                 <div className="testimonial-content">
                   <div className="testimonial-author-img">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" alt="Customer" />
+                    <Image 
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" 
+                      alt="Customer"
+                      width={200}
+                      height={200}
+                      loading="lazy"
+                      className="img-fluid"
+                    />
                   </div>
                   <div className="testimonial-author-info">
                     <h4>Parker Jimenez</h4>
@@ -362,47 +433,47 @@ export default function AboutPage() {
               <div className="row justify-content-center align-items-center">
                 <div className="col-md-2">
                   <div className="partner-item">
-                    <img src="/assets/img/partner/1.png" alt="Partner" />
+                    <Image src="/assets/img/partner/1.png" alt="Partner" width={150} height={80} loading="lazy" />
                   </div>
                 </div>
                 <div className="col-md-2">
                   <div className="partner-item">
-                    <img src="/assets/img/partner/2.png" alt="Partner" />
+                    <Image src="/assets/img/partner/2.png" alt="Partner" width={150} height={80} loading="lazy" />
                   </div>
                 </div>
                 <div className="col-md-2">
                   <div className="partner-item">
-                    <img src="/assets/img/partner/3.png" alt="Partner" />
+                    <Image src="/assets/img/partner/3.png" alt="Partner" width={150} height={80} loading="lazy" />
                   </div>
                 </div>
                 <div className="col-md-2">
                   <div className="partner-item">
-                    <img src="/assets/img/partner/4.png" alt="Partner" />
+                    <Image src="/assets/img/partner/4.png" alt="Partner" width={150} height={80} loading="lazy" />
                   </div>
                 </div>
                 <div className="col-md-2">
                   <div className="partner-item">
-                    <img src="/assets/img/partner/5.png" alt="Partner" />
+                    <Image src="/assets/img/partner/5.png" alt="Partner" width={150} height={80} loading="lazy" />
                   </div>
                 </div>
                 <div className="col-md-2">
                   <div className="partner-item">
-                    <img src="/assets/img/partner/6.png" alt="Partner" />
+                    <Image src="/assets/img/partner/6.png" alt="Partner" width={150} height={80} loading="lazy" />
                   </div>
                 </div>
                 <div className="col-md-2">
                   <div className="partner-item">
-                    <img src="/assets/img/partner/2.png" alt="Partner" />
+                    <Image src="/assets/img/partner/2.png" alt="Partner" width={150} height={80} loading="lazy" />
                   </div>
                 </div>
                 <div className="col-md-2">
                   <div className="partner-item">
-                    <img src="/assets/img/partner/4.png" alt="Partner" />
+                    <Image src="/assets/img/partner/4.png" alt="Partner" width={150} height={80} loading="lazy" />
                   </div>
                 </div>
                 <div className="col-md-2">
                   <div className="partner-item">
-                    <img src="/assets/img/partner/5.png" alt="Partner" />
+                    <Image src="/assets/img/partner/5.png" alt="Partner" width={150} height={80} loading="lazy" />
                   </div>
                 </div>
               </div>

@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 
 export default function QuoteForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  // Performance: Memoize submit handler to prevent unnecessary re-renders
+  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setStatus('loading')
     setMessage('')
@@ -33,7 +34,7 @@ export default function QuoteForm() {
       setStatus('error')
       setMessage('An error occurred. Please try again later.')
     }
-  }
+  }, [])
 
   return (
     <div className="quote-content">

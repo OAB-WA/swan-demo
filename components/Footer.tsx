@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Script from 'next/script'
 
 export default function Footer() {
@@ -11,7 +12,14 @@ export default function Footer() {
               <div className="col-md-6 col-lg-4">
                 <div className="footer-widget-box about-us">
                   <Link href="/" className="footer-logo">
-                    <img src="/assets/img/swan logo.webp" alt="Swan Electric, Plumbing, Heating & Air" style={{maxWidth: '120px', height: 'auto'}} />
+                    <Image 
+                      src="/assets/img/swan logo.webp" 
+                      alt="Swan Electric, Plumbing, Heating & Air" 
+                      width={120}
+                      height={60}
+                      loading="lazy"
+                      style={{maxWidth: '120px', height: 'auto'}}
+                    />
                   </Link>
                   <p className="mb-20">
                     Swan Electric, Plumbing, Heating & Air provides professional plumbing, electrical, and HVAC services 

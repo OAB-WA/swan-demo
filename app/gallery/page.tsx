@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
@@ -50,7 +51,14 @@ export default function GalleryPage() {
               {galleryImages.map((image, index) => (
                 <div key={index} className="col-md-4">
                   <div className="gallery-item">
-                    <img src={image} alt={`Gallery Image ${index + 1}`} />
+                    <Image 
+                      src={image} 
+                      alt={`Gallery Image ${index + 1}`}
+                      width={800}
+                      height={600}
+                      loading="lazy"
+                      className="img-fluid"
+                    />
                     <a className="popup-img" href={image}>
                       <i className="far fa-plus"></i>
                     </a>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
@@ -92,7 +93,14 @@ export default function TestimonialsPage() {
                     </div>
                     <div className="testimonial-content">
                       <div className="testimonial-author-img">
-                        <img src={testimonial.image} alt={testimonial.name} />
+                        <Image 
+                          src={testimonial.image} 
+                          alt={testimonial.name}
+                          width={200}
+                          height={200}
+                          loading="lazy"
+                          className="img-fluid"
+                        />
                       </div>
                       <div className="testimonial-author-info">
                         <h4>{testimonial.name}</h4>

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
@@ -88,7 +89,14 @@ export default function ServicesPage() {
                 <div key={service.id} className="col-md-6 col-lg-4">
                   <div className="service-item">
                     <div className="service-img">
-                      <img src={service.image} alt={service.title} />
+                      <Image 
+                        src={service.image} 
+                        alt={service.title}
+                        width={800}
+                        height={600}
+                        loading="lazy"
+                        className="img-fluid"
+                      />
                     </div>
                     <div className="service-icon">
                       <i className={service.icon}></i>

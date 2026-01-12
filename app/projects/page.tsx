@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
@@ -52,7 +53,14 @@ export default function ProjectsPage() {
                 <div key={project.id} className="col-md-6 col-lg-4">
                   <div className="case-item">
                     <div className="case-img">
-                      <img className="img-fluid" src={project.image} alt={project.title} />
+                      <Image 
+                        className="img-fluid" 
+                        src={project.image} 
+                        alt={project.title}
+                        width={800}
+                        height={600}
+                        loading="lazy"
+                      />
                       <a className="popup-img case-link" href={project.image}>
                         <i className="far fa-plus"></i>
                       </a>

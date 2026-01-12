@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   return (
@@ -50,7 +51,14 @@ export default function Header() {
         <nav className="navbar navbar-expand-lg">
           <div className="container">
             <Link className="navbar-brand" href="/">
-              <img src="/assets/img/swan logo.webp" alt="Swan Electric, Plumbing, Heating & Air" style={{maxWidth: '120px', height: 'auto'}} />
+              <Image 
+                src="/assets/img/swan logo.webp" 
+                alt="Swan Electric, Plumbing, Heating & Air" 
+                width={120}
+                height={60}
+                priority
+                style={{maxWidth: '120px', height: 'auto'}}
+              />
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">

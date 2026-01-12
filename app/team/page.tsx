@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
@@ -49,7 +50,14 @@ export default function TeamPage() {
               {teamMembers.map((member) => (
                 <div key={member.id} className="col-md-6 col-lg-3">
                   <div className={`team-item ${member.active ? 'active' : ''}`}>
-                    <img src={member.image} alt={member.name} />
+                    <Image 
+                      src={member.image} 
+                      alt={member.name}
+                      width={400}
+                      height={400}
+                      loading="lazy"
+                      className="img-fluid"
+                    />
                     <div className="team-content">
                       <div className="team-social">
                         <a href="#"><i className="fab fa-facebook-f"></i></a>

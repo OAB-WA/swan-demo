@@ -1,19 +1,21 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 
 export default function FloatingCallButton() {
   const [isVisible, setIsVisible] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // Show button after scrolling 300px
-      setIsVisible(window.scrollY > 300)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+  // Performance: Memoize scroll handler to prevent unnecessary re-renders
+  const handleScroll = useCallback(() => {
+    // Show button after scrolling 300px
+    setIsVisible(window.scrollY > 300)
   }, [])
+
+  useEffect(() => {
+    // Use passive listener for better scroll performance
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [handleScroll])
 
   if (!isVisible) return null
 
