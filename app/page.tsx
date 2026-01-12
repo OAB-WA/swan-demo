@@ -1,9 +1,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
-import HeroSlider from '@/components/HeroSlider'
+
+// Performance: Dynamically import heavy carousel component to reduce initial TBT
+// Load only on client side since it depends on jQuery
+const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { 
+  ssr: false,
+  loading: () => <div className="hero-slider-placeholder" style={{ minHeight: '600px', background: '#f0f0f0' }}></div>
+})
 
 export default function Home() {
   return (
@@ -42,6 +49,7 @@ export default function Home() {
                       height={600}
                       loading="lazy"
                       className="img-fluid"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                   <div className="service-icon">
@@ -665,6 +673,7 @@ export default function Home() {
                     height={400}
                     loading="lazy"
                     className="img-fluid"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="team-content">
                     <div className="team-social">

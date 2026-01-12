@@ -2,6 +2,14 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import Preloader from '@/components/Preloader'
 import FloatingCallButton from '@/components/FloatingCallButton'
+
+// Import CSS directly for Next.js optimization and bundling
+import '../public/assets/css/bootstrap.min.css'
+import '../public/assets/css/all-fontawesome.min.css'
+import '../public/assets/css/animate.min.css'
+import '../public/assets/css/magnific-popup.min.css'
+import '../public/assets/css/owl.carousel.min.css'
+import '../public/assets/css/style.css'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -28,6 +36,9 @@ export default function RootLayout({
         {/* Performance: Preconnect to external domains for faster resource loading */}
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        {/* Preload critical font files to fix FOUT and layout shift */}
+        <link rel="preload" href="/assets/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/assets/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         {/* Favicon */}
         <link rel="icon" type="image/webp" href="/assets/img/swan logo.webp" />
       </head>

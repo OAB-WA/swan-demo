@@ -13,23 +13,23 @@ export default function Preloader() {
     }
 
     // Try multiple methods to ensure preloader hides
-    if (document.readyState === 'complete') {
-      // Page already loaded
-      setTimeout(hidePreloader, 100)
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      // Page already loaded or interactive
+      hidePreloader()
     } else {
-      // Wait for page load
-      window.addEventListener('load', () => {
-        setTimeout(hidePreloader, 100)
-      })
+      // Wait for DOM to be ready
+      document.addEventListener('DOMContentLoaded', hidePreloader)
+      window.addEventListener('load', hidePreloader)
     }
 
-    // Fallback timeout (in case scripts don't load)
+    // Fallback timeout (shorter for better UX)
     const timeout = setTimeout(() => {
       hidePreloader()
-    }, 2000)
+    }, 1500)
 
     return () => {
       clearTimeout(timeout)
+      document.removeEventListener('DOMContentLoaded', hidePreloader)
       window.removeEventListener('load', hidePreloader)
     }
   }, [])

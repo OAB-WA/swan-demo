@@ -1,8 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
+
+// Performance: Dynamic import for client-only components
+const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { ssr: false })
 
 export const metadata = {
   title: 'About Us - Swan Electric, Plumbing, Heating & Air',
