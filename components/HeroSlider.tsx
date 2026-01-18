@@ -5,11 +5,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
+import { useBooking } from '@/contexts/BookingContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
-import { faArrowRight, faLongArrowLeft, faLongArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faLongArrowLeft, faLongArrowRight, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default function HeroSlider() {
+  const { openModal } = useBooking()
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })])
 
   // Re-trigger reveal when slide changes to match original behavior
@@ -89,9 +91,13 @@ export default function HeroSlider() {
                     <a href="tel:+12145550123" className="theme-btn" style={{marginRight: '15px'}}>
                       <FontAwesomeIcon icon={faPhone} className="me-2" />Call (214) 555-0123
                     </a>
-                    <Link href="/contact" className="theme-btn theme-btn2">
-                      Get Free Quote<FontAwesomeIcon icon={faArrowRight} className="ms-2" />
-                    </Link>
+                    <button 
+                      onClick={openModal}
+                      className="theme-btn theme-btn2"
+                      style={{border: 'none'}}
+                    >
+                      Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-2" />
+                    </button>
                   </div>
                 </div>
               </div>
@@ -152,9 +158,13 @@ export default function HeroSlider() {
                     <a href="tel:+12145550123" className="theme-btn" style={{marginRight: '15px'}}>
                       <FontAwesomeIcon icon={faPhone} className="me-2" />Call (214) 555-0123
                     </a>
-                    <Link href="/contact" className="theme-btn theme-btn2">
-                      Get Free Quote<FontAwesomeIcon icon={faArrowRight} className="ms-2" />
-                    </Link>
+                    <button 
+                      onClick={openModal}
+                      className="theme-btn theme-btn2"
+                      style={{border: 'none'}}
+                    >
+                      Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-2" />
+                    </button>
                   </div>
                 </div>
               </div>

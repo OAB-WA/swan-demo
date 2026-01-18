@@ -12,7 +12,7 @@ import { faPlus, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const projects = [
   { id: 1, title: 'Water Line Repair', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop' },
-  { id: 2, title: 'Kitchen Plumbing', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop' },
+  { id: 2, title: 'Kitchen Plumbing', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop' },
   { id: 3, title: 'Basement Plumbing', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop' },
   { id: 4, title: 'Pipe Line Repair', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop' },
 ]

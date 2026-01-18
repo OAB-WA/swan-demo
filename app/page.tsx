@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
@@ -5,6 +7,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import FAQAccordion from '@/components/FAQAccordion'
+import { useBooking } from '@/contexts/BookingContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faPhone, 
@@ -18,7 +21,8 @@ import {
   faDroplet,
   faBath,
   faPaintRoller,
-  faHouseFloodWater
+  faHouseFloodWater,
+  faCalendarAlt
 } from '@fortawesome/free-solid-svg-icons'
 import { 
   faFacebookF, 
@@ -39,6 +43,8 @@ const TestimonialSlider = dynamic(() => import('@/components/TestimonialSlider')
 const PartnerSlider = dynamic(() => import('@/components/PartnerSlider'), { ssr: false })
 
 export default function Home() {
+  const { openModal } = useBooking()
+  
   return (
     <>
       <Header />
@@ -69,7 +75,7 @@ export default function Home() {
                 <div className="service-item">
                   <div className="service-img">
                     <Image 
-                      src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop" 
+                      src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop" 
                       alt="Kitchen Plumbing"
                       width={800}
                       height={600}
@@ -93,9 +99,13 @@ export default function Home() {
                       <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
                         <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
-                      <Link href="/contact" className="theme-btn" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        Get Quote<FontAwesomeIcon icon={faArrowRight} className="ms-1" />
-                      </Link>
+                      <button 
+                        onClick={openModal}
+                        className="theme-btn" 
+                        style={{fontSize: '14px', padding: '8px 20px', border: 'none'}}
+                      >
+                        Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-1" />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -128,9 +138,13 @@ export default function Home() {
                       <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
                         <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
-                      <Link href="/contact" className="theme-btn" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        Get Quote<FontAwesomeIcon icon={faArrowRight} className="ms-1" />
-                      </Link>
+                      <button 
+                        onClick={openModal}
+                        className="theme-btn" 
+                        style={{fontSize: '14px', padding: '8px 20px', border: 'none'}}
+                      >
+                        Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-1" />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -163,9 +177,13 @@ export default function Home() {
                       <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
                         <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
-                      <Link href="/contact" className="theme-btn" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        Get Quote<FontAwesomeIcon icon={faArrowRight} className="ms-1" />
-                      </Link>
+                      <button 
+                        onClick={openModal}
+                        className="theme-btn" 
+                        style={{fontSize: '14px', padding: '8px 20px', border: 'none'}}
+                      >
+                        Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-1" />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -174,7 +192,7 @@ export default function Home() {
                 <div className="service-item">
                   <div className="service-img">
                     <Image 
-                      src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop" 
+                      src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop" 
                       alt="Bathroom Plumbing"
                       width={800}
                       height={600}
@@ -198,9 +216,13 @@ export default function Home() {
                       <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
                         <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
-                      <Link href="/contact" className="theme-btn" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        Get Quote<FontAwesomeIcon icon={faArrowRight} className="ms-1" />
-                      </Link>
+                      <button 
+                        onClick={openModal}
+                        className="theme-btn" 
+                        style={{fontSize: '14px', padding: '8px 20px', border: 'none'}}
+                      >
+                        Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-1" />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -233,9 +255,13 @@ export default function Home() {
                       <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
                         <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
-                      <Link href="/contact" className="theme-btn" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        Get Quote<FontAwesomeIcon icon={faArrowRight} className="ms-1" />
-                      </Link>
+                      <button 
+                        onClick={openModal}
+                        className="theme-btn" 
+                        style={{fontSize: '14px', padding: '8px 20px', border: 'none'}}
+                      >
+                        Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-1" />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -268,9 +294,13 @@ export default function Home() {
                       <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
                         <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
-                      <Link href="/contact" className="theme-btn" style={{fontSize: '14px', padding: '8px 20px'}}>
-                        Get Quote<FontAwesomeIcon icon={faArrowRight} className="ms-1" />
-                      </Link>
+                      <button 
+                        onClick={openModal}
+                        className="theme-btn" 
+                        style={{fontSize: '14px', padding: '8px 20px', border: 'none'}}
+                      >
+                        Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-1" />
+                      </button>
                     </div>
                   </div>
                 </div>

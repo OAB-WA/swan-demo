@@ -1,69 +1,18 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
+import { useBooking } from '@/contexts/BookingContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-  faTools, 
-  faGasPump, 
-  faDroplet, 
-  faBath, 
-  faPaintRoller, 
-  faHouseFloodWater, 
-  faArrowRight 
-} from '@fortawesome/free-solid-svg-icons'
-
-export const metadata = {
-  title: 'Services - Swan Electric, Plumbing, Heating & Air',
-  description: 'Professional plumbing, electrical, and HVAC services in Dallas, Texas. Kitchen plumbing, gas line services, water line services, and more.',
-}
+import { faArrowRight, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+import { getAllServices } from '@/lib/services'
 
 export default function ServicesPage() {
-  const services = [
-    {
-      id: 1,
-      title: 'Kitchen Plumbing',
-      description: 'Professional kitchen plumbing services including sink installation, garbage disposal, and faucet repair.',
-      image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop',
-      icon: faTools
-    },
-    {
-      id: 2,
-      title: 'Gas Line Services',
-      description: 'Safe and reliable gas line installation, repair, and maintenance for your home or business.',
-      image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop',
-      icon: faGasPump
-    },
-    {
-      id: 3,
-      title: 'Water Line Services',
-      description: 'Complete water line installation, repair, and replacement services to keep your water flowing.',
-      image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop',
-      icon: faDroplet
-    },
-    {
-      id: 4,
-      title: 'Bathroom Plumbing',
-      description: 'Expert bathroom plumbing services including toilet repair, shower installation, and drain cleaning.',
-      image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop',
-      icon: faBath
-    },
-    {
-      id: 5,
-      title: 'Pipe Line Install',
-      description: 'Professional pipe installation and replacement services using quality materials and expert craftsmanship.',
-      image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop',
-      icon: faPaintRoller
-    },
-    {
-      id: 6,
-      title: 'Basement Plumbing',
-      description: 'Comprehensive basement plumbing solutions including sump pump installation and water damage prevention.',
-      image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop',
-      icon: faHouseFloodWater
-    }
-  ]
+  const services = getAllServices()
+  const { openModal } = useBooking()
 
   return (
     <>
@@ -114,13 +63,13 @@ export default function ServicesPage() {
                     </div>
                     <div className="service-content">
                       <h3 className="service-title">
-                        <Link href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                        <Link href={`/services/${service.slug}`}>
                           {service.title}
                         </Link>
                       </h3>
                       <p className="service-text">{service.description}</p>
                       <div className="service-arrow">
-                        <Link href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="theme-btn">
+                        <Link href={`/services/${service.slug}`} className="theme-btn">
                           Read More<FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                         </Link>
                       </div>
@@ -131,10 +80,22 @@ export default function ServicesPage() {
             </div>
             <div className="row mt-4">
               <div className="col-12 text-center">
-                <p className="mb-0">
+                <p className="mb-4">
                   <strong>We also provide comprehensive Electrical and HVAC services.</strong> 
                   <Link href="/contact" className="ms-2">Contact us</Link> to learn more about our full range of home services.
                 </p>
+                <button
+                  onClick={openModal}
+                  className="theme-btn"
+                  style={{
+                    fontSize: 'clamp(16px, 3.5vw, 18px)',
+                    padding: '15px 40px',
+                    minHeight: '54px'
+                  }}
+                >
+                  <FontAwesomeIcon icon={faCalendarAlt} className="me-2" />
+                  Schedule Service Online
+                </button>
               </div>
             </div>
           </div>

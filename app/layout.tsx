@@ -3,6 +3,8 @@ import { Rubik } from 'next/font/google'
 import Preloader from '@/components/Preloader'
 import FloatingCallButton from '@/components/FloatingCallButton'
 import ScrollReveal from '@/components/ScrollReveal'
+import { BookingProvider } from '@/contexts/BookingContext'
+import BookingModalWrapper from '@/components/BookingModalWrapper'
 
 // Performance: FontAwesome tree-shaking setup
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -54,10 +56,13 @@ export default function RootLayout({
         <link rel="icon" type="image/webp" href="/assets/img/swan logo.webp" />
       </head>
       <body>
-        <Preloader />
-        <ScrollReveal />
-        {children}
-        <FloatingCallButton />
+        <BookingProvider>
+          <Preloader />
+          <ScrollReveal />
+          {children}
+          <FloatingCallButton />
+          <BookingModalWrapper />
+        </BookingProvider>
       </body>
     </html>
   )

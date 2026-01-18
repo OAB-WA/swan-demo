@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import { useBooking } from '@/contexts/BookingContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faMapMarkerAlt, 
@@ -25,6 +26,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isSticky, setIsSticky] = useState(false)
   const pathname = usePathname()
+  const { openModal } = useBooking()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -133,9 +135,16 @@ export default function Header() {
                   <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{whiteSpace: 'nowrap'}}>
                     <FontAwesomeIcon icon={faPhone} className="me-2" />CALL NOW
                   </a>
-                  <Link href="/contact" className="theme-btn" onClick={() => setIsMobileMenuOpen(false)}>
-                    GET QUOTE<FontAwesomeIcon icon={faArrowRight} className="ms-2" />
-                  </Link>
+                  <button 
+                    onClick={() => {
+                      openModal()
+                      setIsMobileMenuOpen(false)
+                    }} 
+                    className="theme-btn" 
+                    style={{background: '#0000cc', whiteSpace: 'nowrap', border: 'none'}}
+                  >
+                    BOOK NOW<FontAwesomeIcon icon={faArrowRight} className="ms-2" />
+                  </button>
                 </div>
               </div>
             </div>
