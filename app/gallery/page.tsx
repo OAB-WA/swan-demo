@@ -5,17 +5,17 @@ import GalleryGrid from '@/components/GalleryGrid'
 
 export const metadata = {
   title: 'Gallery - Swan Electric, Plumbing, Heating & Air',
-  description: 'View our gallery of completed projects showcasing our plumbing, electrical, and HVAC work in Dallas, Texas.',
+    description: 'View our gallery of completed projects showcasing our high-quality HVAC, electrical, and plumbing work across the Dallas-Fort Worth area.',
 }
 
 export default function GalleryPage() {
   const galleryImages = [
-    'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop',
-    'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop',
-    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
-    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
-    'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop',
-    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    '/assets/img/swan_1.webp',
+    '/assets/img/swan_2.webp',
+    '/assets/img/swan_3.webp',
+    '/assets/img/swan_4.webp',
+    '/assets/img/swan_5.webp',
+    '/assets/img/swan_6.webp',
   ]
 
   return (

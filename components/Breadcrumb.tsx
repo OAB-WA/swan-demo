@@ -8,13 +8,13 @@ interface BreadcrumbProps {
 
 export default function Breadcrumb({ title, items }: BreadcrumbProps) {
   return (
-    <div className="site-breadcrumb" style={{ position: 'relative', paddingTop: '120px', paddingBottom: '120px' }}>
+    <div className="site-breadcrumb" style={{ position: 'relative', paddingTop: '120px', paddingBottom: '120px', overflow: 'hidden', minHeight: '300px' }}>
       <Image
-        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=350&fit=crop"
+        src="/assets/img/swan_hero.webp"
         alt="Breadcrumb Background"
         fill
         priority
-        style={{ objectFit: 'cover', zIndex: -1 }}
+        style={{ objectFit: 'cover', zIndex: -2, position: 'absolute', top: 0, left: 0 }}
         sizes="100vw"
       />
       <div className="breadcrumb-overlay" style={{
@@ -24,7 +24,7 @@ export default function Breadcrumb({ title, items }: BreadcrumbProps) {
         width: '100%',
         height: '100%',
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        zIndex: 0
+        zIndex: -1
       }} />
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <h2 className="breadcrumb-title" style={{ marginBottom: '10px' }}>{title}</h2>

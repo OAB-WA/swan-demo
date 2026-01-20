@@ -34,11 +34,11 @@ export default function ServicesPage() {
               <div className="col-lg-6 mx-auto">
                 <div className="site-heading text-center">
                   <span className="site-title-tagline">Services</span>
-                  <h2 className="site-title">Best Services</h2>
+                  <h2 className="site-title">Our Expert Services</h2>
                   <div className="heading-divider"></div>
                   <p>
-                    We provide comprehensive plumbing services and also offer electrical and HVAC solutions 
-                    for your home and business in Dallas, Texas.
+                    Swan Electric, Plumbing, Heating & Air provides top-rated HVAC, electrical, and plumbing services 
+                    for homeowners and businesses across the Dallas-Fort Worth area.
                   </p>
                 </div>
               </div>
@@ -56,6 +56,7 @@ export default function ServicesPage() {
                         loading="lazy"
                         className="img-fluid"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                       />
                     </div>
                     <div className="service-icon">
@@ -80,9 +81,9 @@ export default function ServicesPage() {
             </div>
             <div className="row mt-4">
               <div className="col-12 text-center">
-                <p className="mb-4">
-                  <strong>We also provide comprehensive Electrical and HVAC services.</strong> 
-                  <Link href="/contact" className="ms-2">Contact us</Link> to learn more about our full range of home services.
+                <p className="mb-4" style={{fontSize: 'clamp(14px, 3.5vw, 16px)'}}>
+                  <strong>Technicians That Care - Available 24/7 for all your home service needs.</strong> 
+                  <Link href="/contact" className="ms-2">Contact us</Link> to learn more about our full range of services.
                 </p>
                 <button
                   onClick={openModal}

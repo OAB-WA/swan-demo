@@ -8,35 +8,35 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
   title: 'FAQ - Swan Electric, Plumbing, Heating & Air',
-  description: 'Frequently asked questions about our plumbing, electrical, and HVAC services in Dallas, Texas.',
+    description: 'Frequently asked questions about our plumbing, electrical, and HVAC services in the Dallas-Fort Worth area.',
 }
 
 export default function FAQPage() {
   const faqItems = [
     {
       id: 'One',
-      question: 'What services do you provide?',
-      answer: 'We provide comprehensive plumbing services including kitchen and bathroom plumbing, gas and water line services, pipe installation, and basement plumbing. We also offer electrical and HVAC services for your complete home service needs.'
+      question: 'What services does Swan provide?',
+      answer: 'Swan Electric, Plumbing, Heating & Air provides comprehensive home services including plumbing (leak detection, repiping, slab leaks), air conditioning (repair, installation, duct cleaning), heating (furnace repair, maintenance), and electrical (panel replacement, emergency repairs, EV chargers).'
     },
     {
       id: 'Two',
       question: 'Do you offer emergency services?',
-      answer: 'Yes, we offer 24/7 emergency services for plumbing, electrical, and HVAC emergencies. Contact us anytime for urgent repairs and we\'ll dispatch a technician to your location.'
+      answer: 'Yes! We offer 24/7 emergency service for plumbing, AC, and electrical issues. We always have a live answer, day or night, to ensure your home stays safe and comfortable.'
     },
     {
       id: 'Three',
       question: 'What areas do you serve?',
-      answer: 'We serve the greater Dallas, Texas area including Sunnyvale and surrounding communities. Contact us to confirm if we service your specific location.'
+      answer: 'We proudly serve Mesquite, Sunnyvale, Forney, Balch Springs, Dallas, Fort Worth, and surrounding areas. If you are in the DFW region, Swan is here to help.'
     },
     {
       id: 'Four',
-      question: 'Are your technicians licensed and insured?',
-      answer: 'Yes, all our technicians are licensed, insured, and highly trained professionals. We maintain the highest standards of quality and safety in all our work.'
+      question: 'What is the SAM Plan?',
+      answer: 'The SAM (Swan Annual Maintenance) Plan is our exclusive membership for $9.95/month. It includes 4 annual visits, no service fees, priority scheduling, 15% off products and services, and 50% off emergency service fees.'
     },
     {
       id: 'Five',
-      question: 'Do you provide free estimates?',
-      answer: 'Yes, we provide free estimates for all our services. Contact us to schedule a consultation and we\'ll provide you with a detailed estimate for your project.'
+      question: 'Do you offer second opinions?',
+      answer: 'Absolutely. We offer free, no-obligation second opinions. If you\'ve already had another contractor out, we\'ll provide a complimentary evaluation to ensure you\'re not spending money on unnecessary repairs.'
     }
   ]
 
@@ -65,7 +65,7 @@ export default function FAQPage() {
                   </div>
                   <p className="about-text">
                     Have questions about our services? We&apos;re here to help. 
-                    Find answers to common questions about our plumbing, electrical, and HVAC services in Dallas, Texas.
+                    Find answers to common questions about our plumbing, electrical, and HVAC services in the DFW area.
                   </p>
                   <p>
                     If you don&apos;t find the answer you&apos;re looking for, feel free to contact us directly.

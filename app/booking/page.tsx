@@ -5,7 +5,7 @@ import ServiceTitanBooking from '@/components/ServiceTitanBooking'
 
 export const metadata = {
   title: 'Book Service - Swan Electric, Plumbing, Heating & Air',
-  description: 'Schedule your service appointment online with our expert technicians. Book plumbing, electrical, and HVAC services in Dallas, Texas.',
+    description: 'Schedule your service appointment online with our expert technicians. Book plumbing, electrical, and HVAC services across the DFW area.',
 }
 
 export default function BookingPage() {

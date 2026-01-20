@@ -3,58 +3,69 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRocket, faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faArrowRight, faTag, faHandHoldingHeart, faWrench, faCertificate } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
-  title: 'Pricing - Swan Electric, Plumbing, Heating & Air',
-  description: 'Affordable pricing plans for plumbing, electrical, and HVAC services in Dallas, Texas.',
+  title: 'Special Offers & SAM Plan - Swan Electric, Plumbing, Heating & Air',
+  description: 'Save on your home services with Swan\'s special offers and the SAM maintenance plan.',
 }
 
 export default function PricingPage() {
-  const plans = [
+  const offers = [
     {
       id: 1,
-      name: 'Basic Plan',
-      price: '$59',
-      period: '/Monthly',
+      name: 'Slab Leak Test',
+      price: '$199',
+      description: 'Testing fees waived with repairs.',
+      icon: faWrench,
       features: [
-        'Get 10% Off',
-        'Test Water Pressure',
-        'Extended Equipment Life',
-        'Priority Scheduling',
-        'Annual Boiler Service'
+        'Fresh water slab leaks only',
+        'Expert diagnostics',
+        'Professional evaluation',
+        'Waived with completed repair'
       ]
     },
     {
       id: 2,
-      name: 'Business Plan',
-      price: '$99',
-      period: '/Monthly',
+      name: 'HVAC Install',
+      price: '$500 OFF',
+      description: 'Complete HVAC System Install.',
+      icon: faCertificate,
       features: [
-        'Get 15% Off',
-        'Test Water Pressure',
-        'Extended Equipment Life',
-        'Priority Scheduling',
-        'Annual Boiler Service',
-        '24/7 Emergency Support'
+        'Full, high-efficiency replacement',
+        'Installed by licensed pros',
+        'Residential systems only',
+        'Energy-efficient models'
       ]
     },
     {
       id: 3,
-      name: 'Premium Plan',
-      price: '$156',
-      period: '/Monthly',
+      name: 'Service Repair',
+      price: '$55 OFF',
+      description: 'Any Service Repair.',
+      icon: faTag,
       features: [
-        'Get 20% Off',
-        'Test Water Pressure',
-        'Extended Equipment Life',
-        'Priority Scheduling',
-        'Annual Boiler Service',
-        '24/7 Emergency Support',
-        'Free Annual Inspection'
+        'Plumbing repairs',
+        'AC or Heating repairs',
+        'Electrical repairs',
+        'Fast diagnostics'
       ]
     }
   ]
+
+  const samPlan = {
+    name: 'SAM Plan',
+    subName: 'Swan Annual Maintenance',
+    price: '$9.95',
+    period: '/month',
+    features: [
+      '4 VISITS ANUALLY',
+      'NO REGULAR SERVICE FEES',
+      'PRIORITY SCHEDULING',
+      '15% OFF PRODUCTS & SERVICES',
+      '50% OFF EMERGENCY SERVICE FEES'
+    ]
+  }
 
   return (
     <>
@@ -62,47 +73,47 @@ export default function PricingPage() {
       
       <main className="main">
         <Breadcrumb 
-          title="Pricing Plan"
+          title="Special Offers"
           items={[
             { label: 'Home', href: '/' },
-            { label: 'Pricing Plan' }
+            { label: 'Special Offers' }
           ]}
         />
 
-        {/* pricing area */}
+        {/* offers area */}
         <div className="pricing-area py-120">
           <div className="container">
             <div className="row">
               <div className="col-lg-6 mx-auto">
                 <div className="site-heading text-center">
-                  <span className="site-title-tagline">Pricing</span>
-                  <h2 className="site-title">Pricing Plan</h2>
+                  <span className="site-title-tagline">Save More</span>
+                  <h2 className="site-title">Special Offers</h2>
                   <div className="heading-divider"></div>
                   <p>
-                    Choose the plan that best fits your needs. All plans include 
-                    professional service and quality workmanship.
+                    Check out our current specials and start saving on your 
+                    essential home services today.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="row g-5">
-              {plans.map((plan) => (
-                <div key={plan.id} className="col-md-6 col-lg-4">
+              {offers.map((offer) => (
+                <div key={offer.id} className="col-md-6 col-lg-4">
                   <div className="pricing-item">
                     <div className="pricing-icon">
-                      <FontAwesomeIcon icon={faRocket} />
+                      <FontAwesomeIcon icon={offer.icon} />
                     </div>
                     <div className="pricing-header">
-                      <h5>{plan.name}</h5>
+                      <h5>{offer.name}</h5>
+                      <p className="text-muted small">{offer.description}</p>
                     </div>
                     <div className="pricing-amount">
-                      <strong>{plan.price}</strong>
-                      <span>{plan.period}</span>
+                      <strong>{offer.price}</strong>
                     </div>
                     <div className="pricing-feature">
                       <ul>
-                        {plan.features.map((feature, index) => (
+                        {offer.features.map((feature, index) => (
                           <li key={index}>
                             <FontAwesomeIcon icon={faCheck} className="me-2" /> {feature}
                           </li>
@@ -111,7 +122,7 @@ export default function PricingPage() {
                     </div>
                     <div className="pricing-footer">
                       <Link href="/contact" className="theme-btn">
-                        Get Started <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
+                        Claim Offer <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                       </Link>
                     </div>
                   </div>
@@ -120,7 +131,44 @@ export default function PricingPage() {
             </div>
           </div>
         </div>
-        {/* pricing area end */}
+
+        {/* SAM Plan Area */}
+        <div className="sam-plan-area py-120 bg-light">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-lg-6">
+                <div className="site-heading mb-4">
+                  <span className="site-title-tagline">Membership</span>
+                  <h2 className="site-title">{samPlan.subName}</h2>
+                </div>
+                <p className="mb-4">
+                  Join the SAM Plan today and enjoy year-round peace of mind. 
+                  Our members get the best service at the best price.
+                </p>
+                <div className="pricing-amount mb-4" style={{fontSize: '48px', color: '#0000FF'}}>
+                  <strong>{samPlan.price}</strong>
+                  <span style={{fontSize: '20px', color: '#666'}}>{samPlan.period}</span>
+                </div>
+                <Link href="/contact" className="theme-btn">
+                  Learn More <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
+                </Link>
+              </div>
+              <div className="col-lg-6">
+                <div className="pricing-feature card border-0 shadow-sm p-4 mt-4 mt-lg-0" style={{borderRadius: '15px'}}>
+                  <h4 className="mb-4">Member Benefits:</h4>
+                  <ul className="list-unstyled">
+                    {samPlan.features.map((feature, index) => (
+                      <li key={index} className="mb-3 d-flex align-items-center">
+                        <FontAwesomeIcon icon={faCheck} className="me-3 text-primary" style={{fontSize: '20px'}} /> 
+                        <strong>{feature}</strong>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
 
       <Footer />

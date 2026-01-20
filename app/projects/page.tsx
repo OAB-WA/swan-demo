@@ -1,25 +1,29 @@
-import Link from 'next/link'
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
+import Lightbox from 'yet-another-react-lightbox'
+import 'yet-another-react-lightbox/styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faArrowRight } from '@fortawesome/free-solid-svg-icons'
-
-export const metadata = {
-  title: 'Projects - Swan Electric, Plumbing, Heating & Air',
-  description: 'View our recent projects showcasing our expertise in plumbing, electrical, and HVAC services in Dallas, Texas.',
-}
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 export default function ProjectsPage() {
+  const [open, setOpen] = useState(false)
+  const [index, setIndex] = useState(0)
+
   const projects = [
-    { id: 1, title: 'Water Line Repair', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop' },
-    { id: 2, title: 'Kitchen Plumbing', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop' },
-    { id: 3, title: 'Basement Plumbing', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop' },
-    { id: 4, title: 'Pipe Line Repair', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop' },
-    { id: 5, title: 'Bathroom Renovation', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop' },
-    { id: 6, title: 'Gas Line Installation', category: 'Plumbing', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop' },
+    { id: 1, title: 'AC Replacement', category: 'HVAC', image: '/assets/img/swan_2.webp' },
+    { id: 2, title: 'Slab Leak Detection', category: 'Plumbing', image: '/assets/img/swan_1.webp' },
+    { id: 3, title: 'Electrical Panel Upgrade', category: 'Electrical', image: '/assets/img/swan_4.webp' },
+    { id: 4, title: 'Furnace Maintenance', category: 'Heating', image: '/assets/img/swan_3.webp' },
+    { id: 5, title: 'Whole-Home Repiping', category: 'Plumbing', image: '/assets/img/swan_5.webp' },
+    { id: 6, title: 'EV Charger Installation', category: 'Electrical', image: '/assets/img/swan_7.webp' },
   ]
+
+  const slides = projects.map((p) => ({ src: p.image }))
 
   return (
     <>
@@ -40,20 +44,27 @@ export default function ProjectsPage() {
             <div className="row">
               <div className="col-lg-6 mx-auto">
                 <div className="site-heading text-center">
-                  <span className="site-title-tagline">Cases</span>
-                  <h2 className="site-title">Recent Projects</h2>
+                  <span className="site-title-tagline">Showcase</span>
+                  <h2 className="site-title">Swan Case Studies</h2>
                   <div className="heading-divider"></div>
                   <p>
-                    Take a look at some of our recent projects showcasing our expertise 
-                    in plumbing, electrical, and HVAC services.
+                    Take a look at some of our recent work. From complex slab leaks 
+                    to high-efficiency HVAC installs, we handle it all with care.
                   </p>
                 </div>
               </div>
             </div>
             <div className="row popup-gallery">
-              {projects.map((project) => (
+              {projects.map((project, idx) => (
                 <div key={project.id} className="col-md-6 col-lg-4">
-                  <div className="case-item">
+                  <div 
+                    className="case-item" 
+                    style={{ cursor: 'pointer' }} 
+                    onClick={() => {
+                      setIndex(idx)
+                      setOpen(true)
+                    }}
+                  >
                     <div className="case-img">
                       <Image 
                         className="img-fluid" 
@@ -63,21 +74,25 @@ export default function ProjectsPage() {
                         height={600}
                         loading="lazy"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                       />
-                      <div className="popup-img case-link">
+                      <div 
+                        className="popup-img case-link" 
+                        style={{ cursor: 'pointer' }}
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setIndex(idx)
+                          setOpen(true)
+                        }}
+                      >
                         <FontAwesomeIcon icon={faPlus} />
                       </div>
                     </div>
                     <div className="case-content">
                       <div className="case-content-info">
-                        <h4><Link href={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                          {project.title}
-                        </Link></h4>
+                        <h4 style={{ cursor: 'pointer' }}>{project.title}</h4>
                         <small>{project.category}</small>
                       </div>
-                      <Link href={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`} className="case-arrow">
-                        <FontAwesomeIcon icon={faArrowRight} />
-                      </Link>
                     </div>
                   </div>
                 </div>
@@ -86,6 +101,13 @@ export default function ProjectsPage() {
           </div>
         </div>
         {/* case area end */}
+
+        <Lightbox
+          open={open}
+          close={() => setOpen(false)}
+          index={index}
+          slides={slides}
+        />
       </main>
 
       <Footer />

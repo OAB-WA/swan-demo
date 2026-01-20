@@ -34,17 +34,17 @@ export default function HeroSlider() {
   }, [emblaApi, onSelect])
 
   return (
-    <div className="hero-section hero-slider-wrapper embla" ref={emblaRef}>
-      <div className="hero-slider embla__container d-flex">
+    <div className="hero-section hero-slider-wrapper embla" ref={emblaRef} style={{ height: '100vh' }}>
+      <div className="hero-slider embla__container d-flex" style={{ height: '100%' }}>
         {/* Slide 1 */}
-        <div className="hero-single embla__slide w-100 flex-shrink-0" style={{ position: 'relative', minHeight: '600px', minWidth: '100%' }}>
+        <div className="hero-single embla__slide w-100 flex-shrink-0" style={{ position: 'relative', minHeight: '100%', height: '100vh', minWidth: '100%', overflow: 'hidden' }}>
           {/* Performance: Use next/image with priority and sizes for mobile LCP optimization */}
           <Image
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop"
+            src="/assets/img/swan_hero.webp"
             alt="Professional Plumbing Services"
             fill
             priority
-            style={{ objectFit: 'cover', zIndex: -1 }}
+            style={{ objectFit: 'cover', zIndex: -2, position: 'absolute', top: 0, left: 0 }}
             sizes="100vw"
             quality={85}
           />
@@ -54,8 +54,8 @@ export default function HeroSlider() {
             left: 0,
             width: '100%',
             height: '100%',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust opacity as needed
-            zIndex: 0
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: -1
           }} />
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div className="row align-items-center">
@@ -66,30 +66,30 @@ export default function HeroSlider() {
                     data-wow-duration="1s" 
                     data-wow-delay=".25s"
                   >
-                    Professional Plumbing, Electrical & HVAC Services
+                    Swan Electric, Plumbing, Heating & Air
                   </h6>
                   <h1 
                     className="hero-title wow animate__animated animate__fadeInUp" 
                     data-wow-duration="1s"
                     data-wow-delay=".50s"
                   >
-                    Your Trusted Service Provider in Dallas, TX
+                    Plumbing, AC & Electrical Service in Mesquite
                   </h1>
                   <p 
                     className="wow animate__animated animate__fadeInUp" 
                     data-wow-duration="1s"
                     data-wow-delay=".75s"
                   >
-                    Licensed professionals providing same-day service, upfront pricing, and 100% satisfaction guarantee. 
-                    Available 24/7 for all your home service needs.
+                    Providing fast, reliable AC repair and plumbing services across the Dallas-Fort Worth Area. 
+                    Same-day service, transparent pricing, and expert care.
                   </p>
                   <div 
                     className="hero-btn wow animate__animated animate__fadeInUp" 
                     data-wow-duration="1s"
                     data-wow-delay="1s"
                   >
-                    <a href="tel:+12145550123" className="theme-btn" style={{marginRight: '15px'}}>
-                      <FontAwesomeIcon icon={faPhone} className="me-2" />Call (214) 555-0123
+                    <a href="tel:4697277904" className="theme-btn" style={{marginRight: '15px'}}>
+                      <FontAwesomeIcon icon={faPhone} className="me-2" />Call 469-727-7904
                     </a>
                     <button 
                       onClick={openModal}
@@ -106,9 +106,9 @@ export default function HeroSlider() {
         </div>
 
         {/* Slide 2 */}
-        <div className="hero-single embla__slide w-100 flex-shrink-0" style={{ position: 'relative', minHeight: '600px', minWidth: '100%' }}>
+        <div className="hero-single embla__slide w-100 flex-shrink-0" style={{ position: 'relative', minHeight: '100%', height: '100vh', minWidth: '100%', overflow: 'hidden' }}>
           <Image
-            src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1920&h=1080&fit=crop"
+            src="/assets/img/swan_hero_2.webp"
             alt="Trusted Service Provider"
             fill
             style={{ objectFit: 'cover', zIndex: -1 }}
@@ -133,30 +133,30 @@ export default function HeroSlider() {
                     data-wow-duration="1s" 
                     data-wow-delay=".25s"
                   >
-                    Professional Plumbing, Electrical & HVAC Services
+                    Swan Electric, Plumbing, Heating & Air
                   </h6>
                   <h1 
                     className="hero-title wow animate__animated animate__fadeInUp" 
                     data-wow-duration="1s"
                     data-wow-delay=".50s"
                   >
-                    Your Trusted Service Provider in Dallas, TX
+                    Plumbing, AC & Electrical Service in Mesquite
                   </h1>
                   <p 
                     className="wow animate__animated animate__fadeInUp" 
                     data-wow-duration="1s"
                     data-wow-delay=".75s"
                   >
-                    Licensed professionals providing same-day service, upfront pricing, and 100% satisfaction guarantee. 
-                    Available 24/7 for all your home service needs.
+                    Providing fast, reliable AC repair and plumbing services across the Dallas-Fort Worth Area. 
+                    Same-day service, transparent pricing, and expert care.
                   </p>
                   <div 
                     className="hero-btn wow animate__animated animate__fadeInUp" 
                     data-wow-duration="1s"
                     data-wow-delay="1s"
                   >
-                    <a href="tel:+12145550123" className="theme-btn" style={{marginRight: '15px'}}>
-                      <FontAwesomeIcon icon={faPhone} className="me-2" />Call (214) 555-0123
+                    <a href="tel:4697277904" className="theme-btn" style={{marginRight: '15px'}}>
+                      <FontAwesomeIcon icon={faPhone} className="me-2" />Call 469-727-7904
                     </a>
                     <button 
                       onClick={openModal}

@@ -27,9 +27,9 @@ import '../public/assets/css/style.css'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Swan Electric, Plumbing, Heating & Air - Dallas, TX',
-  description: 'Professional plumbing, electrical, and HVAC services in Dallas, Texas. Trusted experts for all your home service needs.',
-  keywords: 'plumbing, electrical, HVAC, Dallas, Texas, Sunnyvale, home services',
+  title: 'Swan Electric, Plumbing, Heating & Air - Mesquite, TX',
+  description: 'Professional plumbing, electrical, and HVAC services across Dallas, Fort Worth, Mesquite, and Sunnyvale. Technicians that care.',
+  keywords: 'plumbing, electrical, HVAC, AC repair, Dallas, Fort Worth, Mesquite, Sunnyvale, home services',
   openGraph: {
     type: 'website',
     locale: 'en_US',

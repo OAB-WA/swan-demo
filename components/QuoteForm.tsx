@@ -75,14 +75,12 @@ export default function QuoteForm() {
           <div className="col-md-6">
             <select name="service" className="form-select" required>
               <option value="">Choose Service</option>
-              <option value="Kitchen Plumbing">Kitchen Plumbing</option>
-              <option value="Gas Line Services">Gas Line Services</option>
-              <option value="Water Line Services">Water Line Services</option>
-              <option value="Bathroom Plumbing">Bathroom Plumbing</option>
-              <option value="Pipe Line Install">Pipe Line Install</option>
-              <option value="Basement Plumbing">Basement Plumbing</option>
-              <option value="Electrical Services">Electrical Services</option>
-              <option value="HVAC Services">HVAC Services</option>
+              <option value="Plumbing">Plumbing</option>
+              <option value="Air Conditioning">Air Conditioning</option>
+              <option value="Heating">Heating</option>
+              <option value="Electrical">Electrical</option>
+              <option value="Drain & Sewer">Drain & Sewer</option>
+              <option value="Water Heaters">Water Heaters</option>
             </select>
           </div>
           <div className="col-md-12">
@@ -128,7 +126,7 @@ export default function QuoteForm() {
         
         <div className="text-center mt-3">
           <p className="mb-0" style={{fontSize: '14px'}}>
-            Or call us directly: <a href="tel:+12145550123" className="fw-bold" style={{color: '#0000FF'}}>(214) 555-0123</a>
+            Or call us directly: <a href="tel:4697277904" className="fw-bold" style={{color: '#0000FF'}}>469-727-7904</a>
           </p>
         </div>
       </form>

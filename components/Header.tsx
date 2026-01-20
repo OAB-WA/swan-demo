@@ -10,7 +10,8 @@ import {
   faMapMarkerAlt, 
   faEnvelope, 
   faClock, 
-  faStream, 
+  faBars,
+  faTimes,
   faPhone, 
   faArrowRight 
 } from '@fortawesome/free-solid-svg-icons'
@@ -41,6 +42,18 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Add/remove class to body when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add('mobile-menu-open')
+    } else {
+      document.body.classList.remove('mobile-menu-open')
+    }
+    return () => {
+      document.body.classList.remove('mobile-menu-open')
+    }
+  }, [isMobileMenuOpen])
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
@@ -62,18 +75,18 @@ export default function Header() {
               <div className="header-top-contact">
                 <ul>
                   <li>
-                    <a href="#">
-                      <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />309 US Highway 80 E, Sunnyvale, TX 75150
+                    <a href="https://www.google.com/maps/search/?api=1&query=309+U.S.+80+Frontage+Rd,+Sunnyvale,+TX+75182" target="_blank" rel="noopener noreferrer">
+                      <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />309 U.S. 80 Frontage Rd, Sunnyvale, TX 75182
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:info@swanplumbingdemo.com">
-                      <FontAwesomeIcon icon={faEnvelope} className="me-2" />info@swanplumbingdemo.com
+                    <a href="tel:4697277904">
+                      <FontAwesomeIcon icon={faPhone} className="me-2" />469-727-7904
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <FontAwesomeIcon icon={faClock} className="me-2" /> Sun - Fri (08AM - 10PM)
+                      <FontAwesomeIcon icon={faClock} className="me-2" /> 24/7 Emergency Service
                     </a>
                   </li>
                 </ul>
@@ -113,10 +126,52 @@ export default function Header() {
               aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon">
-                <FontAwesomeIcon icon={faStream} />
+                <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
               </span>
             </button>
-            <div className={`collapse navbar-collapse ${isMobileMenuOpen ? 'show' : ''}`} id="main_nav">
+            {/* Backdrop overlay */}
+            {isMobileMenuOpen && (
+              <div 
+                className="mobile-menu-backdrop"
+                onClick={() => setIsMobileMenuOpen(false)}
+                style={{
+                  position: 'fixed',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'rgba(0, 0, 0, 0.6)',
+                  backdropFilter: 'blur(4px)',
+                  WebkitBackdropFilter: 'blur(4px)',
+                  zIndex: 998,
+                  animation: 'fadeIn 0.3s ease'
+                }}
+              />
+            )}
+            <div 
+              className={`collapse navbar-collapse ${isMobileMenuOpen ? 'show' : ''}`} 
+              id="main_nav"
+            >
+              {/* Mobile Menu Header */}
+              <div className="mobile-menu-header">
+                <Link className="mobile-menu-logo" href="/" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Image 
+                    src="/assets/img/swan logo.webp" 
+                    alt="Swan Electric, Plumbing, Heating & Air" 
+                    width={100}
+                    height={50}
+                    priority
+                    style={{maxWidth: '100px', height: 'auto'}}
+                  />
+                </Link>
+                <button 
+                  className="mobile-menu-close"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  aria-label="Close menu"
+                >
+                  <FontAwesomeIcon icon={faTimes} />
+                </button>
+              </div>
               <ul className="navbar-nav ms-auto">
                 {navLinks.map((link) => (
                   <li className="nav-item" key={link.href}>
@@ -132,7 +187,7 @@ export default function Header() {
               </ul>
               <div className="header-nav-right">
                 <div className="header-btn d-flex gap-2">
-                  <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{whiteSpace: 'nowrap'}}>
+                  <a href="tel:4697277904" className="theme-btn theme-btn2" style={{whiteSpace: 'nowrap'}}>
                     <FontAwesomeIcon icon={faPhone} className="me-2" />CALL NOW
                   </a>
                   <button 

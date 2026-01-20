@@ -72,7 +72,7 @@ export default function ServiceSinglePage({ params }: { params: { slug: string }
                         className="img-fluid"
                         priority
                         sizes="(max-width: 576px) 100vw, (max-width: 992px) 100vw, 66vw"
-                        style={{ borderRadius: '12px', width: '100%', height: 'auto' }}
+                        style={{ borderRadius: '12px', width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     </div>
                     <div className="service-details">
@@ -94,7 +94,7 @@ export default function ServiceSinglePage({ params }: { params: { slug: string }
                             className="img-fluid"
                             loading="lazy"
                             sizes="(max-width: 576px) 100vw, 50vw"
-                            style={{ borderRadius: '12px', width: '100%', height: 'auto' }}
+                            style={{ borderRadius: '12px', width: '100%', height: '100%', objectFit: 'cover' }}
                           />
                         </div>
                         <div className="col-md-6 mb-20">
@@ -106,7 +106,7 @@ export default function ServiceSinglePage({ params }: { params: { slug: string }
                             className="img-fluid"
                             loading="lazy"
                             sizes="(max-width: 576px) 100vw, 50vw"
-                            style={{ borderRadius: '12px', width: '100%', height: 'auto' }}
+                            style={{ borderRadius: '12px', width: '100%', height: '100%', objectFit: 'cover' }}
                           />
                         </div>
                       </div>

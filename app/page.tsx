@@ -16,12 +16,12 @@ import {
   faPlay, 
   faQuestion, 
   faMapMarkerAlt,
-  faTools,
-  faGasPump,
-  faDroplet,
-  faBath,
-  faPaintRoller,
-  faHouseFloodWater,
+  faWrench,
+  faWind,
+  faFire,
+  faBolt,
+  faSink,
+  faHotTub,
   faCalendarAlt
 } from '@fortawesome/free-solid-svg-icons'
 import { 
@@ -61,11 +61,11 @@ export default function Home() {
               <div className="col-lg-6 mx-auto">
                 <div className="site-heading text-center">
                   <span className="site-title-tagline">Services</span>
-                  <h2 className="site-title">Best Services</h2>
+                  <h2 className="site-title">Our Core Services</h2>
                   <div className="heading-divider"></div>
                   <p>
-                    We provide comprehensive plumbing services and also offer electrical and HVAC solutions 
-                    for your home and business in Dallas, Texas.
+                    Swan Electric, Plumbing, Heating & Air provides top-rated HVAC, electrical, and plumbing services 
+                    for homeowners and businesses across the Dallas-Fort Worth area.
                   </p>
                 </div>
               </div>
@@ -75,34 +75,34 @@ export default function Home() {
                 <div className="service-item">
                   <div className="service-img">
                     <Image 
-                      src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop" 
-                      alt="Kitchen Plumbing"
+                      src="/assets/img/swan_1.webp" 
+                      alt="Plumbing Services"
                       width={800}
                       height={600}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                     />
                   </div>
                   <div className="service-icon">
-                    <FontAwesomeIcon icon={faTools} />
+                    <FontAwesomeIcon icon={faWrench} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
-                      <Link href="/services">Kitchen Plumbing</Link>
+                      <Link href="/services">Plumbing Services</Link>
                     </h3>
                     <p className="service-text">
-                      Professional kitchen plumbing services including sink installation, 
-                      garbage disposal, and faucet repair.
+                      From emergency repairs to slab leak detection, our licensed plumbers handle it all with precision.
                     </p>
-                    <div className="service-arrow d-flex gap-2">
-                      <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
+                    <div className="service-arrow d-flex gap-2 flex-wrap">
+                      <a href="tel:4697277904" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '10px 20px', minHeight: '44px', flex: '1 1 auto', minWidth: '120px'}}>
                         <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
                       <button 
                         onClick={openModal}
                         className="theme-btn" 
-                        style={{fontSize: '14px', padding: '8px 20px', border: 'none'}}
+                        style={{fontSize: '14px', padding: '10px 20px', border: 'none', minHeight: '44px', flex: '1 1 auto', minWidth: '120px'}}
                       >
                         Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-1" />
                       </button>
@@ -114,34 +114,34 @@ export default function Home() {
                 <div className="service-item">
                   <div className="service-img">
                     <Image 
-                      src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" 
-                      alt="Gas Line Services"
+                      src="/assets/img/swan_2.webp" 
+                      alt="Air Conditioning"
                       width={800}
                       height={600}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                     />
                   </div>
                   <div className="service-icon">
-                    <FontAwesomeIcon icon={faGasPump} />
+                    <FontAwesomeIcon icon={faWind} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
-                      <Link href="/services">Gas Line Services</Link>
+                      <Link href="/services">Air Conditioning</Link>
                     </h3>
                     <p className="service-text">
-                      Safe and reliable gas line installation, repair, and maintenance 
-                      for your home or business.
+                      Expert AC repair, maintenance, and energy-efficient replacements to keep you cool.
                     </p>
-                    <div className="service-arrow d-flex gap-2">
-                      <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
+                    <div className="service-arrow d-flex gap-2 flex-wrap">
+                      <a href="tel:4697277904" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '10px 20px', minHeight: '44px', flex: '1 1 auto', minWidth: '120px'}}>
                         <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
                       <button 
                         onClick={openModal}
                         className="theme-btn" 
-                        style={{fontSize: '14px', padding: '8px 20px', border: 'none'}}
+                        style={{fontSize: '14px', padding: '10px 20px', border: 'none', minHeight: '44px', flex: '1 1 auto', minWidth: '120px'}}
                       >
                         Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-1" />
                       </button>
@@ -153,34 +153,34 @@ export default function Home() {
                 <div className="service-item">
                   <div className="service-img">
                     <Image 
-                      src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" 
-                      alt="Water Line Services"
+                      src="/assets/img/swan_3.webp" 
+                      alt="Heating Services"
                       width={800}
                       height={600}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                     />
                   </div>
                   <div className="service-icon">
-                    <FontAwesomeIcon icon={faDroplet} />
+                    <FontAwesomeIcon icon={faFire} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
-                      <Link href="/services">Water Line Services</Link>
+                      <Link href="/services">Heating Services</Link>
                     </h3>
                     <p className="service-text">
-                      Complete water line installation, repair, and replacement services 
-                      to keep your water flowing.
+                      Stay warm with our furnace repair, replacement, and annual maintenance services.
                     </p>
-                    <div className="service-arrow d-flex gap-2">
-                      <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
+                    <div className="service-arrow d-flex gap-2 flex-wrap">
+                      <a href="tel:4697277904" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '10px 20px', minHeight: '44px', flex: '1 1 auto', minWidth: '120px'}}>
                         <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
                       <button 
                         onClick={openModal}
                         className="theme-btn" 
-                        style={{fontSize: '14px', padding: '8px 20px', border: 'none'}}
+                        style={{fontSize: '14px', padding: '10px 20px', border: 'none', minHeight: '44px', flex: '1 1 auto', minWidth: '120px'}}
                       >
                         Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-1" />
                       </button>
@@ -192,34 +192,34 @@ export default function Home() {
                 <div className="service-item">
                   <div className="service-img">
                     <Image 
-                      src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop" 
-                      alt="Bathroom Plumbing"
+                      src="/assets/img/swan_4.webp" 
+                      alt="Electrical Services"
                       width={800}
                       height={600}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                     />
                   </div>
                   <div className="service-icon">
-                    <FontAwesomeIcon icon={faBath} />
+                    <FontAwesomeIcon icon={faBolt} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
-                      <Link href="/services">Bathroom Plumbing</Link>
+                      <Link href="/services">Electrical Services</Link>
                     </h3>
                     <p className="service-text">
-                      Expert bathroom plumbing services including toilet repair, 
-                      shower installation, and drain cleaning.
+                      Safe and professional electrical repairs, panel replacements, and home rewiring.
                     </p>
-                    <div className="service-arrow d-flex gap-2">
-                      <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
+                    <div className="service-arrow d-flex gap-2 flex-wrap">
+                      <a href="tel:4697277904" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '10px 20px', minHeight: '44px', flex: '1 1 auto', minWidth: '120px'}}>
                         <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
                       <button 
                         onClick={openModal}
                         className="theme-btn" 
-                        style={{fontSize: '14px', padding: '8px 20px', border: 'none'}}
+                        style={{fontSize: '14px', padding: '10px 20px', border: 'none', minHeight: '44px', flex: '1 1 auto', minWidth: '120px'}}
                       >
                         Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-1" />
                       </button>
@@ -231,34 +231,34 @@ export default function Home() {
                 <div className="service-item">
                   <div className="service-img">
                     <Image 
-                      src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" 
-                      alt="Pipe Line Install"
+                      src="/assets/img/swan_5.webp" 
+                      alt="Drain & Sewer"
                       width={800}
                       height={600}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                     />
                   </div>
                   <div className="service-icon">
-                    <FontAwesomeIcon icon={faPaintRoller} />
+                    <FontAwesomeIcon icon={faSink} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
-                      <Link href="/services">Pipe Line Install</Link>
+                      <Link href="/services">Drain & Sewer</Link>
                     </h3>
                     <p className="service-text">
-                      Professional pipe installation and replacement services 
-                      using quality materials and expert craftsmanship.
+                      Expert drain cleaning, camera inspections, and full sewer line replacements.
                     </p>
-                    <div className="service-arrow d-flex gap-2">
-                      <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
+                    <div className="service-arrow d-flex gap-2 flex-wrap">
+                      <a href="tel:4697277904" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '10px 20px', minHeight: '44px', flex: '1 1 auto', minWidth: '120px'}}>
                         <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
                       <button 
                         onClick={openModal}
                         className="theme-btn" 
-                        style={{fontSize: '14px', padding: '8px 20px', border: 'none'}}
+                        style={{fontSize: '14px', padding: '10px 20px', border: 'none', minHeight: '44px', flex: '1 1 auto', minWidth: '120px'}}
                       >
                         Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-1" />
                       </button>
@@ -270,34 +270,34 @@ export default function Home() {
                 <div className="service-item">
                   <div className="service-img">
                     <Image 
-                      src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop" 
-                      alt="Basement Plumbing"
+                      src="/assets/img/swan_6.webp" 
+                      alt="Water Heaters"
                       width={800}
                       height={600}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                     />
                   </div>
                   <div className="service-icon">
-                    <FontAwesomeIcon icon={faHouseFloodWater} />
+                    <FontAwesomeIcon icon={faHotTub} />
                   </div>
                   <div className="service-content">
                     <h3 className="service-title">
-                      <Link href="/services">Basement Plumbing</Link>
+                      <Link href="/services">Water Heaters</Link>
                     </h3>
                     <p className="service-text">
-                      Comprehensive basement plumbing solutions including 
-                      sump pump installation and water damage prevention.
+                      Tankless and traditional water heater repair, replacement, and maintenance.
                     </p>
-                    <div className="service-arrow d-flex gap-2">
-                      <a href="tel:+12145550123" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '8px 20px'}}>
+                    <div className="service-arrow d-flex gap-2 flex-wrap">
+                      <a href="tel:4697277904" className="theme-btn theme-btn2" style={{fontSize: '14px', padding: '10px 20px', minHeight: '44px', flex: '1 1 auto', minWidth: '120px'}}>
                         <FontAwesomeIcon icon={faPhone} className="me-1" />Call
                       </a>
                       <button 
                         onClick={openModal}
                         className="theme-btn" 
-                        style={{fontSize: '14px', padding: '8px 20px', border: 'none'}}
+                        style={{fontSize: '14px', padding: '10px 20px', border: 'none', minHeight: '44px', flex: '1 1 auto', minWidth: '120px'}}
                       >
                         Book Now<FontAwesomeIcon icon={faCalendarAlt} className="ms-1" />
                       </button>
@@ -308,9 +308,9 @@ export default function Home() {
             </div>
             <div className="row mt-4">
               <div className="col-12 text-center">
-                <p className="mb-0">
-                  <strong>We also provide comprehensive Electrical and HVAC services.</strong> 
-                  <a href="tel:+12145550123" className="ms-2">Call (214) 555-0123</a> to learn more about our full range of home services.
+                <p className="mb-0" style={{fontSize: 'clamp(14px, 3.5vw, 16px)'}}>
+                  <strong>Technicians That Care - Available 24/7 for Emergencies.</strong> 
+                  <a href="tel:4697277904" className="ms-2" style={{whiteSpace: 'nowrap'}}>Call 469-727-7904</a> to learn more about our full range of home services.
                 </p>
               </div>
             </div>
@@ -332,7 +332,7 @@ export default function Home() {
                     have to say about our services.
                   </p>
                   <div className="review-badge mb-4">
-                    <span className="badge" style={{background: 'rgba(255,255,255,0.2)', color: '#fff', padding: '10px 25px', borderRadius: '30px', fontSize: '16px'}}>
+                    <span className="badge" style={{background: 'rgba(255,255,255,0.2)', color: '#fff', padding: '10px 25px', borderRadius: '30px', fontSize: 'clamp(14px, 3.5vw, 16px)', display: 'inline-block'}}>
                       <FontAwesomeIcon icon={faStar} className="me-2" style={{color: '#FFD700'}} />
                       <strong>4.9/5 Stars</strong> from <strong>250+ Reviews</strong>
                     </span>
@@ -343,7 +343,7 @@ export default function Home() {
             <TestimonialSlider />
             <div className="row mt-4">
               <div className="col-12 text-center">
-                <Link href="/contact" className="theme-btn">
+                <Link href="/contact" className="theme-btn" style={{minHeight: '44px', minWidth: '200px', justifyContent: 'center'}}>
                   Read More Reviews<FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                 </Link>
               </div>
@@ -355,7 +355,7 @@ export default function Home() {
         {/* video area */}
         <div className="video-area" style={{ position: 'relative' }}>
           <Image
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop"
+            src="/assets/img/swan_hero_3.webp"
             alt="Video Background"
             fill
             style={{ objectFit: 'cover', zIndex: -1 }}
@@ -383,7 +383,7 @@ export default function Home() {
                 <div className="col-lg-5 col-12">
                   <div className="quote-thum quote-thum-sticky">
                     <Image 
-                      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop" 
+                      src="/assets/img/swan_1.webp" 
                       alt="Request A Quote"
                       width={800}
                       height={600}
@@ -413,13 +413,13 @@ export default function Home() {
                     <h2 className="site-title my-3">General frequently asked questions</h2>
                   </div>
                   <p className="about-text">Have questions about our services? We&apos;re here to help. 
-                    Find answers to common questions about our plumbing, electrical, and HVAC services in Dallas, Texas.</p>
+                    Find answers to common questions about our plumbing, electrical, and HVAC services in the DFW area.</p>
                   <p>If you don&apos;t find the answer you&apos;re looking for, feel free to contact us directly.</p>
-                  <div className="d-flex gap-3 mt-5">
-                    <a href="tel:+12145550123" className="theme-btn theme-btn2">
-                      <FontAwesomeIcon icon={faPhone} className="me-2" />Call (214) 555-0123
+                  <div className="d-flex flex-column flex-md-row gap-3 mt-5">
+                    <a href="tel:4697277904" className="theme-btn theme-btn2" style={{minHeight: '44px', justifyContent: 'center'}}>
+                      <FontAwesomeIcon icon={faPhone} className="me-2" />Call 469-727-7904
                     </a>
-                    <Link href="/contact" className="theme-btn">Ask Your Question <FontAwesomeIcon icon={faArrowRight} className="ms-2" /></Link>
+                    <Link href="/contact" className="theme-btn" style={{minHeight: '44px', justifyContent: 'center'}}>Ask Your Question <FontAwesomeIcon icon={faArrowRight} className="ms-2" /></Link>
                   </div>    
                 </div>
               </div>
@@ -427,18 +427,18 @@ export default function Home() {
                 <FAQAccordion items={[
                   {
                     id: 'One',
-                    question: 'What services do you provide?',
-                    answer: 'We provide comprehensive plumbing services including kitchen and bathroom plumbing, gas and water line services, pipe installation, and basement plumbing. We also offer electrical and HVAC services for your complete home service needs.'
+                    question: 'What services does Swan provide?',
+                    answer: 'Swan Electric, Plumbing, Heating & Air provides a full range of home services including plumbing (leak detection, repiping, slab leaks), air conditioning (repair, installation, duct cleaning), heating (furnace repair, maintenance), and electrical (panel replacement, emergency repairs, EV chargers).'
                   },
                   {
                     id: 'Two',
                     question: 'Do you offer emergency services?',
-                    answer: 'Yes, we offer 24/7 emergency services for plumbing, electrical, and HVAC emergencies. Contact us anytime for urgent repairs and we\'ll dispatch a technician to your location.'
+                    answer: 'Yes! We offer 24/7 emergency service for plumbing, AC, and electrical issues. We always have a live answer, so you can count on us day or night.'
                   },
                   {
                     id: 'Three',
-                    question: 'What areas do you serve?',
-                    answer: 'We serve the greater Dallas, Texas area including Sunnyvale and surrounding communities. Contact us to confirm if we service your specific location.'
+                    question: 'What is the SAM Plan?',
+                    answer: 'The SAM (Swan Annual Maintenance) Plan is our membership program for only $9.95/month. It includes 4 annual visits, no regular service fees, priority scheduling, 15% off products and services, and 50% off emergency service fees.'
                   }
                 ]} />
               </div>
@@ -470,134 +470,6 @@ export default function Home() {
         </div>
         {/* case area end */}
 
-        {/* team-area */}
-        <div className="team-area pb-120">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6 mx-auto">
-                <div className="site-heading text-center">
-                  <span className="site-title-tagline">Team</span>
-                  <h2 className="site-title">Meet Experts</h2>
-                  <div className="heading-divider"></div>
-                  <p>
-                    Our experienced team of professionals is dedicated to providing 
-                    the highest quality service for your home and business.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-6 col-lg-3">
-                <div className="team-item">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
-                    alt="Team Member"
-                    width={400}
-                    height={400}
-                    loading="lazy"
-                    className="img-fluid"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
-                  <div className="team-content">
-                    <div className="team-social">
-                      <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
-                      <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
-                      <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
-                      <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
-                      <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
-                    </div>
-                    <div className="team-bio">
-                      <h5><Link href="/team">George Hooks</Link></h5>
-                      <span>Project Manager</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-3">
-                <div className="team-item">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face" 
-                    alt="Team Member"
-                    width={400}
-                    height={400}
-                    loading="lazy"
-                    className="img-fluid"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
-                  <div className="team-content">
-                    <div className="team-social">
-                      <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
-                      <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
-                      <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
-                      <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
-                      <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
-                    </div>
-                    <div className="team-bio">
-                      <h5><Link href="/team">Veron Reyn</Link></h5>
-                      <span>Project Manager</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-6 col-lg-3">
-                <div className="team-item active">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" 
-                    alt="Team Member"
-                    width={400}
-                    height={400}
-                    loading="lazy"
-                    className="img-fluid"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
-                  <div className="team-content">
-                    <div className="team-social">
-                      <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
-                      <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
-                      <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
-                      <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
-                      <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
-                    </div>
-                    <div className="team-bio">
-                      <h5><Link href="/team">Karl Hart</Link></h5>
-                      <span>Project Manager</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-6 col-lg-3">
-                <div className="team-item">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" 
-                    alt="Team Member"
-                    width={400}
-                    height={400}
-                    loading="lazy"
-                    className="img-fluid"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
-                  <div className="team-content">
-                    <div className="team-social">
-                      <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
-                      <a href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
-                      <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
-                      <a href="#" aria-label="Linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
-                      <a href="#" aria-label="Youtube"><FontAwesomeIcon icon={faYoutube} /></a>
-                    </div>
-                    <div className="team-bio">
-                      <h5><Link href="/team">Adam Coon</Link></h5>
-                      <span>Project Manager</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* team-area end */}
-
         {/* service areas section */}
         <div className="service-areas py-120" style={{background: '#F6F7F9'}}>
           <div className="container">
@@ -618,39 +490,39 @@ export default function Home() {
               <div className="col-md-6 col-lg-3 mb-4">
                 <div className="service-area-item text-center p-4" style={{background: '#fff', borderRadius: '10px', boxShadow: '0 3px 15px rgba(0,0,0,0.1)'}}>
                   <FontAwesomeIcon icon={faMapMarkerAlt} className="mb-3" style={{fontSize: '30px', color: '#0000FF'}} />
-                  <h5>Dallas</h5>
-                  <p className="mb-0">Downtown & Surrounding</p>
+                  <h5>Mesquite</h5>
+                  <p className="mb-0">Top-Rated HVAC & Plumbing</p>
                 </div>
               </div>
               <div className="col-md-6 col-lg-3 mb-4">
                 <div className="service-area-item text-center p-4" style={{background: '#fff', borderRadius: '10px', boxShadow: '0 3px 15px rgba(0,0,0,0.1)'}}>
                   <FontAwesomeIcon icon={faMapMarkerAlt} className="mb-3" style={{fontSize: '30px', color: '#0000FF'}} />
                   <h5>Sunnyvale</h5>
-                  <p className="mb-0">Full Service Area</p>
+                  <p className="mb-0">Expert Home Services</p>
                 </div>
               </div>
               <div className="col-md-6 col-lg-3 mb-4">
                 <div className="service-area-item text-center p-4" style={{background: '#fff', borderRadius: '10px', boxShadow: '0 3px 15px rgba(0,0,0,0.1)'}}>
                   <FontAwesomeIcon icon={faMapMarkerAlt} className="mb-3" style={{fontSize: '30px', color: '#0000FF'}} />
-                  <h5>Mesquite</h5>
-                  <p className="mb-0">Complete Coverage</p>
+                  <h5>Forney</h5>
+                  <p className="mb-0">Reliable Repairs 24/7</p>
                 </div>
               </div>
               <div className="col-md-6 col-lg-3 mb-4">
                 <div className="service-area-item text-center p-4" style={{background: '#fff', borderRadius: '10px', boxShadow: '0 3px 15px rgba(0,0,0,0.1)'}}>
                   <FontAwesomeIcon icon={faMapMarkerAlt} className="mb-3" style={{fontSize: '30px', color: '#0000FF'}} />
-                  <h5>Garland</h5>
-                  <p className="mb-0">24/7 Available</p>
+                  <h5>Balch Springs</h5>
+                  <p className="mb-0">Technicians That Care</p>
                 </div>
               </div>
             </div>
             <div className="row mt-4">
               <div className="col-12 text-center">
-                <p className="mb-3">
-                  <strong>Not sure if we service your area?</strong>
+                <p className="mb-3" style={{fontSize: 'clamp(14px, 3.5vw, 16px)'}}>
+                  <strong>Serving Dallas, Fort Worth, Plano, Arlington, and more!</strong>
                 </p>
-                <a href="tel:+12145550123" className="theme-btn">
-                  <FontAwesomeIcon icon={faPhone} className="me-2" />Call (214) 555-0123 to Confirm
+                <a href="tel:4697277904" className="theme-btn" style={{minHeight: '44px', minWidth: '200px', justifyContent: 'center'}}>
+                  <FontAwesomeIcon icon={faPhone} className="me-2" />Call 469-727-7904 to Confirm
                 </a>
               </div>
             </div>

@@ -38,7 +38,7 @@ export default function Footer() {
                   </Link>
                   <p className="mb-20">
                     Swan Electric, Plumbing, Heating & Air provides professional plumbing, electrical, and HVAC services 
-                    in Dallas, Texas. We are your trusted partner for all your home service needs.
+                    across the Dallas-Fort Worth area. We are the technicians that care.
                   </p>
                   <ul className="footer-social">
                     <li><a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a></li>
@@ -52,13 +52,13 @@ export default function Footer() {
                 <div className="footer-widget-box list">
                   <h4 className="footer-widget-title">Our Services</h4>
                   <ul className="footer-list">
-                    <li><Link href="/services">- Gas Line</Link></li>
-                    <li><Link href="/services">- Water Line</Link></li>
-                    <li><Link href="/services">- Kitchen Plumbing</Link></li>
-                    <li><Link href="/services">- Bath Plumbing</Link></li>
-                    <li><Link href="/services">- Pipe Install</Link></li>
-                    <li><Link href="/services">- Electrical Services</Link></li>
-                    <li><Link href="/services">- HVAC Services</Link></li>
+                    <li><Link href="/services/plumbing">- Plumbing</Link></li>
+                    <li><Link href="/services/air-conditioning">- Air Conditioning</Link></li>
+                    <li><Link href="/services/heating">- Heating</Link></li>
+                    <li><Link href="/services/electrical">- Electrical</Link></li>
+                    <li><Link href="/services/drain-sewer">- Drain & Sewer</Link></li>
+                    <li><Link href="/services/water-heaters">- Water Heaters</Link></li>
+                    <li><Link href="/services/plumbing">- Gas Lines</Link></li>
                   </ul>
                 </div>
               </div>
@@ -70,7 +70,6 @@ export default function Footer() {
                     <li><Link href="/about">- About Us</Link></li>
                     <li><Link href="/services">- Our Services</Link></li>
                     <li><Link href="/projects">- Projects</Link></li>
-                    <li><Link href="/team">- Our Team</Link></li>
                     <li><Link href="/gallery">- Gallery</Link></li>
                     <li><Link href="/pricing">- Pricing</Link></li>
                     <li><Link href="/testimonials">- Testimonials</Link></li>
@@ -106,7 +105,7 @@ export default function Footer() {
                   <span className="contact-info-icon"><FontAwesomeIcon icon={faMapMarkerAlt} /></span>
                   <div>
                     <h5>Address</h5>
-                    <p>309 US Highway 80 E, Sunnyvale, TX 75150</p>
+                    <p>309 U.S. 80 Frontage Rd, Sunnyvale, TX 75182</p>
                   </div>
                 </div>
               </div>
@@ -116,9 +115,9 @@ export default function Footer() {
                   <div>
                     <h5>Call Us</h5>
                     <p style={{fontSize: '18px', fontWeight: '600'}}>
-                      <a href="tel:+12145550123">(214) 555-0123</a>
+                      <a href="tel:4697277904">469-727-7904</a>
                     </p>
-                    <small style={{color: '#3333FF'}}>24/7 Emergency Service Available</small>
+                    <small style={{color: '#3333FF'}}>24/7 EMERGENCY SERVICE AVAILABLE</small>
                   </div>
                 </div>
               </div>
@@ -126,8 +125,10 @@ export default function Footer() {
                 <div className="contact-info-item">
                   <span className="contact-info-icon"><FontAwesomeIcon icon={faEnvelope} /></span>
                   <div>
-                    <h5>Email Us</h5>
-                    <p><a href="mailto:info@swanplumbingdemo.com">info@swanplumbingdemo.com</a></p>
+                    <h5>Licenses</h5>
+                    <p style={{fontSize: '14px'}}>
+                      M42142 | TACLA00148000E | TECL 35435
+                    </p>
                   </div>
                 </div>
               </div>
@@ -136,8 +137,8 @@ export default function Footer() {
                   <span className="contact-info-icon"><FontAwesomeIcon icon={faClock} /></span>
                   <div>
                     <h5>Business Hours</h5>
-                    <p>Sun - Fri (08AM - 10PM)</p>
-                    <small style={{color: '#3333FF'}}>After Hours: Emergency Only</small>
+                    <p>Open 24/7</p>
+                    <small style={{color: '#3333FF'}}>Always a live answer</small>
                   </div>
                 </div>
               </div>
