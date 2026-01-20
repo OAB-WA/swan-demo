@@ -29,9 +29,9 @@ import {
   faYoutube 
 } from '@fortawesome/free-brands-svg-icons'
 
-// Performance: Dynamically import heavy carousel and below-the-fold components
+// Performance: SSR enabled for HeroSlider to improve LCP
 const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { 
-  ssr: false,
+  ssr: true,
   loading: () => <div className="hero-slider-placeholder" style={{ height: '100vh', background: '#000' }}></div>
 })
 

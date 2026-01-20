@@ -22,6 +22,10 @@ const nextConfig = {
   compress: true,
   // Optimize production builds
   swcMinify: true,
+  // Performance: Enable CSS optimization (requires critters)
+  experimental: {
+    optimizeCss: true,
+  },
 }
 
 module.exports = nextConfig
