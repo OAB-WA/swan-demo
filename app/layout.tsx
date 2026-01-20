@@ -11,11 +11,11 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
-// Performance: Optimize Google Fonts with next/font
+// Performance: Optimize Google Fonts with next/font - Only load weights actually used (400, 500, 600, 700)
 const rubik = Rubik({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-rubik',
 })
 
@@ -52,6 +52,14 @@ export default function RootLayout({
         {/* Performance: Preconnect to external domains */}
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        {/* Performance: Preload critical hero image for faster LCP */}
+        <link 
+          rel="preload" 
+          href="/assets/img/swan_hero.webp" 
+          as="image" 
+          type="image/webp"
+          fetchPriority="high"
+        />
         {/* Preload critical font files - removed FA woff2 preloads as we use SVGs now */}
         <link rel="icon" type="image/webp" href="/assets/img/swan logo.webp" />
       </head>

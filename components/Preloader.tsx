@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 export default function Preloader() {
   useEffect(() => {
-    // Hide preloader when page loads - multiple fallbacks
+    // Performance: Optimized preloader - faster hide, non-blocking
     const hidePreloader = () => {
       const preloader = document.querySelector('.preloader')
       if (preloader) {
@@ -12,25 +12,36 @@ export default function Preloader() {
       }
     }
 
-    // Try multiple methods to ensure preloader hides
-    if (document.readyState === 'complete') {
-      // Page already loaded
-      setTimeout(hidePreloader, 100)
-    } else {
-      // Wait for page load
-      window.addEventListener('load', () => {
-        setTimeout(hidePreloader, 100)
+    // Use requestAnimationFrame for smoother, non-blocking hide
+    const hideWithRAF = () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(hidePreloader)
       })
     }
 
-    // Fallback timeout (in case scripts don't load)
-    const timeout = setTimeout(() => {
-      hidePreloader()
-    }, 2000)
+    // Try multiple methods to ensure preloader hides quickly
+    if (document.readyState === 'complete') {
+      // Page already loaded - hide immediately
+      hideWithRAF()
+    } else {
+      // Wait for DOMContentLoaded (faster than 'load' event)
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', hideWithRAF, { once: true })
+      } else {
+        hideWithRAF()
+      }
+      
+      // Fallback for 'load' event
+      window.addEventListener('load', hideWithRAF, { once: true })
+    }
+
+    // Reduced fallback timeout from 2000ms to 500ms
+    const timeout = setTimeout(hidePreloader, 500)
 
     return () => {
       clearTimeout(timeout)
-      window.removeEventListener('load', hidePreloader)
+      document.removeEventListener('DOMContentLoaded', hideWithRAF)
+      window.removeEventListener('load', hideWithRAF)
     }
   }, [])
 
