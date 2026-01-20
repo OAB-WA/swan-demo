@@ -42,6 +42,31 @@ body {
   line-height: 1.8;
 }
 
+/* Call Now Button in Menubar */
+.call-now-btn {
+  background: linear-gradient(135deg, #0000CC 0%, #0000FF 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 204, 0.2) !important;
+  font-weight: 700 !important;
+  padding: 12px 25px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px !important;
+}
+
+.call-now-btn:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 204, 0.3) !important;
+  background: linear-gradient(135deg, #0000FF 0%, #0000CC 100%) !important;
+}
+
+.call-now-btn:active {
+  transform: translateY(0) scale(0.98) !important;
+}
+
 a {
   color: #14212B;
   display: inline-block;
@@ -2244,9 +2269,10 @@ service single
 }
 
 .image-row .col-md-6 {
-  height: 300px;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   border-radius: 12px;
+  background-color: #f8f9fa;
 }
 
 .image-row .col-md-6 img,

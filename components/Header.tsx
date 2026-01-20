@@ -175,7 +175,7 @@ export default function Header() {
               </ul>
               <div className="header-nav-right">
                 <div className="header-btn d-flex gap-2">
-                  <a href="tel:4697277904" className="theme-btn theme-btn2" style={{whiteSpace: 'nowrap'}}>
+                  <a href="tel:4697277904" className="theme-btn theme-btn2 call-now-btn" style={{whiteSpace: 'nowrap'}}>
                     <FontAwesomeIcon icon={faPhone} className="me-2" />CALL NOW
                   </a>
                   <button 
