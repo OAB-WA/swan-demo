@@ -13,6 +13,7 @@ export default function Breadcrumb({ title, items }: BreadcrumbProps) {
         src="/assets/img/swan_hero.webp"
         alt="Breadcrumb Background"
         fill
+        quality={75}
         priority
         style={{ objectFit: 'cover', zIndex: -2, position: 'absolute', top: 0, left: 0 }}
         sizes="100vw"

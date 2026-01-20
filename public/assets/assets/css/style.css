@@ -2473,7 +2473,7 @@ testimonial css
 .testimonial-area::before {
   content: "";
   position: absolute;
-  background-image: url(../img/testimonial/map.png);
+  background-image: url(../img/testimonial/map.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

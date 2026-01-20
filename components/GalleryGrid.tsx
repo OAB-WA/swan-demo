@@ -22,7 +22,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
       <div className="row">
         {images.map((image, idx) => (
           <div key={idx} className="col-md-6 col-lg-4 mb-4">
-            <div className="gallery-item" style={{ cursor: 'pointer' }} onClick={() => {
+              <div className="gallery-item" style={{ cursor: 'pointer' }} onClick={() => {
               setOpenIndex(idx)
               setOpen(true)
             }}>
@@ -31,6 +31,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
                 alt={`Gallery Image ${idx + 1}`}
                 width={800}
                 height={600}
+                quality={75}
                 loading="lazy"
                 className="img-fluid"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

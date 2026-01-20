@@ -58,6 +58,7 @@ export default function AboutPage() {
                       alt="About Us"
                       width={800}
                       height={600}
+                      quality={75}
                       loading="lazy"
                       sizes="(max-width: 768px) 100vw, 50vw"
                       style={{ width: '100%', height: 'auto', aspectRatio: '1.6 / 1', objectFit: 'cover' }}
@@ -68,6 +69,7 @@ export default function AboutPage() {
                       alt="About Us"
                       width={800}
                       height={600}
+                      quality={75}
                       loading="lazy"
                       sizes="(max-width: 768px) 100vw, 50vw"
                       style={{ width: '280px', height: 'auto', aspectRatio: '1.4 / 1', objectFit: 'cover' }}

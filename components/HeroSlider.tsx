@@ -46,7 +46,7 @@ export default function HeroSlider() {
             priority
             style={{ objectFit: 'cover', zIndex: -2, position: 'absolute', top: 0, left: 0 }}
             sizes="100vw"
-            quality={85}
+            quality={75}
           />
           <div className="hero-overlay" style={{
             position: 'absolute',
@@ -113,7 +113,7 @@ export default function HeroSlider() {
             fill
             style={{ objectFit: 'cover', zIndex: -1 }}
             sizes="100vw"
-            quality={85}
+            quality={75}
           />
           <div className="hero-overlay" style={{
             position: 'absolute',

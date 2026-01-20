@@ -2457,7 +2457,7 @@ testimonial css
 .testimonial-area::before {
   content: "";
   position: absolute;
-  background-image: url(/assets/img/testimonial/map.png);
+  background-image: url(/assets/img/testimonial/map.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -79,6 +79,7 @@ export default function Home() {
                         alt="Plumbing Services"
                         width={800}
                         height={600}
+                        quality={75}
                         loading="lazy"
                         className="img-fluid"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -118,6 +119,7 @@ export default function Home() {
                       alt="Air Conditioning"
                       width={800}
                       height={600}
+                      quality={75}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -157,6 +159,7 @@ export default function Home() {
                       alt="Heating Services"
                       width={800}
                       height={600}
+                      quality={75}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -196,6 +199,7 @@ export default function Home() {
                       alt="Electrical Services"
                       width={800}
                       height={600}
+                      quality={75}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -235,6 +239,7 @@ export default function Home() {
                       alt="Drain & Sewer"
                       width={800}
                       height={600}
+                      quality={75}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -274,6 +279,7 @@ export default function Home() {
                       alt="Water Heaters"
                       width={800}
                       height={600}
+                      quality={75}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -358,6 +364,7 @@ export default function Home() {
             src="/assets/img/swan_hero_3.webp"
             alt="Video Background"
             fill
+            quality={75}
             style={{ objectFit: 'cover', zIndex: -1 }}
             sizes="100vw"
           />
@@ -387,6 +394,7 @@ export default function Home() {
                       alt="Request A Quote"
                       width={800}
                       height={600}
+                      quality={75}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 991px) 100vw, 40vw"

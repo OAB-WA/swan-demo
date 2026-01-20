@@ -32,6 +32,7 @@ export default function Footer() {
                       alt="Swan Electric, Plumbing, Heating & Air" 
                       width={120}
                       height={60}
+                      quality={75}
                       loading="lazy"
                       style={{maxWidth: '120px', height: 'auto'}}
                     />

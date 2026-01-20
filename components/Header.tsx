@@ -114,6 +114,7 @@ export default function Header() {
                 alt="Swan Electric, Plumbing, Heating & Air" 
                 width={120}
                 height={60}
+                quality={75}
                 priority
                 style={{maxWidth: '120px', height: 'auto'}}
               />
@@ -148,6 +149,7 @@ export default function Header() {
                     alt="Swan Electric, Plumbing, Heating & Air" 
                     width={100}
                     height={50}
+                    quality={75}
                     priority
                     style={{maxWidth: '100px', height: 'auto'}}
                   />

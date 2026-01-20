@@ -104,12 +104,18 @@ The contact form API endpoint is located at:
 
 The site will be automatically deployed on every push to main branch.
 
+## Performance Optimization
+
+- ✅ **Next.js Image**: All standard `<img>` tags have been replaced with the `<Image>` component for automatic optimization.
+- ✅ **Quality Control**: Image quality is set to 75% to significantly reduce file sizes without visual loss.
+- ✅ **Modern Formats**: Support for WebP and AVIF is enabled in `next.config.js`.
+- ✅ **Dynamic Imports**: Heavy components are dynamically imported to improve Initial Page Load.
+
 ## Notes
 
-- **Option A Implementation**: This project uses regular `<img>` tags (not Next.js Image) to ensure 100% visual match with the original template
+- **Optimized Implementation**: This project uses Next.js Image optimization to ensure fast load times while maintaining visual quality.
 - **jQuery**: jQuery and plugins are kept for exact behavior matching
-- **CSS**: All original CSS files are preserved exactly as-is
-- **Performance**: While optimized for visual match, you can switch to Next.js Image component later for better performance
+- **CSS**: Original CSS files are preserved with optimized background image references.
 
 ## License
 

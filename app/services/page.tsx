@@ -55,6 +55,7 @@ export default function ServicesPage() {
                       alt={service.title}
                       width={800}
                       height={600}
+                      quality={75}
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

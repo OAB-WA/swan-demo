@@ -69,6 +69,7 @@ export default function ServiceSinglePage({ params }: { params: { slug: string }
                         alt={service.title}
                         width={1200}
                         height={600}
+                        quality={75}
                         className="img-fluid"
                         priority
                         sizes="(max-width: 576px) 100vw, (max-width: 992px) 100vw, 66vw"
@@ -91,6 +92,7 @@ export default function ServiceSinglePage({ params }: { params: { slug: string }
                             alt={service.title}
                             width={800}
                             height={600}
+                            quality={75}
                             className="img-fluid"
                             loading="lazy"
                             sizes="(max-width: 576px) 100vw, 50vw"
@@ -103,6 +105,7 @@ export default function ServiceSinglePage({ params }: { params: { slug: string }
                             alt={service.title}
                             width={800}
                             height={600}
+                            quality={75}
                             className="img-fluid"
                             loading="lazy"
                             sizes="(max-width: 576px) 100vw, 50vw"
