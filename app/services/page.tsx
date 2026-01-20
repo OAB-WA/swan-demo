@@ -3,12 +3,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import dynamic from 'next/dynamic'
 import Breadcrumb from '@/components/Breadcrumb'
 import { useBooking } from '@/contexts/BookingContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 import { getAllServices } from '@/lib/services'
+
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false })
 
 export default function ServicesPage() {
   const services = getAllServices()
@@ -48,16 +50,16 @@ export default function ServicesPage() {
                 <div key={service.id} className="col-md-6 col-lg-4">
                   <div className="service-item">
                     <div className="service-img">
-                      <Image 
-                        src={service.image} 
-                        alt={service.title}
-                        width={800}
-                        height={600}
-                        loading="lazy"
-                        className="img-fluid"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                      />
+                    <Image 
+                      src={service.image} 
+                      alt={service.title}
+                      width={800}
+                      height={600}
+                      loading="lazy"
+                      className="img-fluid"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      style={{ objectFit: 'cover', width: '100%', height: '100%', aspectRatio: '4 / 3' }}
+                    />
                     </div>
                     <div className="service-icon">
                       <FontAwesomeIcon icon={service.icon} />

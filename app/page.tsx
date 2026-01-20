@@ -4,9 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import QuoteForm from '@/components/QuoteForm'
-import FAQAccordion from '@/components/FAQAccordion'
 import { useBooking } from '@/contexts/BookingContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
@@ -32,15 +29,18 @@ import {
   faYoutube 
 } from '@fortawesome/free-brands-svg-icons'
 
-// Performance: Dynamically import heavy carousel component
+// Performance: Dynamically import heavy carousel and below-the-fold components
 const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { 
   ssr: false,
-  loading: () => <div className="hero-slider-placeholder" style={{ minHeight: '600px', background: '#f0f0f0' }}></div>
+  loading: () => <div className="hero-slider-placeholder" style={{ height: '100vh', background: '#000' }}></div>
 })
 
 const CaseSlider = dynamic(() => import('@/components/CaseSlider'), { ssr: false })
 const TestimonialSlider = dynamic(() => import('@/components/TestimonialSlider'), { ssr: false })
 const PartnerSlider = dynamic(() => import('@/components/PartnerSlider'), { ssr: false })
+const QuoteForm = dynamic(() => import('@/components/QuoteForm'), { ssr: false })
+const FAQAccordion = dynamic(() => import('@/components/FAQAccordion'), { ssr: false })
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false })
 
 export default function Home() {
   const { openModal } = useBooking()
@@ -74,16 +74,16 @@ export default function Home() {
               <div className="col-md-6 col-lg-4">
                 <div className="service-item">
                   <div className="service-img">
-                    <Image 
-                      src="/assets/img/swan_1.webp" 
-                      alt="Plumbing Services"
-                      width={800}
-                      height={600}
-                      loading="lazy"
-                      className="img-fluid"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                    />
+                      <Image 
+                        src="/assets/img/swan_1.webp" 
+                        alt="Plumbing Services"
+                        width={800}
+                        height={600}
+                        loading="lazy"
+                        className="img-fluid"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{ objectFit: 'cover', width: '100%', height: '100%', aspectRatio: '4 / 3' }}
+                      />
                   </div>
                   <div className="service-icon">
                     <FontAwesomeIcon icon={faWrench} />
@@ -121,7 +121,7 @@ export default function Home() {
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                      style={{ objectFit: 'cover', width: '100%', height: '100%', aspectRatio: '4 / 3' }}
                     />
                   </div>
                   <div className="service-icon">
@@ -160,7 +160,7 @@ export default function Home() {
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                      style={{ objectFit: 'cover', width: '100%', height: '100%', aspectRatio: '4 / 3' }}
                     />
                   </div>
                   <div className="service-icon">
@@ -199,7 +199,7 @@ export default function Home() {
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                      style={{ objectFit: 'cover', width: '100%', height: '100%', aspectRatio: '4 / 3' }}
                     />
                   </div>
                   <div className="service-icon">
@@ -238,7 +238,7 @@ export default function Home() {
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                      style={{ objectFit: 'cover', width: '100%', height: '100%', aspectRatio: '4 / 3' }}
                     />
                   </div>
                   <div className="service-icon">
@@ -277,7 +277,7 @@ export default function Home() {
                       loading="lazy"
                       className="img-fluid"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                      style={{ objectFit: 'cover', width: '100%', height: '100%', aspectRatio: '4 / 3' }}
                     />
                   </div>
                   <div className="service-icon">

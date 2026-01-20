@@ -3,14 +3,17 @@
 /* Ensure hero section displays properly before carousel initialization */
 .hero-slider {
   position: relative;
-  min-height: 600px;
-  background-color: #f0f0f0;
+  min-height: 100vh;
+  background-color: #000;
+  display: block;
 }
 
 /* Home page hero section - Performance: Use min-height to prevent CLS */
 .hero-section.hero-slider-wrapper {
   min-height: 100vh;
   height: 100vh;
+  overflow: hidden;
+  background: #000;
 }
 
 .hero-section .hero-slider {
@@ -20,69 +23,82 @@
 .hero-section .hero-single {
   min-height: 100vh;
   height: 100vh;
+  aspect-ratio: 16 / 9;
 }
 
-/* Aspect ratio for images to prevent CLS */
+/* Aspect ratio for images to prevent CLS - Refactored for modern browsers */
 .service-img {
-  height: 250px;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
   overflow: hidden;
+  background-color: #f8f9fa;
 }
 
 .service-img img,
 .service-img > * {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .case-img {
-  height: 300px;
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  height: auto;
   overflow: hidden;
+  background-color: #f8f9fa;
 }
 
 .case-img img,
 .case-img > * {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .team-item img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   background-color: #eee;
 }
 
 /* Service detail page images - consistent heights */
 .service-details-img {
-  height: 400px !important;
+  aspect-ratio: 2 / 1;
+  width: 100%;
+  height: auto;
   overflow: hidden;
   border-radius: 12px;
+  background-color: #f8f9fa;
 }
 
 .service-details-img img,
 .service-details-img > * {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   border-radius: 12px;
 }
 
 .image-row .col-md-6 {
-  height: 300px !important;
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  height: auto;
   overflow: hidden;
   border-radius: 12px;
+  background-color: #f8f9fa;
 }
 
 .image-row .col-md-6 img,
 .image-row .col-md-6 > * {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   border-radius: 12px;
 }
 

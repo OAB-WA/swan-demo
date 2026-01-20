@@ -42,14 +42,18 @@ export default function ScrollReveal() {
 
     // Initial observation - use requestIdleCallback if available for better performance
     const initObservation = () => {
-      observeNewElements(document.body)
+      // Small delay to ensure LCP has a chance to fire first
+      setTimeout(() => {
+        observeNewElements(document.body)
+      }, 500)
     }
 
     if ('requestIdleCallback' in window) {
-      requestIdleCallback(initObservation, { timeout: 2000 })
+      // Use longer timeout for idle callback
+      requestIdleCallback(initObservation, { timeout: 3000 })
     } else {
       // Fallback for browsers without requestIdleCallback
-      setTimeout(initObservation, 0)
+      setTimeout(initObservation, 1000)
     }
 
     // Performance: Optimized MutationObserver - only observe main content area, not entire body

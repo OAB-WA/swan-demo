@@ -2840,7 +2840,7 @@ counter css
 
 .counter-box .title {
   color: #fff;
-  font-family: "Karla", sans-serif;
+  font-family: var(--font-rubik), sans-serif;
   margin-top: 15px;
   font-size: 18px;
   letter-spacing: -1px;

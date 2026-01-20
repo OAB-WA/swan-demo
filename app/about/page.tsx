@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 import Breadcrumb from '@/components/Breadcrumb'
 import dynamic from 'next/dynamic'
+
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false })
 import Counter from '@/components/Counter'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
@@ -59,7 +60,7 @@ export default function AboutPage() {
                       height={600}
                       loading="lazy"
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      style={{ width: '100%', height: '500px', objectFit: 'cover' }}
+                      style={{ width: '100%', height: 'auto', aspectRatio: '1.6 / 1', objectFit: 'cover' }}
                     />
                     <Image 
                       className="about-img-2" 
@@ -69,7 +70,7 @@ export default function AboutPage() {
                       height={600}
                       loading="lazy"
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      style={{ width: '280px', height: '200px', objectFit: 'cover' }}
+                      style={{ width: '280px', height: 'auto', aspectRatio: '1.4 / 1', objectFit: 'cover' }}
                     />
                   </div>
                 </div>
