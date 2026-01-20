@@ -7,8 +7,9 @@
   background-color: #f0f0f0;
 }
 
-/* Home page hero section - full viewport height */
+/* Home page hero section - Performance: Use min-height to prevent CLS */
 .hero-section.hero-slider-wrapper {
+  min-height: 100vh;
   height: 100vh;
 }
 
@@ -17,8 +18,8 @@
 }
 
 .hero-section .hero-single {
-  height: 100vh;
   min-height: 100vh;
+  height: 100vh;
 }
 
 /* Aspect ratio for images to prevent CLS */
@@ -98,10 +99,10 @@
   }
 }
 
-/* Sticky navbar background */
+/* Sticky navbar background - Performance: Specific transition */
 .sticky-nav {
   background-color: #ffffff !important;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 /* Ensure active link visibility */
@@ -243,53 +244,64 @@
     height: auto !important;
   }
   
-  /* Modern Hamburger Button */
+  /* Modern Hamburger Button - Performance: Specific transitions, solid colors */
   .navbar-toggler {
     position: relative;
     width: 44px;
     height: 44px;
-    border: none !important;
-    padding: 0 !important;
-    border-radius: 12px !important;
-    background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 51, 0.1) !important;
+    border: none;
+    padding: 0;
+    border-radius: 12px;
+    background: #f0f4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 51, 0.08);
   }
   
   .navbar-toggler:hover {
-    background: linear-gradient(135deg, #e0ecff 0%, #d8e8fe 100%) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 51, 0.15) !important;
-    transform: translateY(-1px) !important;
+    background: #e0ecff;
+    box-shadow: 0 2px 8px rgba(0, 0, 51, 0.12);
+    transform: translateY(-1px);
   }
   
   .navbar-toggler:active {
-    transform: translateY(0) scale(0.96) !important;
+    transform: translateY(0) scale(0.96);
   }
   
   .navbar-toggler-icon {
-    font-size: 22px !important;
-    color: #0000CC !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    font-size: 22px;
+    color: #0000CC;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   /* Transform to X when open */
   .navbar-toggler[aria-expanded="true"] {
-    background: linear-gradient(135deg, #0000CC 0%, #0000FF 100%) !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 204, 0.3) !important;
+    background: #0000CC;
+    box-shadow: 0 2px 10px rgba(0, 0, 204, 0.25);
   }
   
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    color: #fff !important;
-    transform: rotate(180deg) !important;
+    color: #fff;
+    transform: rotate(180deg);
   }
   
-  /* Full-screen backdrop overlay - handled by React component */
+  /* Full-screen backdrop overlay - Performance: No blur, simple overlay */
+  .mobile-menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    animation: fadeIn 0.3s ease;
+  }
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -299,28 +311,29 @@
     }
   }
   
-  /* Modern slide-in menu panel */
+  /* Modern slide-in menu panel - Performance: Use transform instead of right */
   .navbar-collapse {
-    position: fixed !important;
-    top: 0 !important;
-    right: -100% !important;
-    width: 85% !important;
-    max-width: 400px !important;
-    height: 100vh !important;
-    background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%) !important;
-    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15) !important;
-    max-height: none !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    padding: 0 !important;
-    z-index: 999 !important;
-    display: flex !important;
-    flex-direction: column !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
+    max-height: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
   }
   
   .navbar-collapse.show {
-    right: 0 !important;
+    transform: translateX(0);
   }
   
   /* Mobile Menu Header - Only show on mobile when menu is open */
@@ -368,7 +381,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
   }
   
   .mobile-menu-close:hover {
@@ -390,53 +403,53 @@
     position: relative;
   }
   
+  /* Performance: Simplified animation - single fade-in instead of staggered */
   .navbar-nav .nav-item {
-    margin-bottom: 8px !important;
+    margin-bottom: 8px;
     opacity: 0;
-    transform: translateX(20px);
-    animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+    animation: fadeInUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
   
   .navbar-collapse.show .navbar-nav .nav-item:nth-child(1) {
-    animation-delay: 0.1s !important;
+    animation-delay: 0.05s;
   }
   
   .navbar-collapse.show .navbar-nav .nav-item:nth-child(2) {
-    animation-delay: 0.15s !important;
+    animation-delay: 0.1s;
   }
   
   .navbar-collapse.show .navbar-nav .nav-item:nth-child(3) {
-    animation-delay: 0.2s !important;
+    animation-delay: 0.15s;
   }
   
   .navbar-collapse.show .navbar-nav .nav-item:nth-child(4) {
-    animation-delay: 0.25s !important;
+    animation-delay: 0.2s;
   }
   
-  @keyframes slideInRight {
+  @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateX(20px);
+      transform: translateY(10px);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
   
-  /* Modern navigation links */
+  /* Modern navigation links - Performance: Specific transitions instead of 'all' */
   .navbar-nav .nav-link {
-    padding: 16px 20px !important;
-    border-radius: 12px !important;
-    font-size: 17px !important;
-    font-weight: 600 !important;
-    color: #1a1a2e !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    display: flex !important;
-    align-items: center !important;
-    position: relative !important;
-    background: transparent !important;
-    border: 2px solid transparent !important;
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1a1a2e;
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: transparent;
+    border: 2px solid transparent;
   }
   
   .navbar-nav .nav-link::before {
@@ -447,17 +460,17 @@
     transform: translateY(-50%);
     width: 0;
     height: 100%;
-    background: linear-gradient(90deg, #0000CC 0%, #0000FF 100%);
+    background: #0000CC;
     border-radius: 12px 0 0 12px;
     transition: width 0.3s ease;
   }
   
   .navbar-nav .nav-link:hover {
-    background: linear-gradient(90deg, #f0f4ff 0%, #e8f0fe 100%) !important;
-    color: #0000CC !important;
-    transform: translateX(4px) !important;
-    border-color: #e0ecff !important;
-    padding-left: 24px !important;
+    background: #f0f4ff;
+    color: #0000CC;
+    transform: translateX(4px);
+    border-color: #e0ecff;
+    padding-left: 24px;
   }
   
   .navbar-nav .nav-link:hover::before {
@@ -465,11 +478,11 @@
   }
   
   .navbar-nav .nav-link.active {
-    background: linear-gradient(135deg, #0000CC 0%, #0000FF 100%) !important;
-    color: #fff !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 204, 0.25) !important;
-    transform: translateX(4px) !important;
-    padding-left: 24px !important;
+    background: #0000CC;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 204, 0.2);
+    transform: translateX(4px);
+    padding-left: 24px;
   }
   
   .navbar-nav .nav-link.active::before {
@@ -477,28 +490,17 @@
     background: rgba(255, 255, 255, 0.3);
   }
   
-  /* Mobile menu buttons section */
+  /* Mobile menu buttons section - Performance: Simplified animation */
   .navbar-collapse .header-nav-right {
-    display: block !important;
-    margin-top: auto !important;
-    padding: 24px !important;
-    border-top: 1px solid #e5e9f2 !important;
-    background: #f8faff !important;
+    display: block;
+    margin-top: auto;
+    padding: 24px;
+    border-top: 1px solid #e5e9f2;
+    background: #f8faff;
     z-index: 2;
     position: relative;
     opacity: 0;
-    animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards !important;
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    animation: fadeInUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
   }
   
   .navbar-collapse .header-btn {
@@ -508,26 +510,26 @@
   }
   
   .navbar-collapse .header-btn .theme-btn {
-    width: 100% !important;
-    justify-content: center !important;
-    padding: 16px 24px !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    border-radius: 12px !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-    letter-spacing: 0.5px !important;
-    text-transform: uppercase !important;
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
   }
   
   .navbar-collapse .header-btn .theme-btn:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
   
   .navbar-collapse .header-btn .theme-btn:active {
-    transform: translateY(0) scale(0.98) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   }
   
   .navbar-collapse .header-btn .theme-btn2 {
@@ -863,15 +865,15 @@
   }
 }
 
-/* Pricing page card and icon styling */
+/* Pricing page card and icon styling - Performance: Specific transitions, simplified gradients */
 .pricing-item {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   border: 2px solid transparent;
 }
 
 .pricing-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   border-color: #e0ecff;
 }
 
@@ -882,11 +884,11 @@
   width: 100px;
   height: 100px;
   margin: 30px auto 20px;
-  background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+  background: #f0f4ff;
   border-radius: 20px;
   position: relative;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 12px rgba(0, 0, 204, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 204, 0.08);
 }
 
 .pricing-icon::before {
@@ -894,7 +896,7 @@
   position: absolute;
   inset: -2px;
   border-radius: 20px;
-  background: linear-gradient(135deg, #0000CC 0%, #0000FF 100%);
+  background: #0000CC;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
@@ -902,8 +904,8 @@
 
 .pricing-item:hover .pricing-icon {
   transform: translateY(-5px) scale(1.05);
-  background: linear-gradient(135deg, #0000CC 0%, #0000FF 100%);
-  box-shadow: 0 8px 24px rgba(0, 0, 204, 0.25);
+  background: #0000CC;
+  box-shadow: 0 4px 16px rgba(0, 0, 204, 0.2);
 }
 
 .pricing-item:hover .pricing-icon::before {
@@ -911,10 +913,10 @@
 }
 
 .pricing-icon svg {
-  width: 50px !important;
-  height: 50px !important;
+  width: 50px;
+  height: 50px;
   color: #0000CC;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.3s ease, transform 0.3s ease;
   z-index: 1;
 }
 

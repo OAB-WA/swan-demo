@@ -1053,74 +1053,96 @@ button.navbar-toggler:focus {
     width: 190px;
   }
 
-  /* Modern Hamburger Button */
+  /* Modern Hamburger Button - Performance: Specific transitions, solid colors */
   .navbar-toggler {
     position: relative;
     width: 44px;
     height: 44px;
-    border: none !important;
-    padding: 0 !important;
-    border-radius: 12px !important;
-    background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 51, 0.1) !important;
+    border: none;
+    padding: 0;
+    border-radius: 12px;
+    background: #f0f4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 51, 0.08);
   }
   
   .navbar-toggler:hover {
-    background: linear-gradient(135deg, #e0ecff 0%, #d8e8fe 100%) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 51, 0.15) !important;
-    transform: translateY(-1px) !important;
+    background: #e0ecff;
+    box-shadow: 0 2px 8px rgba(0, 0, 51, 0.12);
+    transform: translateY(-1px);
   }
   
   .navbar-toggler:active {
-    transform: translateY(0) scale(0.96) !important;
+    transform: translateY(0) scale(0.96);
   }
   
   .navbar-toggler-icon {
-    font-size: 22px !important;
-    color: #0000CC !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    font-size: 22px;
+    color: #0000CC;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   /* Transform to X when open */
   .navbar-toggler[aria-expanded="true"] {
-    background: linear-gradient(135deg, #0000CC 0%, #0000FF 100%) !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 204, 0.3) !important;
+    background: #0000CC;
+    box-shadow: 0 2px 10px rgba(0, 0, 204, 0.25);
   }
   
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    color: #fff !important;
-    transform: rotate(180deg) !important;
+    color: #fff;
+    transform: rotate(180deg);
   }
   
-  /* Modern slide-in menu panel */
+  /* Modern slide-in menu panel - Performance: Use transform instead of right */
   .navbar-collapse {
-    position: fixed !important;
-    top: 0 !important;
-    right: -100% !important;
-    width: 85% !important;
-    max-width: 400px !important;
-    height: 100vh !important;
-    background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%) !important;
-    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15) !important;
-    max-height: none !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    padding: 0 !important;
-    z-index: 999 !important;
-    display: flex !important;
-    flex-direction: column !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
+    max-height: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
   }
   
   .navbar-collapse.show {
-    right: 0 !important;
+    transform: translateX(0);
+  }
+  
+  /* Full-screen backdrop overlay - Performance: No blur, simple overlay */
+  .mobile-menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   
   /* Mobile Menu Header - Only show on mobile when menu is open */
@@ -1168,7 +1190,7 @@ button.navbar-toggler:focus {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
   }
   
   .mobile-menu-close:hover {
@@ -1190,37 +1212,37 @@ button.navbar-toggler:focus {
     position: relative;
   }
   
+  /* Performance: Simplified animation - single fade-in instead of staggered */
   .navbar-nav .nav-item {
-    margin-bottom: 8px !important;
+    margin-bottom: 8px;
     opacity: 0;
-    transform: translateX(20px);
-    animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+    animation: fadeInUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
   
   .navbar-collapse.show .navbar-nav .nav-item:nth-child(1) {
-    animation-delay: 0.1s !important;
+    animation-delay: 0.05s;
   }
   
   .navbar-collapse.show .navbar-nav .nav-item:nth-child(2) {
-    animation-delay: 0.15s !important;
+    animation-delay: 0.1s;
   }
   
   .navbar-collapse.show .navbar-nav .nav-item:nth-child(3) {
-    animation-delay: 0.2s !important;
+    animation-delay: 0.15s;
   }
   
   .navbar-collapse.show .navbar-nav .nav-item:nth-child(4) {
-    animation-delay: 0.25s !important;
+    animation-delay: 0.2s;
   }
   
-  @keyframes slideInRight {
+  @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateX(20px);
+      transform: translateY(10px);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 
